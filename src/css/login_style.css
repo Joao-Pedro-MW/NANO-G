@@ -1,14 +1,6 @@
-/* =============================================================================
-   HTML5 CSS Reset Minified - Eric Meyer
-   ========================================================================== */
-
+/*Reset do CSS base do HTML*/
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
 
-/* =============================================================================
-   My CSS
-   ========================================================================== */
-
-/* ---- base ---- */
 *{
   font-family: Nunito,sans-serif;
   color: #000;
@@ -34,23 +26,34 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 }
 #painel_login input{
   height: 100%;
+  padding: 0 10px;
   font-size: 20px;
 }
 #painel_login label {
   padding-bottom: 2%;
-  padding-top: 20%;
+  padding-top: 12%;
 }
 #painel_login form h2{
   font-size:2em;
   font-weight: 100;
   text-align: center;
 }
-
+#bt_login{
+  margin-top: 2vw;
+  border: 0;
+  border-radius: 6px;
+  color:#FFF;
+  font-size: 20vh;
+  background-color: #2ca4ef;
+}
+#bt_login:hover{
+  background-color: #023E8A ;
+}
 html{
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-/* ---- particles.js container ---- */
+/* ---- fundo de particulas ---- */
 
 #particles-js{
   display: block;
