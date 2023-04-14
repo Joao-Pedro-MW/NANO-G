@@ -1,0 +1,68 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+*{
+  font-family: Nunito,sans-serif;
+  color: #000;
+}
+#painel_login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  transform: translate(-50%, -50%);
+}
+#painel_login form {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  background: transparent;
+  border:7px solid ;
+  border-image: linear-gradient(45deg,#2ca4ef, #f0f0f3, #2ca4ef) 1 round;
+  font-size: 2vw;
+  padding: 15vh;
+  align-self: center;
+  justify-content: center;
+  display: grid;
+}
+#painel_login input{
+  height: 100%;
+  font-size: 20px;
+}
+#painel_login label {
+  padding-bottom: 2%;
+  padding-top: 20%;
+}
+#painel_login form h2{
+  font-size:2em;
+  font-weight: 100;
+  text-align: center;
+}
+
+html{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  display: block;
+  position: relative;
+  background-color: #FFF;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
