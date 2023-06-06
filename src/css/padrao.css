@@ -1,0 +1,10 @@
+* {
+  font-family: Nunito, sans-serif;
+  color: #000;
+}
+.sidenav { 
+  display: flex;
+} 
+#botao_menu{
+  transform: scale(0.2);
+}
