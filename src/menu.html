@@ -5,21 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
   <link rel="stylesheet" type="text/css" href="css\css_menu.css">
+  <link rel="stylesheet" type="text/css" href="css\padrao.css">
   <script type="text/javascript" src="js\menu.js"></script>
+  <!-- Fonte Nunito-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,200&display=swap" rel="stylesheet">
 </head>
 <body>
   <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><style type="text/css">color{#FFF}</style>X</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+    <!-- primeiro botão para FECHAR o menu -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+      <div class="menu-botao-claro">
+        <img id="botao_menu" src="imagens/botao_menu_branco.svg">
+        <p>Fechar</p>
+      </div>
+    </a>
+    <a href="#">ABCDEFGHIJK</a>
+    <a href="#">ABCDEFGHIJK</a>
+    <a href="#">ABCDEFGHIJK</a>
+    <a href="#">ABCDEFGHIJK</a>
   </div>
-
-  <!-- Use any element to open the sidenav -->
-  <span onclick="openNav()"><img id="botao_menu" src="imagens/botao_menu.svg">Menu</span>
-
-  <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+  <!-- primeiro botão para ABRIR o menu -->
+  <span class="menu-botao-escuro" onclick="openNav()"><img id="botao_menu" src="imagens/botao_menu.svg"><p>Menu</p></span>
+  <div id="usuario" class="usuario"></div>
+  <hr>
   <div id="main">
   </div>
 </body>

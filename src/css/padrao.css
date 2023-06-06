@@ -1,10 +1,29 @@
 * {
   font-family: Nunito, sans-serif;
+  font-size: x-large;
   color: #000;
 }
-.sidenav { 
-  display: flex;
-} 
-#botao_menu{
-  transform: scale(0.2);
+/*COMEÇO DO MENU*/
+/*Ajustamos os tamanhos das imagens*/
+#botao_menu, .usuario img{
+  width: 100px;
+  margin: -10px;
 }
+
+/*Texto do menu claro*/
+.menu-botao-claro p {color: #FFF;}
+/*Ajuste da posição da imagem e do texto MENU*/
+.menu-botao-escuro, .menu-botao-claro {
+  width: min-content;
+  display: flex;
+}
+/*MENU*/
+/* aplicamos o espaçamento apenas ao primeiro <a> depois de closebtn*/
+.closebtn + a {padding-top: 40px;}
+/*Ajuste da posição da imagem e do texto FECHAR*/
+.menu-botao-claro  {
+  margin-left: -39%;
+}
+/*FIM DO MENU*/
+hr{margin: 0;}
+
