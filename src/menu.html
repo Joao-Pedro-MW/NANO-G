@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
-  <link rel="stylesheet" type="text/css" href="css\css_menu.css">
-  <link rel="stylesheet" type="text/css" href="css\padrao.css">
+  <link rel="stylesheet" type="text/css" href="css\menu\menu_lateral.css">
+  <link rel="stylesheet" type="text/css" href="css\menu\header.css">
   <script type="text/javascript" src="js\menu.js"></script>
   <!-- Fonte Nunito-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,22 +13,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,200&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="mySidenav" class="sidenav">
-    <!-- primeiro botão para FECHAR o menu -->
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
-      <div class="menu-botao-claro">
-        <img id="botao_menu" src="imagens/botao_menu_branco.svg">
-        <p>Fechar</p>
-      </div>
-    </a>
-    <a href="#">ABCDEFGHIJK</a>
-    <a href="#">ABCDEFGHIJK</a>
-    <a href="#">ABCDEFGHIJK</a>
-    <a href="#">ABCDEFGHIJK</a>
+  <div class="titulo_sistema">
+    <div id="mySidenav" class="sidenav">
+        <!-- primeiro botão para FECHAR o menu -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+          <div class="menu-botao-claro">
+            <img id="botao_menu" src="imagens/botao_menu_branco.svg">
+            <p>Fechar</p>
+          </div>
+        </a>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+    </div>
+    <!-- primeiro botão para ABRIR o menu -->
+    <span class="menu-botao-escuro" onclick="openNav()"><img id="botao_menu" src="imagens/botao_menu.svg">
+    <p>Menu</p></span>
+    <h2>NANO-G</h2>
+    <div id="usuario" class="usuario">
+        <p>Usuário</p><img src="imagens/imagem_usuario.svg" alt="imagem do usuario">
+    </div>
   </div>
-  <!-- primeiro botão para ABRIR o menu -->
-  <span class="menu-botao-escuro" onclick="openNav()"><img id="botao_menu" src="imagens/botao_menu.svg"><p>Menu</p></span>
-  <div id="usuario" class="usuario"></div>
   <hr>
   <div id="main">
   </div>

@@ -1,14 +1,33 @@
+@import "../cores.css";
+
 * {
-  font-family: Nunito, sans-serif;
   font-size: x-large;
-  color: #000;
+  color: var(--preto);
+}
+
+.titulo_sistema{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+#usuario{
+height:3em;
+display: flex;
+align-content: flex-end;}
+
+#usuario img{
+  transform: scale(1.0);
 }
 /*COMEÇO DO MENU*/
 /*Ajustamos os tamanhos das imagens*/
-#botao_menu, .usuario img{
+#botao_menu {
+  transform: scale(0.4);
   width: 100px;
-  margin: -10px;
+  margin: -15px;
 }
+.titulo_sistema h1{font-size: large }
 
 /*Texto do menu claro*/
 .menu-botao-claro p {color: #FFF;}
@@ -26,4 +45,4 @@
 }
 /*FIM DO MENU*/
 hr{margin: 0;}
-
+/*COMECO DA IMAGEM DO USUÁRIO*/
