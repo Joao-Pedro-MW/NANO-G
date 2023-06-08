@@ -1,0 +1,48 @@
+@import "../cores.css";
+@import "menu_lateral.css";
+
+* {
+  font-size: x-large;
+  color: var(--dodger-blue-900);
+}
+
+.titulo_sistema{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+#usuario{
+height:3em;
+display: flex;
+align-content: flex-end;}
+
+#usuario img{
+  transform: scale(1.0);
+}
+/*COMEÇO DO MENU*/
+/*Ajustamos os tamanhos das imagens*/
+#botao_menu {
+  transform: scale(0.4);
+  width: 100px;
+  margin: -15px;
+}
+
+/*Texto do menu claro*/
+.menu-botao-claro p {color: var(--dodger-blue-50);}
+/*Ajuste da posição da imagem e do texto MENU*/
+.menu-botao-escuro, .menu-botao-claro {
+  width: min-content;
+  display: flex;
+}
+/*MENU*/
+/* aplicamos o espaçamento apenas ao primeiro <a> depois de closebtn*/
+.closebtn + a {padding-top: 40px;}
+/*Ajuste da posição da imagem e do texto FECHAR*/
+.menu-botao-claro  {
+  margin-left: -39%;
+}
+/*FIM DO MENU*/
+hr{margin: 0;background-color: var(--dodger-blue-950);}
+/*COMECO DA IMAGEM DO USUÁRIO*/
