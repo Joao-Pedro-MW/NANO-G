@@ -1,8 +1,9 @@
 @import "../cores.css";
+@import "menu_lateral.css";
 
 * {
   font-size: x-large;
-  color: var(--preto);
+  color: var(--dodger-blue-900);
 }
 
 .titulo_sistema{
@@ -27,10 +28,9 @@ align-content: flex-end;}
   width: 100px;
   margin: -15px;
 }
-.titulo_sistema h1{font-size: large }
 
 /*Texto do menu claro*/
-.menu-botao-claro p {color: #FFF;}
+.menu-botao-claro p {color: var(--dodger-blue-50);}
 /*Ajuste da posição da imagem e do texto MENU*/
 .menu-botao-escuro, .menu-botao-claro {
   width: min-content;
@@ -44,5 +44,5 @@ align-content: flex-end;}
   margin-left: -39%;
 }
 /*FIM DO MENU*/
-hr{margin: 0;}
+hr{margin: 0;background-color: var(--dodger-blue-950);}
 /*COMECO DA IMAGEM DO USUÁRIO*/
