@@ -9,6 +9,6 @@
 </head>
 <body>
 	<?php require 'menu_lateral.html' ?>
-    <div class="base"></div>
+   	<div class="base"></div>
 </body>
 </html>
