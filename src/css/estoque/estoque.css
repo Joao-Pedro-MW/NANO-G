@@ -2,13 +2,10 @@
     background-color: var(--dodger-blue-500);
     color: var(--preto);
 }
-#imagem_filtro{
-    transform: scale(0.05);
-}
 .menu_botoes{
     display: flex;
-    justify-content: space-between;
-    align-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .botao{
@@ -29,6 +26,7 @@
     color: var(--branco);
 }
 
+/*Estilização da tabela*/
 .tabela_dados{
     margin-top: 30px;
     width: 100%;
@@ -44,4 +42,6 @@ td, th {
     width: 10em;
     border: 1px solid var(--dodger-blue-500);
 }
-tr:nth-child(even){background-color:var(--dodger-blue-100)}
+tr:nth-child(even){
+    background-color:var(--dodger-blue-100)
+}
