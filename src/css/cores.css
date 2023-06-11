@@ -123,6 +123,7 @@
 .botao{
   background-color: var(--branco);
   border-radius: 3px;
+  text-align: center;
   border: 2px solid var(--dodger-blue-500);
-	color: var(--dodger-blue-800);
+color: var(--dodger-blue-800);
 }
