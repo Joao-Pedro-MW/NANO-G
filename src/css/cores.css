@@ -115,12 +115,10 @@
 * {font-family: 'Manrope', sans-serif;
   font-size: large;}
 
-
 /*Estilo padrao para botões*/
 .botao{
   background-color: var(--branco);
   border-radius: 3px;
   border: 2px solid var(--dodger-blue-500);
   color: var(--dodger-blue-800);
-
 }
