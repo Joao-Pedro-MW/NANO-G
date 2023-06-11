@@ -1,16 +1,10 @@
 #botao_filtro{
-    display: flex;
-    align-items: center;
     background-color: var(--dodger-blue-500);
     color: var(--preto);
-}
-#botao_filtro p {
-    width: max-content;
 }
 #imagem_filtro{
     transform: scale(0.05);
 }
-.texto_filtro{margin-right: 10px;}
 .menu_botoes{
     display: flex;
     justify-content: space-between;
@@ -23,7 +17,21 @@
     width: 17%;
     margin: 0.5em;
 }
+
+/*Estilização da tabela*/
 .tabela_dados{
+    margin-top: 30px;
+    width: 100%;
     text-align: center;
-    display: grid;
+    border: 1px solid black;
+    border-collapse: collapse;
 }
+th{
+    background-color:var(--dodger-blue-600);
+    color: var(--branco);
+}
+td, th {
+    width: 10em;
+    border: 1px solid var(--dodger-blue-500);
+}
+tr:nth-child(even){background-color:var(--dodger-blue-100)}
