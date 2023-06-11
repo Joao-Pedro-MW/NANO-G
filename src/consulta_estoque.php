@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Logs</title>
+	<title>Consulta estoque</title>
 	<link rel="stylesheet" type="text/css" href="css\menu\header.css">
-	<link rel="stylesheet" type="text/css" href="css\logs\logs.css">
+	<link rel="stylesheet" type="text/css" href="css\estoque\estoque.css">
 	<script type="text/javascript" src="js\menu.js"></script>
 </head>
 <body>
