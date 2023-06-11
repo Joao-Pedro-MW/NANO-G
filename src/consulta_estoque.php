@@ -9,7 +9,7 @@
 	<script type="text/javascript" src="js\menu.js"></script>
 </head>
 <body>
-	<?php require 'menu_lateral.html' ?>
+	<?php require 'menu_lateral.html'?>
    	<div class="base">
 	<h1>Registros de Entrada/Saída</h1>
 	<div class="menu_botoes">
