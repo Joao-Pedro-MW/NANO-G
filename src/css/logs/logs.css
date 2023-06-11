@@ -1,0 +1,29 @@
+#botao_filtro{
+    display: flex;
+    align-items: center;
+    background-color: var(--dodger-blue-500);
+    color: var(--preto);
+}
+#botao_filtro p {
+    width: max-content;
+}
+#imagem_filtro{
+    transform: scale(0.05);
+}
+.texto_filtro{margin-right: 10px;}
+.menu_botoes{
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+.botao{
+    text-align: center;
+    height: 50px;
+    width: 17%;
+    margin: 0.5em;
+}
+.tabela_dados{
+    text-align: center;
+    display: grid;
+}

@@ -1,11 +1,6 @@
 @import "../cores.css";
 @import "menu_lateral.css";
 
-* {
-  font-size: x-large;
-  color: var(--dodger-blue-900);
-}
-
 .titulo_sistema{
   display: flex;
   justify-content: space-between;
