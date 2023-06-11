@@ -5,11 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Logs</title>
 	<link rel="stylesheet" type="text/css" href="css\menu\header.css">
-	<link rel="stylesheet" type="text/css" href="css\estoque\estoque.css">
+	<link rel="stylesheet" type="text/css" href="css\logs\logs.css">
 	<script type="text/javascript" src="js\menu.js"></script>
 </head>
 <body>
-	<?php require 'menu_lateral.html'?>
+	<?php require 'menu_lateral.html' ?>
    	<div class="base">
 	<h1>Registros de Entrada/Saída</h1>
 	<div class="menu_botoes">

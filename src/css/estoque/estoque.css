@@ -5,13 +5,10 @@
 #imagem_filtro{
     transform: scale(0.05);
 }
-@media only screen and (max-width: 600px) {
-    /**/
-  }
 .menu_botoes{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
 }
 
 .botao{
