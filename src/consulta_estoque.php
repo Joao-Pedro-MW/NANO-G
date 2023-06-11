@@ -13,13 +13,17 @@
    	<div class="base">
 	<h1>Registros de Entrada/Saída</h1>
 	<div class="menu_botoes">
-		<button type="button" id="saida" class="botao">Saída</button>
-		<button type="button" id="entrada" class="botao">Entrada</button>
-		<p>De:</p>
-		<input type="date" name="data_inicio" id="data_inicio" class="botao" placeholder="Data Inicial">
-		<p>até:</p>
-		<input type="date" name="data_fim" id="data_fim" class="botao" placeholder="Data Final">
-		<button type="button" class="botao" id="botao_filtro">Filtrar Dados
+		<label for="nome_item">Nome</label>
+		<input type="text" id="nome_item"></input>
+		<label for="valor_item">Valor</label>
+		<input type="number" id="valor_item"></input>
+		<label for="quantidade_item">Quantidade</label>
+		<input type="number" id="quantidade_itens"></input>
+		<label for="data_vencimento">Vencimento de:</label>
+		<input type="date" name="data_inicio" id="data_vencimento" class="botao" placeholder="Data Inicial do Vencimento">
+		<label for="data_fim">até vencimento em:</label>
+		<input type="date" name="data_fim" id="data_fim" class="botao" placeholder="Data Final do Vencimento">
+		<button type="submit" class="botao" id="botao_filtro">Filtrar Dados
 			<!--<img id="imagem_filtro" src="imagens\imagem_filtro.svg" alt="imagem de filtro">-->
 		</button>
 	</div>
