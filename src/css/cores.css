@@ -121,3 +121,12 @@
   outline: none;
 }
 
+.botao{
+  border: 2px solid var(--dodger-blue-500);
+  border-radius: 3px;
+  background-color: var(--branco);
+  color: var(--dodger-blue-900);
+  text-align: center;
+  height: 50px;
+  width: 17%;
+}
