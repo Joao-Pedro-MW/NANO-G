@@ -2,6 +2,7 @@
     background-color: var(--dodger-blue-500);
     color: var(--preto);
 }
+*{outline: blue;}
 .menu_botoes{
     display: flex;
     flex-wrap: wrap;
