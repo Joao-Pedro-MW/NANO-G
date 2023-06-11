@@ -13,11 +13,11 @@
    	<div class="base">
 	<h1>Registros de Entrada/Saída</h1>
 	<div class="menu_botoes">
-		<label for="nome_item">Nome</label>
+		<label for="nome_item">Nome do produto:</label>
 		<input type="text" id="nome_item"></input>
-		<label for="valor_item">Valor</label>
+		<label for="valor_item">Valor:</label>
 		<input type="number" id="valor_item"></input>
-		<label for="quantidade_item">Quantidade</label>
+		<label for="quantidade_item">Quantidade:</label>
 		<input type="number" id="quantidade_itens"></input>
 		<label for="data_vencimento">Vencimento de:</label>
 		<input type="date" name="data_inicio" id="data_vencimento" class="botao" placeholder="Data Inicial do Vencimento">
