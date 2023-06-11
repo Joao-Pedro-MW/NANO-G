@@ -1,0 +1,47 @@
+#botao_filtro{
+    background-color: var(--dodger-blue-500);
+    color: var(--preto);
+}
+#imagem_filtro{
+    transform: scale(0.05);
+}
+.menu_botoes{
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+.botao{
+    text-align: center;
+    height: 50px;
+    width: 17%;
+    margin: 0.5em;
+}
+
+#saida:hover{
+    border-color: var(--aviso-escuro);
+    background-color: var(--aviso);
+    color: var(--branco);
+}
+#entrada:hover{
+    border-color: var(--confirmacao-escuro);
+    background-color: var(--confirmacao);
+    color: var(--branco);
+}
+
+.tabela_dados{
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th{
+    background-color:var(--dodger-blue-600);
+    color: var(--branco);
+}
+td, th {
+    width: 10em;
+    border: 1px solid var(--dodger-blue-500);
+}
+tr:nth-child(even){background-color:var(--dodger-blue-100)}
