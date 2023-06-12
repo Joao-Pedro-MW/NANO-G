@@ -4,23 +4,26 @@
     background-color: var(--dodger-blue-500);
     color: var(--preto);
 }
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px ){
     .menu_botoes{
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
     }
+    input{
+        border: 2px solid var(--dodger-blue-500);
+        outline: none;
+        color: var(--dodger-blue-900);
+        text-align: center;
+        border-radius: 3px;
+        width: 100%;
+    }
   }
 
-
-input{
-    border: 2px solid var(--dodger-blue-500);
-    outline: none;
-    color: var(--dodger-blue-900);
-    text-align: center;
-    border-radius: 3px;
-    width: 100%;
+@media only screen {
+    
 }
+
 /*Estilização da tabela*/
 .tabela_dados{
     margin-top: 30px;
