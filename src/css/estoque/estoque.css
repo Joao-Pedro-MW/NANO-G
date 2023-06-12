@@ -20,8 +20,12 @@
     }
   }
 
-@media only screen {
-    
+@media screen {
+    .menu_botoes{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
 }
 
 /*Estilização da tabela*/
