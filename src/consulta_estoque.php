@@ -17,7 +17,7 @@
 		<input type="text" id="nome_item"></input>
 		<label for="valor_item">Valor:</label>
 		<input type="number" id="valor_item"></input>
-		<label for="quantidade_item">Quantidade:</label>
+		<label for="quantidade_itens">Quantidade:</label>
 		<input type="number" id="quantidade_itens"></input>
 		<label for="data_vencimento">Vencimento em:</label>
 		<input type="date" name="data_inicio" id="data_vencimento" class="botao" placeholder="Data Inicial do Vencimento">
