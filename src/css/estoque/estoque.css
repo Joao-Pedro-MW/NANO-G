@@ -1,5 +1,5 @@
 
-@media screen and (max-width: 600px ){
+@media (max-width: 600px ){
     #botao_filtro{
         border: 2px solid var(--dodger-blue-500);
         background-color: var(--dodger-blue-500);
