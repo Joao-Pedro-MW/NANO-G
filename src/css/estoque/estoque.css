@@ -28,9 +28,9 @@
         color: var(--preto);
     }
     label{margin-top: 5px;}
-        
 
-@media handheld{
+
+@media (max-width: 700px) {
     #botao_filtro{
         border: 2px solid var(--dodger-blue-500);
         background-color: var(--dodger-blue-500);
