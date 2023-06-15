@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Consulta estoque</title>
+	<title>Estoque</title>
 	<link rel="stylesheet" type="text/css" href="css\menu\header.css">
 	<link rel="stylesheet" type="text/css" href="css\estoque\estoque.css">
 	<script type="text/javascript" src="js\menu.js"></script>
@@ -175,7 +175,6 @@
 				<td>4</td>
 				<td>5</td>
 			</tr>
-
 	</table>
 	</div>
 </body>
