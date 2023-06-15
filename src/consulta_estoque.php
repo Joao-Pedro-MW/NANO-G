@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Consulta estoque</title>
+	<title>Estoque</title>
 	<link rel="stylesheet" type="text/css" href="css\menu\header.css">
 	<link rel="stylesheet" type="text/css" href="css\estoque\estoque.css">
 	<script type="text/javascript" src="js\menu.js"></script>
@@ -11,7 +11,7 @@
 <body>
 	<?php require 'menu_lateral.html' ?>
    	<div class="base">
-	<h1>Registros de Entrada/Saída</h1>
+	<h1>Consulta de estoque</h1>
 	<div class="menu_botoes">
 		<label for="nome_item">Nome do produto:</label>
 		<input type="text" id="nome_item"></input>
