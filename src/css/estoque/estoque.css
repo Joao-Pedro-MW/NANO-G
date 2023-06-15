@@ -29,8 +29,8 @@ input{
 }
 label{margin-top: 5px;}
 
-
 @media (max-width: 700px) {
+    .base{margin: auto;}
     #botao_filtro{
         border: 2px solid var(--dodger-blue-500);
         background-color: var(--dodger-blue-500);
