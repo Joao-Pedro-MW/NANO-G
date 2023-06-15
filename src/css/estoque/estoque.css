@@ -1,32 +1,4 @@
-
-@media screen and (max-width: 600px ){
-    #botao_filtro{
-        border: 2px solid var(--dodger-blue-500);
-        background-color: var(--dodger-blue-500);
-        color: var(--preto);
-        margin-top: 30px;
-    }
-    .menu_botoes{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-    input{
-        margin-top: 15px;
-        border: 2px solid var(--dodger-blue-500);
-        outline: none;
-        color: var(--dodger-blue-900);
-        text-align: center;
-        border-radius: 3px;
-        width: 100%;
-    }
-    label{
-        margin-top: 15px;
-    }
-  }
-
-@media screen {
-    
+   
     .menu_botoes{
         display: flex;
         flex-wrap: wrap;
@@ -56,7 +28,34 @@
         color: var(--preto);
     }
     label{margin-top: 5px;}
-}
+
+
+@media (max-width: 700px) {
+    #botao_filtro{
+        border: 2px solid var(--dodger-blue-500);
+        background-color: var(--dodger-blue-500);
+        color: var(--preto);
+        margin-top: 30px;
+    }
+    .menu_botoes{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    input{
+        margin-top: 15px;
+        border: 2px solid var(--dodger-blue-500);
+        outline: none;
+        color: var(--dodger-blue-900);
+        text-align: center;
+        border-radius: 3px;
+        width: 100%;
+    }
+    label{
+        margin-top: 15px;
+    }
+  }
+
 
 /*Estilização da tabela*/
 .tabela_dados{
