@@ -11,6 +11,7 @@
 	<?php require 'menu_lateral.html' ?>
    	<div class="base"></div>
 
+    <label for="nome">Nome completo</label>
 
 
     <!--
