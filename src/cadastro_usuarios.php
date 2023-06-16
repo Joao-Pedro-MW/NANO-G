@@ -12,7 +12,19 @@
    	<div class="base"></div>
 
     <label for="nome">Nome completo</label>
+    <input type="text" name="nome" id="nome">
 
+    <label for="cpf">CPF</label>
+    <input type="text" name="cpf" id="cpf">
+
+    <label for="email">E-mail</label>
+    <input type="text" name="email" id="email">
+
+    <label for="dt_nasc">Data nascimento</label>
+    <input type="date" name="dt_nasc" id="dt_nasc">
+
+    <label for="tipo_user">Tipo de usuário</label>
+    <input type="text" name="tipo_user" id="tipo_user">
 
     <!--
         Campo para foto do usuário
@@ -24,5 +36,6 @@
 
         Botão
     --> 
+    
 </body>
 </html>
