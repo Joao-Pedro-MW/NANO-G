@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Menu</title>
 	<link rel="stylesheet" type="text/css" href="css\menu\header.css">
-	<link rel="stylesheet" type="text/css" href="css\remocao_itens.css">
+	<link rel="stylesheet" type="text/css" href="css\remocao_itens\remocao_itens.css">
 	<script type="text/javascript" src="js\menu.js"></script>
 </head>
 
