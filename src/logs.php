@@ -17,7 +17,7 @@
 		<button type="button" id="saida" class="botao">Saída</button>
 		<button type="button" id="entrada" class="botao">Entrada</button>
 		<p>De:</p>
-		<input type="date" name="data_inicio" id="data_inicio" class="botao" data-placeholder="Data Inicial">
+		<input type="date" name="data_inicio" id="data_inicio" class="botao" placeholder="Data Inicial">
 		<p>até:</p>
 		<input type="date" name="data_fim" id="data_fim" class="botao" placeholder="Data Final">
 		<button type="button" class="botao" id="botao_filtro">Filtrar Dados

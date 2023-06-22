@@ -1,0 +1,65 @@
+#combobox select{
+		width:20%;
+		margin: auto;
+		border: 1px solid black;
+		border-radius: 10px;
+		padding: 5px;
+		margin-left: 40%;
+	}
+
+	#combobox label{
+		width:20%;
+		margin: auto;
+		padding: 5px;
+		margin-left: 40%;
+	}
+
+	#tabela{
+	    margin-top: 30px;
+	    width: 100%;
+	    text-align: center;
+	    border-collapse: collapse;
+	    margin-left: 10%;
+	}
+
+	th{
+	    background-color:var(--dodger-blue-600);
+	    color: var(--branco);
+	}
+
+	td, th {
+	    width: 10em;
+	    height: 3em;
+	    border: 1px solid var(--dodger-blue-500);
+	}
+
+	tr:nth-child(even){background-color:var(--dodger-blue-100)}
+
+	#checkbox{
+		margin-top: 6px;
+		width: 20px;
+		height: 20px;
+		border: solid white;
+		border-width: 0 2px 2px 0;);
+		margin-right: 5px;
+	}
+
+	#botao{
+		background-color: #de1839;
+		color: white;
+		font-weight: bold;
+		font-size: 15px;
+		border-radius: 5px;
+		border: 1px solid #de1839;
+		width: 17vw;
+		height: 6vh;
+		margin-left: 41%;
+		margin-top: 2%;
+	}
+
+	#checkbox_inutil{
+		border: 0px solid white;
+		text-align: right; 
+		padding: 0px;
+		background-color: white;
+	}
