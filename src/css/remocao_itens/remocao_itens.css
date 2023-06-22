@@ -19,7 +19,7 @@ th{
 
 td, th {
     width: 14vw;
-    height: 3em;
+    height: 9vh;
     border: 1px solid var(--dodger-blue-500);
 }
 
