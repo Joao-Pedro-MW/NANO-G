@@ -6,6 +6,7 @@
 	<title>Logs</title>
 	<link rel="stylesheet" type="text/css" href="css\menu\header.css">
 	<link rel="stylesheet" type="text/css" href="css\logs\logs.css">
+	<link rel="stylesheet" type="text/css" href="css\tabelas.css">
 	<script type="text/javascript" src="js\menu.js"></script>
 </head>
 <body>

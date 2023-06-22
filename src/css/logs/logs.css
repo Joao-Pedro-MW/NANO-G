@@ -32,21 +32,3 @@
     background-color: var(--confirmacao);
     color: var(--branco);
 }
-
-/*Estilização da tabela*/
-.tabela_dados{
-    margin-top: 30px;
-    width: 100%;
-    text-align: center;
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-th{
-    background-color:var(--dodger-blue-600);
-    color: var(--branco);
-}
-td, th {
-    width: 10em;
-    border: 1px solid var(--dodger-blue-500);
-}
-tr:nth-child(even){background-color:var(--dodger-blue-100)}
