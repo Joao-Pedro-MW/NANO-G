@@ -18,7 +18,7 @@ align-content: flex-end;}
 }
 /*COMEÇO DO MENU*/
 /*Ajustamos os tamanhos das imagens*/
-#botao_menu {
+#botao_menu, #botao_menu_branco {
   transform: scale(0.4);
   width: 100px;
   margin: -15px;

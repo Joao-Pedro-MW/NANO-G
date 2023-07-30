@@ -4,13 +4,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Consulta estoque</title>
-	<link rel="stylesheet" type="text/css" href="css\menu\header.css">
-	<link rel="stylesheet" type="text/css" href="css\tabelas.css">
-	<link rel="stylesheet" type="text/css" href="css\estoque\estoque.css">
-	<script type="text/javascript" src="js\menu.js"></script>
+	<link rel="stylesheet" type="text/css" href="\..\css\menu\header.css">
+	<link rel="stylesheet" type="text/css" href="\..\css\tabelas.css">
+	<link rel="stylesheet" type="text/css" href="\..\css\estoque\estoque.css">
+	<script type="text/javascript" src="\..\js\menu.js"></script>
 </head>
 <body>
-	<?php require 'menu_lateral.html' ?>
+	<?php require __DIR__ . "\..\menu_lateral.html" ?>
    	<div class="base">
 		<h1>Consulta de estoque</h1>
 		<div class="menu_botoes">
