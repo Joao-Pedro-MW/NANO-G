@@ -1,0 +1,47 @@
+th{
+	width: 15vw;
+}
+
+input{
+	margin
+}
+
+table{
+	display: flex;
+	justify-content: center;
+	margin-top: 15vh;
+}
+
+.combobox select{
+	width:20%;
+	margin: auto;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 5px;
+	margin-left: 40%;
+}
+
+
+#checkbox{
+	width:20%;
+	margin: auto;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 5px;
+	margin-left: 40%;
+}
+
+#botao{
+	background-color: #1b88f5;
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+	border-radius: 5px;
+	border: 1px solid #1b88f5;
+	width: 17vw;
+	height: 6vh;
+}
+
+input, label {
+    display:block;
+}

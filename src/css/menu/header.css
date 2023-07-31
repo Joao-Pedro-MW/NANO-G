@@ -36,7 +36,7 @@ align-content: flex-end;}
 .closebtn + a {padding-top: 40px;}
 /*Ajuste da posição da imagem e do texto FECHAR*/
 .menu-botao-claro  {
-  margin-left: -39%;
+  margin-left: -50%;
 }
 /*FIM DO MENU*/
 hr{margin: 0;background-color: var(--dodger-blue-950);}
