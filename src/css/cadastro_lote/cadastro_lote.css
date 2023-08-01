@@ -1,5 +1,8 @@
 input, select{
 	margin-bottom: 10vh;
+	border-radius: 5px;
+	border: #d2d2d2 2px solid;
+
 }
 
 input, label {
