@@ -11,59 +11,48 @@
 
 <body>
 	<?php require 'menu_lateral.html' ?>
-
-	<table>
-		<tr>
-			<td>
+	<div class="linha">
+		<div class="coluna">
+			<div>
 				<label for="itens">Nome do Item</label><br>
-				<select name="itens" id="itens" autofocus required class="combobox">
+				<select name="itens" id="itens" autofocus required style="width:16vw"> 
 					<option>1</option>
 					<option>2</option>
 					<option>3</option>
 					<option>4</option>
 					<option>5</option>
 				</select>
-			</td>
-			<th></th>
-			<td>
-				<label for="validade">Validade do Produto</label>
-				<input type="date" name="validade" id="validade" class="input"><br>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<label for="unidades">Unidades</label><label for="un_medida">Unidade de Medida</label>
-				<input type="" name="unidade" id="unidades" class="junto"><input type="" name="un_medida" id="un_medida" readonly class="junto"></td>
+			</div>
+			<div class="junto">
+				<div style="float:left;">
+					<label for="unidade">Unidade</label>
+					<input type="" name="unidade" id="unidades">
+				</div>
 				
-				
-			<th></th>
-			<td>
-				<label for="lote">Lote</label>
-				<input type="text" name="lote" id="lote" class="input"><br>
-			</td>
-		</tr>
-		<tr>
-			<td>
+				<div style="float:left;">
+					<label for="un_medida">Unidade de Medida</label>
+					<input type="" name="un_medida" id="un_medida">
+				</div>
+			</div>
+			<div>
 				<label for="valor">Valor</label>
-				<input type="" name="valor" id="valor" class="input">
-			</td>
-			<th></th>
-			<td>
-				<button id="botao">Cadastrar Lote</button>	
-			</td>
-		</tr>
-
-	</table>
-
-
-	
-
-	
-
-	
-
-	
-
-	
+				<input type="" name="valor" id="valor" style="width:16vw">
+			</div>
+		</div>
+			
+		<div class="coluna">
+			<div>
+				<label for="validade">Validade do Produto</label>
+			<input type="date" name="validade" id="validade" style="width:16vw"><br>
+			</div>
+			<div>
+				<label for="lote" id="label">Lote</label>
+				<input type="text" name="lote" id="lote" style="width:16vw"><br>
+			</div>
+			<div>
+				<button id="botao" style="width:16vw">Cadastrar Lote</button>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
