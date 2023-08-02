@@ -25,7 +25,9 @@ align-content: flex-end;}
 }
 
 /*Texto do menu claro*/
-.menu-botao-claro p {color: var(--dodger-blue-50);}
+.menu-botao-claro p {
+  color: var(--dodger-blue-50);
+}
 /*Ajuste da posição da imagem e do texto MENU*/
 .menu-botao-escuro, .menu-botao-claro {
   width: min-content;
@@ -36,11 +38,22 @@ align-content: flex-end;}
 .closebtn + a {padding-top: 40px;}
 /*Ajuste da posição da imagem e do texto FECHAR*/
 .menu-botao-claro  {
-  margin-left: -50%;
+  padding-top: 10px;
+  margin-left: -150%;
 }
 /*FIM DO MENU*/
 hr{margin: 0;background-color: var(--dodger-blue-950);}
 /*COMECO DA IMAGEM DO USUÁRIO*/
 
 /*Funcionamento dos links do menu*/
-.menu_classe{}
+.menu_container{
+  text-align: left;
+  margin-top: 45px;
+  margin-left: 5%;
+}
+.menu_classe a{
+  display:none
+}
+.menu_classe:hover a{
+  display:block;
+}

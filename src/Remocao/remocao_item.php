@@ -11,7 +11,7 @@
 
 <body>
 	<?php require '..\menu_lateral.php' ?>
-	<div>
+	<div class="container">
 		<div id="combobox">
 			<select name="itens" id="itens" autofocus required class="combobox">
 				<option>1</option>

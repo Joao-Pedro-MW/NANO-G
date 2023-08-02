@@ -12,25 +12,24 @@
         
         <div class="menu_container">
             <div class="menu_classe">
-                <h1>Logs</h1>
+                <h1 class="classe_titulo">Logs</h1>
                 <a href="\logs\logs.php">Consulta de Logs</a>
                 
             </div>
             <div class="menu_classe">
-                <h1>Produtos</h1>
+                <h1 class="classe_titulo">Produtos</h1>
                 <a href="\produtos\cadastro_lote.php">Cadastro de lote</a>
                 <a href="\produtos\menu_produtos.php">Menu produtos</a>
                 
             </div>
             <div class="menu_classe">
-                <h1>Saída</h1>
+                <h1 class="classe_titulo">Saída</h1>
                 <a href="\remocao\remocao_item.php">Saída de estoque</a>
             </div>
             <div class="menu_classe">
-                <h1>Usuarios</h1>
-                <a href="\usuarios\cadastro_usuario.php">Cadastro de usuários</a>
-                <a href="\usuarios\atualiza_usuario.php">Configurar usuários</a>
-                <a href="\usuarios\menu_usuario.php">Menu usuarios</a>
+                <h1 class="classe_titulo">Usuarios</h1>
+                <a href="\usuarios\cria_usuario.php">Cadastro de usuários</a>
+                <a href="\usuarios\menu_usuario.php">Gestão de usuarios</a>
             </div>
 
         </div>

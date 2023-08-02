@@ -71,7 +71,7 @@ tr:nth-child(even){background-color:var(--dodger-blue-100)}
     padding: 1px;
 }
 
-div{
+.container{
 	display: flex;
     justify-content: center;
     align-content: center;
