@@ -32,5 +32,6 @@
 		<button style="float:right;" class="botao_editar">Editar</button>
 		<button style="float:right;" class="botao_lixeira"><img src="/imagens/imagem_lixeira.svg" width="50vw" height="50vh" style="transform: scale(0.7);margin-top: -1vh;margin-left: -0.9vw"></button>
 	</div>
+	<!-- -->
 </body>
 </html>
