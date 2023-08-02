@@ -1,4 +1,5 @@
 <?php $imagens_url = '..' . DIRECTORY_SEPARATOR . 'imagens' . DIRECTORY_SEPARATOR ?>
+
 <div class="titulo_sistema">
     <div id="mySidenav" class="sidenav">
         <!-- primeiro botão para FECHAR o menu -->
@@ -8,10 +9,11 @@
             <p>Fechar</p>
           </div>
         </a>
-        <a href="#">Cadastro</a>
+        <!-- <a href="#">Cadastro</a>
         <a href="#">Consulta Estoque</a>
         <a href="#">Link 3</a>
-        <a href="#">Link 4</a>
+        <a href="#">Link 4</a> -->
+        
     </div>
     <!-- primeiro botão para ABRIR o menu -->
     <span class="menu-botao-escuro" onclick="openNav()">
