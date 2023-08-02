@@ -130,9 +130,6 @@ input:checked + .slider:before {
   font-size: 15px;
   border-radius: 5px;
   border: 1px solid #1b88f5;
-  display: flex;
-  align-content: center;
-  justify-content: center;
 }
 
 .novo_usuario:active {

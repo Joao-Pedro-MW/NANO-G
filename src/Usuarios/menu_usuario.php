@@ -10,16 +10,11 @@
 </head>
 
 <body>
-<<<<<<< Updated upstream:src/Usuarios/menu_usuario.php
 	<?php require '..\menu_lateral.php' ?>
-	
-=======
-	<?php require 'menu_lateral.html' ?>
 	<div style="display:flex; padding: 0px;height: 7vh;">
 		<h1 style="margin-left:10vw; height: 7vh;margin-right: 60vw;">Usuários</h1>
 		<button class="novo_usuario">Novo Usuário</button>
 	</div>
->>>>>>> Stashed changes:src/menu_usuarios.php
 	<div class="tab_usuario">
 		<img src="/imagens/imagem_usuario.svg" alt="Foto de perfil" class="perfil" >
 
