@@ -9,10 +9,31 @@
             <p>Fechar</p>
           </div>
         </a>
-        <!-- <a href="#">Cadastro</a>
-        <a href="#">Consulta Estoque</a>
-        <a href="#">Link 3</a>
-        <a href="#">Link 4</a> -->
+        
+        <div class="menu_container">
+            <div class="menu_classe">
+                <h1>Logs</h1>
+                <a href="\logs\logs.php">Consulta de Logs</a>
+                
+            </div>
+            <div class="menu_classe">
+                <h1>Produtos</h1>
+                <a href="\produtos\cadastro_lote.php">Cadastro de lote</a>
+                <a href="\produtos\menu_produtos.php">Menu produtos</a>
+                
+            </div>
+            <div class="menu_classe">
+                <h1>Saída</h1>
+                <a href="\remocao\remocao_item.php">Saída de estoque</a>
+            </div>
+            <div class="menu_classe">
+                <h1>Usuarios</h1>
+                <a href="\usuarios\cadastro_usuario.php">Cadastro de usuários</a>
+                <a href="\usuarios\atualiza_usuario.php">Configurar usuários</a>
+                <a href="\usuarios\menu_usuario.php">Menu usuarios</a>
+            </div>
+
+        </div>
         
     </div>
     <!-- primeiro botão para ABRIR o menu -->

@@ -41,3 +41,6 @@ align-content: flex-end;}
 /*FIM DO MENU*/
 hr{margin: 0;background-color: var(--dodger-blue-950);}
 /*COMECO DA IMAGEM DO USUÁRIO*/
+
+/*Funcionamento dos links do menu*/
+.menu_classe{}

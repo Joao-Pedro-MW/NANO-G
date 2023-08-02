@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Menu</title>
+	<title>Menu produtos</title>
 	<link rel="stylesheet" type="text/css" href="..\css\menu\header.css">
     <link rel="stylesheet" type="text/css" href="..\css\menu_produtos\css_produtos.css">
 	<script type="text/javascript" src="..\js\menu.js"></script>
@@ -53,7 +53,7 @@
 				<td class="td_tipo">Materia-Prima</td>
 				<td class="td_opcoes">
                     <img src="..\imagens\imagem_lapis_edicao.svg" alt="Lapis" id="icones">
-                    <img src="..\ximagens\imagem_lixeira.svg" alt="Lixeira" id="icones">
+                    <img src="..\imagens\imagem_lixeira.svg" alt="Lixeira" id="icones">
                 </td>
 			</tr>
         </table>
