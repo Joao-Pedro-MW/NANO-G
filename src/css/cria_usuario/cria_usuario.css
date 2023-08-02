@@ -1,26 +1,14 @@
-input[type="checkbox"] {
-	-webkit-appearance: none;
-	appearance: none;
-	background-color: #fff;
-	margin: 0;
-}
 
-input[type="checkbox"] {
-	appearance: none;
-	background-color: #fff;
+input{margin-right: 30px;}
+input[type="checkbox"]{
+	padding-left: 10px;
 	margin: 0;
-	font: inherit;
-	color: currentColor;
+	
 	width: 1.15em;
 	height: 1.15em;
+	margin-right: 10px;
 	border: 0.15em solid currentColor;
 	border-radius: 0.15em;
-	transform: translateY(-0.075em);
-}
-
-.form-control--disabled {
-	color: var(--form-control-disabled);
-	cursor: not-allowed;
 }
 
 
@@ -58,10 +46,8 @@ input[type="checkbox"] {
   color: #1b88f5; 
   border: 2px solid #1b88f5;
   border-radius: 5px;
-  padding: 0px;
-  margin-right: 2vw;
   float:right;
-  margin-right: 15vw;
+  margin-right: 30vw;
 }
 
 .botao_salvar:hover {
