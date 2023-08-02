@@ -10,14 +10,22 @@
 </head>
 
 <body>
+<<<<<<< Updated upstream:src/Usuarios/menu_usuario.php
 	<?php require '..\menu_lateral.php' ?>
 	
+=======
+	<?php require 'menu_lateral.html' ?>
+	<div style="display:flex; padding: 0px;height: 7vh;">
+		<h1 style="margin-left:10vw; height: 7vh;margin-right: 60vw;">Usuários</h1>
+		<button class="novo_usuario">Novo Usuário</button>
+	</div>
+>>>>>>> Stashed changes:src/menu_usuarios.php
 	<div class="tab_usuario">
-		<img src="/imagens/teste.png" alt="Foto de perfil" class="perfil" >
+		<img src="/imagens/imagem_usuario.svg" alt="Foto de perfil" class="perfil" >
 
 		<div class="nome">	
-			<p>Nome: João Pedro Muller Wilges</p>
-			<p>Tipo: Administrador</p>
+			<p class="nome">Nome: João Pedro Muller Wilges</p>
+			<p class="nome">Tipo: Administrador</p>
 		</div>
 
 		<label for="switch">Ativado</label>
@@ -27,7 +35,7 @@
 		</label>
 
 		<button style="float:right;" class="botao_editar">Editar</button>
-		<button style="float:right;" class="botao_lixeira"><img src="/imagens/imagem_lixeira.svg" width="50vw" height="50vh"></button>
+		<button style="float:right;" class="botao_lixeira"><img src="/imagens/imagem_lixeira.svg" width="50vw" height="50vh" style="transform: scale(0.7);margin-top: -1vh;margin-left: -0.9vw"></button>
 	</div>
 </body>
 </html>
