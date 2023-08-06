@@ -52,7 +52,7 @@ hr{margin: 0;background-color: var(--dodger-blue-950);}
   margin-left: 5%;
 }
 .menu_classe a{
-  display:none
+  display:none;
 }
 .menu_classe:hover a{
   display:block;
