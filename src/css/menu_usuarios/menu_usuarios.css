@@ -84,10 +84,9 @@ input:checked + .slider:before {
 }
 
 .perfil{
-  width: 3.6vw;
+  width: 8vh;
   height: 8vh;
   border-radius: 50px;
-  margin: 0.25vw;
   padding: 0px;
   border: #1b88f5 solid;
 }

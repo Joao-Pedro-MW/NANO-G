@@ -45,8 +45,6 @@ input[type="checkbox"] {
 }
 
 .perfil{
-	border: 8px #1b88f5 solid;
-	border-radius: 250px;
 	transform: scale(0.35);
 	width: 34vw;
 	margin-top: -10vh;
@@ -56,6 +54,7 @@ input[type="checkbox"] {
   width: 10vw;
   height: 6vh;
   color: #1b88f5; 
+  background-color: #ffffff;
   border: 2px solid #1b88f5;
   border-radius: 5px;
   padding: 0px;
