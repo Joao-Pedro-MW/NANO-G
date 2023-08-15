@@ -5,6 +5,8 @@ declare(strict_types=1);
 
 if($_SERVER['REQUEST_URI']==='/'){
   require_once __DIR__ . '\..\src\login.php';
+} else if($_SERVER['REQUEST_URI']==='/logs'){
+    require_once __DIR__ . '\..\src\logs\logs.php';
 } else {
   http_response_code(404);
 }
