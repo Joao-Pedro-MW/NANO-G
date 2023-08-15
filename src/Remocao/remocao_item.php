@@ -8,9 +8,9 @@
 	<link rel="stylesheet" type="text/css" href="..\css\remocao_itens\remocao_itens.css">
 	<script type="text/javascript" src="..\js\menu.js"></script>
 </head>
-
 <body>
-	<?php require '..\menu_lateral.php' ?>
+
+	<?php require __DIR__ . '..\..\menu_lateral.php' ?>
 	<div class="container">
 		
 		<button id="" class="pesquisa">Pesquisar</button>

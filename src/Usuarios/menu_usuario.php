@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<?php require '..\menu_lateral.php' ?>
+	<?php require __DIR__ . '..\..\menu_lateral.php' ?>
 	<div style="display:flex; padding: 0px;height: 7vh;">
 		<h1 style="margin-left:10vw; height: 7vh;margin-right: 60vw;">Usuários</h1>
 		<button class="novo_usuario">Novo Usuário</button>

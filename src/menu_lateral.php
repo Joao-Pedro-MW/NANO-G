@@ -13,23 +13,24 @@
         <div class="menu_container">
             <div class="menu_classe">
                 <h1 class="classe_titulo">Logs</h1>
-                <a href="\logs\logs.php">Consulta de Logs</a>
+                <a href="\logs">Consulta de Logs</a>
                 
             </div>
             <div class="menu_classe">
                 <h1 class="classe_titulo">Produtos</h1>
-                <a href="\produtos\cadastro_lote.php">Cadastro de lote</a>
-                <a href="\produtos\menu_produtos.php">Menu produtos</a>
+                <a href="\produtos\cadastro-lote">Cadastro de lote</a>
+                <a href="\produtos">Menu produtos</a>
                 
             </div>
             <div class="menu_classe">
                 <h1 class="classe_titulo">Saída</h1>
-                <a href="\remocao\remocao_item.php">Saída de estoque</a>
+                <a href="\saida">Saída de estoque</a>
             </div>
             <div class="menu_classe">
                 <h1 class="classe_titulo">Usuarios</h1>
-                <a href="\usuarios\cria_usuario.php">Cadastro de usuários</a>
-                <a href="\usuarios\menu_usuario.php">Gestão de usuarios</a>
+                <a href="\usuarios">Menu usuarios</a>
+                <a href="\usuarios\criar-usuario">Cadastro de usuários</a>
+                <a href="\usuarios\edita-usuario">Editar usuários</a>
             </div>
 
         </div>

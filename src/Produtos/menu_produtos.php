@@ -9,7 +9,7 @@
 	<script type="text/javascript" src="..\js\menu.js"></script>
 </head>
 <body>
-	<?php require '..\menu_lateral.php' ?>
+	<?php require __DIR__ . '..\..\menu_lateral.php' ?>
    	<div class="base">
         <h1>Consulta de produtos</h1>
         <button type="button" class="botao">Cadastrar novo produto</button>
