@@ -30,7 +30,6 @@
                 <h1 class="classe_titulo">Usuarios</h1>
                 <a href="\usuarios">Menu usuarios</a>
                 <a href="\usuarios\criar-usuario">Cadastro de usuários</a>
-                <a href="\usuarios\edita-usuario">Editar usuários</a>
             </div>
 
         </div>
