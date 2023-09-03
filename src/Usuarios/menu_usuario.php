@@ -3,14 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Menu</title>
+	<title>Menu usuários</title>
 	<link rel="stylesheet" type="text/css" href="..\css\menu\header.css">
 	<link rel="stylesheet" type="text/css" href="..\css\menu_usuarios\menu_usuarios.css">
 	<script type="text/javascript" src="..\js\menu.js"></script>
 </head>
 
 <body>
-	<?php require '..\menu_lateral.php' ?>
+	<?php require __DIR__ . '..\..\menu_lateral.php' ?>
 	<div style="display:flex; padding: 0px;height: 7vh;">
 		<h1 style="margin-left:10vw; height: 7vh;margin-right: 60vw;">Usuários</h1>
 		<button class="novo_usuario">Novo Usuário</button>
