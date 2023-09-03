@@ -8,7 +8,7 @@
 	<script type="text/javascript" src="js\menu.js"></script>
 </head>
 <body>
-<?php require __DIR__ . '..\..\menu_lateral.php' ?>
+	<?php require 'src/menu_lateral.html' ?>
    	<div class="base"></div>
 </body>
 </html>

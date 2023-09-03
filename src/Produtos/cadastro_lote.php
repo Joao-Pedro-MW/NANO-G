@@ -3,14 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Cadastro lote</title>
+	<title>Menu</title>
 	<link rel="stylesheet" type="text/css" href="..\css\menu\header.css">
 	<link rel="stylesheet" type="text/css" href="..\css\cadastro_lote\cadastro_lote.css">
 	<script type="text/javascript" src="..\js\menu.js"></script>
 </head>
 
 <body>
-	<?php require __DIR__ . '..\..\menu_lateral.php' ?>
+	<?php require '..\menu_lateral.php' ?>
 	<div class="linha">
 		<div class="coluna">
 			<div>

@@ -10,7 +10,7 @@
 	<script type="text/javascript" src="..\js\menu.js"></script>
 </head>
 <body>
-	<?php require __DIR__ . '..\..\menu_lateral.php' ?>
+<?php require "..\menu_lateral.php" ?>
    	<div class="base">
 		<h1>Consulta de estoque</h1>
 		<div class="menu_botoes">

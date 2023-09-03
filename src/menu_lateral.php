@@ -9,30 +9,10 @@
             <p>Fechar</p>
           </div>
         </a>
-        
-        <div class="menu_container">
-            <div class="menu_classe">
-                <h1 class="classe_titulo">Logs</h1>
-                <a href="\logs">Consulta de Logs</a>
-                
-            </div>
-            <div class="menu_classe">
-                <h1 class="classe_titulo">Produtos</h1>
-                <a href="\produtos\cadastro-lote">Cadastro de lote</a>
-                <a href="\produtos">Menu produtos</a>
-                
-            </div>
-            <div class="menu_classe">
-                <h1 class="classe_titulo">Saída</h1>
-                <a href="\saida">Saída de estoque</a>
-            </div>
-            <div class="menu_classe">
-                <h1 class="classe_titulo">Usuarios</h1>
-                <a href="\usuarios">Menu usuarios</a>
-                <a href="\usuarios\criar-usuario">Cadastro de usuários</a>
-            </div>
-
-        </div>
+        <!-- <a href="#">Cadastro</a>
+        <a href="#">Consulta Estoque</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a> -->
         
     </div>
     <!-- primeiro botão para ABRIR o menu -->
