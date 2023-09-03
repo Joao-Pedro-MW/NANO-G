@@ -1,0 +1,48 @@
+#tabela{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th{
+    background-color:var(--dodger-blue-600);
+    color: var(--branco);
+}
+
+.item {
+    width: 14vw;
+    height: 5vh;
+    border: 1px solid var(--dodger-blue-500);
+}
+
+tr:nth-child(even){background-color:var(--dodger-blue-100)}
+
+#checkbox{
+	width: 20px;
+	height: 20px;
+}
+.remocao{
+	background-color: var(--aviso);
+	color: white;
+	font-size: 20px;
+	border-radius: 5px;
+	border: 1px solid var(--aviso);
+	width: ;
+	padding-left: 20px;
+	padding-right: 20px;	
+	height:50px;
+}
+
+.pesquisa{
+	align:left;
+	background-color: var(--dodger-blue-600);
+	color: white;
+	font-size: 20px;
+	border-radius: 5px;
+	border: none;
+	height: 50px;
+	width: 100%;
+}
+.remocao, .pesquisa{
+	
+}
