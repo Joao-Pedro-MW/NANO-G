@@ -32,6 +32,9 @@ if($_SERVER['REQUEST_URI']==='/produtos/cadastro-lote'){
 if($_SERVER['REQUEST_URI']==='/consulta_estoque'){
   require_once __DIR__ . '\..\src\estoque\consulta_estoque.php';
 }
+if($_SERVER['REQUEST_URI']==='/teste_banco'){
+  require_once __DIR__ . '\..\src\bancodados\teste.php';
+}
 else {
   http_response_code(404);
 }
