@@ -1,6 +1,13 @@
 <?php
 
 declare(strict_types=1);
+$conn = oci_connect('SYSTEM', '12345', 'localhost/XEPDB1');
+if (!$conn) {
+    $e = oci_error();
+    trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+}
+$pdo = new ();
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 if($_SERVER['REQUEST_URI']==='/'){
   require_once __DIR__ . '\..\src\login.php';

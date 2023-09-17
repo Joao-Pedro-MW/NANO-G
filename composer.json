@@ -25,11 +25,13 @@
   },
   "autoload": {
     "psr-4": {
-      "source\\":"src/"
+      "src\\":"src/"
     },
     "files": [
       "src/config.php"
     ]
   },
-  "require": {}
+  "require": {
+    "ext-oci8": "*"
+  }
 }
