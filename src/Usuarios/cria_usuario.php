@@ -13,42 +13,47 @@
 	<?php require __DIR__ . '..\..\menu_lateral.php' ?>
 	<h1 style="margin-left:10vw; height: 7vh;margin-right: 60vw;">Criar Usuário</h1>
 
-	<div style="display:flex;margin-top: -10vh;">
-		<img src="/imagens/imagem_usuario.svg" class="perfil">
-		<div style="display:grid;" class="div_primaria">
+	<div class="div_horizontal" id="main_div">
+		<img src="" class="perfil">
 
-			<div style="display:flex;" class="div_secundaria">
+		<div class="div_vertical" id="div_dados">
+			<div class="div_horizontal">
+				<div class="div_vertical">
 
-				<label for="nome">Nome*</label>
-				<input type="text" name="nome" class="input" required>
+					<label for="nome">Nome</label>
+					<input type="text" id="nome">
 
-				<label for="emai'l">Email*</label>
-				<input type="email" name="email" required class="input">
+					<label for="cpf">CPF</label>
+					<input type="number" id="cpf">
 
+				</div>
+				<div class="div_vertical">
+
+					<label for="email" id="label_direita">Email</label>
+					<input type="email" id="email">
+
+					<label for="data_nascimento" id="label_direita">Data de Nascimento</label>
+					<input type="date" id="data_nascimento">
+
+				</div>
 			</div>
+			<div class="div_horizontal" id="low_div">
+				<!--<div" id="lower_div">
+					
+					<p>Tipo de Permissão</p>
 
-			<div style="display:flex;" class="div_secundaria">
+					<label for="admin">Administrador</label>
+					<input type="checkbox" id="admin">
 
-				<label for="cpf">CPF*</label>
-				<input type="number" name="cpf" required class="input">
-
-				<label for="data_nascimento">Data de Nascimento*</label>
-				<input type="date" name="data_nascimento" required class="input">
-
+					<label for="user">Usuário</label>
+					<input type="checkbox" id="user">
+					
+				</div> -->
+				<button class="botao_salvar">Salvar</button>
 			</div>
-
-			<div style="display:grid;">
-
-				<p>Tipo de Permissão*</p>
-				<div style="display:flex;"><input type="checkbox" name="">Administrador</div>
-				<div style="display:flex;"><input type="checkbox" name="">Funcionario</div>
-				
-			</div>
-		
+			
 		</div>
-
 	</div>
-	<button class="botao_salvar">Salvar</button>
 
 </body>
 </html>

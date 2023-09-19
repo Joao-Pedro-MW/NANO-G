@@ -1,42 +1,79 @@
-
-input{margin-right: 30px;}
-input[type="checkbox"]{
-	padding-left: 10px;
-	margin: 0;
-	
-	width: 1.15em;
-	height: 1.15em;
-	margin-right: 10px;
-	border: 0.15em solid currentColor;
-	border-radius: 0.15em;
+.div_vertical{
+	display: flex;
+	flex-direction:column ;
 }
 
-.div_primaria{
-	float:right;
-	width: 30vw;
-	margin-right: 0vw;
-	align-content: center;
-	justify-content: center;	
+.div_horizontal{
+	display: flex;
+	flex-direction:row ;
 }
 
-.div_secundaria{
-	width: 30vw;
-	height: 10vh;
+#main_div{
+	justify-content: center;
+	align-items: center;
+	height: 60vh;
 }
 
-.input{
-	border-radius: 5px;
-	border: #d0d0d0 2px solid;
+#div_dados{
+	background-color:rgba(208, 208, 208, 0.8);;
+	width: 40vw;
+	height: 20vw;
+	align-items: center;
+	padding: 3vw;
+	border-radius: 3vw;
+}
+
+#low_div{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	height: 6.5vw;
+	width: 40vw;
+}
+
+#lower_div{
+	outline: solid black;
+	height: 6.5vw;
 	width: 20vw;
-	height: 5vh;
+}
+
+#nome{margin-right: 2vw;}
+#cpf{margin-right: 2vw;}
+
+#email{margin-left: 2vw;}
+#data_nascimento{margin-left: 2vw;}
+#label_direita{margin-left: 2vw;}
+
+
+label{margin-bottom: 0.4vw;}
+
+
+input[type="date"]{
+	margin: 0;
+	width: 15vw;
+	height: 2.6vw;
+	margin-bottom: 3vw;
+	border: #d0d0d0 2px solid;
+	border-radius: 8px;
+}
+
+input{
+	margin: 0;
+	width: 15vw;
+	height: 2.5vw;
+	margin-bottom: 3vw;
+	border: #d0d0d0 2px solid;
+	border-radius: 8px;
 }
 
 .perfil{
 	border: 8px #1b88f5 solid;
-	border-radius: 250px;
+	border-radius: 34vw;
 	transform: scale(0.35);
 	width: 34vw;
-	margin-top: -10vh;
+	height: 34vw;
+	margin-right: -5vw;
+	margin-left: -10vw;
 }
 
 .botao_salvar{
@@ -45,8 +82,6 @@ input[type="checkbox"]{
   color: #1b88f5; 
   border: 2px solid #1b88f5;
   border-radius: 5px;
-  float:right;
-  margin-right: 30vw;
 }
 
 .botao_salvar:hover {
