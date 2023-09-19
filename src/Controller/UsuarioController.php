@@ -1,5 +1,4 @@
-<?php
-
+/*
 namespace src\Controller;
 use PDO;
 use src\Repository\UsuarioRepo;
@@ -16,4 +15,4 @@ class UsuarioController
     {
     }
 
-}
+} */

@@ -13,7 +13,7 @@
 <!-- fundo de particulas -->
 <div id="particles-js">
     <div id="painel_login">
-        <form action="LoginController.php" method="post">
+        <form method="post">
             <h2>Nano-G</h2>
             <label>Usuário:</label>
             <input type="text">
