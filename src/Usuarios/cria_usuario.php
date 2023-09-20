@@ -14,7 +14,7 @@
 	<h1 style="margin-left:10vw; height: 7vh;margin-right: 60vw;">Criar Usuário</h1>
 
 	<div class="div_horizontal" id="main_div">
-		<img src="" class="perfil">
+		<img src="../imagens/imagem_usuario.svg" class="perfil">
 
 		<div class="div_vertical" id="div_dados">
 			<div class="div_horizontal">
@@ -38,17 +38,20 @@
 				</div>
 			</div>
 			<div class="div_horizontal" id="low_div">
-				<!--<div" id="lower_div">
+				<div id="lower_div">
 					
-					<p>Tipo de Permissão</p>
-
-					<label for="admin">Administrador</label>
-					<input type="checkbox" id="admin">
-
-					<label for="user">Usuário</label>
-					<input type="checkbox" id="user">
+					<p id="p">Tipo de Permissão</p>
+					<div>
+						<label for="admin" style="margin-left: 0.5vw">Administrador</label>
+						<input type="radio" name="permissao" id="admin">
+					</div>
 					
-				</div> -->
+					<div>
+						<label for="user" style="margin-left: 0.5vw">Usuário</label>
+						<input type="radio" name="permissao" id="user">	
+					</div>
+					
+				</div>
 				<button class="botao_salvar">Salvar</button>
 			</div>
 			

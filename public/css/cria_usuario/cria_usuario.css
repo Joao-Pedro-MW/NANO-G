@@ -15,7 +15,7 @@
 }
 
 #div_dados{
-	background-color:rgba(208, 208, 208, 0.8);;
+	background-color:rgba(208, 208, 208, 0.8);
 	width: 40vw;
 	height: 20vw;
 	align-items: center;
@@ -29,10 +29,12 @@
 	justify-content: center;
 	height: 6.5vw;
 	width: 40vw;
+	align-items: center;
 }
 
 #lower_div{
-	outline: solid black;
+	display: flex;
+	flex-direction: column;
 	height: 6.5vw;
 	width: 20vw;
 }
@@ -57,7 +59,15 @@ input[type="date"]{
 	border-radius: 8px;
 }
 
-input{
+input[type="radio"]{
+	float:left;
+	width: 1vw;
+	height: 1vw;
+	margin-bottom: 0.5vw;
+}
+
+
+input:not([type="radio"]){
 	margin: 0;
 	width: 15vw;
 	height: 2.5vw;
