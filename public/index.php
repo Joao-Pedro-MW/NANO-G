@@ -7,7 +7,7 @@ if (!$conn) {
     trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 }
 //$pdo = new ();*/
-///require_once __DIR__ . '/../../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 if($_SERVER['REQUEST_URI']==='/'){
   require_once __DIR__ . '\..\src\login.php';
