@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<?php require __DIR__ . '..\..\menu_lateral.php' ?>
+	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
 	<div class="linha">
 		<div class="coluna">
 			<div>
