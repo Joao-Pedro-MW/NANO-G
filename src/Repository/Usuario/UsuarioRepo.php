@@ -12,7 +12,7 @@ class UsuarioRepo
 
     public function CriaUsuario(Usuario $usuario):void
     {
-        $sql = 'INSERT INTO n_usuario () VALUES ()';
+        $sql = 'INSERT INTO n_usuario VALUES ()';
         $query = $this->pdo->prepare($sql);
         $query->execute();
         $usuario->intval($this->pdo->LastInsertId());

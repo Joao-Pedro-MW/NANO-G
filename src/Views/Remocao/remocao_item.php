@@ -10,7 +10,7 @@
 </head>
 <body>
 
-	<?php require __DIR__ . '..\..\menu_lateral.php' ?>
+	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
 	<div class="container">
 		
 		<button id="" class="pesquisa">Pesquisar</button>
@@ -24,60 +24,40 @@
 			    <th class="item">Produto 
 					<select name="itens" id="itens" autofocus required class="combobox">
 						<option></option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
 					</select>
 				</th>
 			    <th class="item">Qtd.
-					<select name="itens" id="itens" autofocus required class="combobox">
 						<option></option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
 					</select>
 				</th>
 			    <th class="item">Tipo
 					<select name="itens" id="itens" autofocus required class="combobox">
 						<option></option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
 					</select>
 				</th>
 			    <th class="item">Valor
 					<select name="itens" id="itens" autofocus required class="combobox">
 						<option></option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
 					</select>
 				</th>
 			    <th class="item">Lote
 					<select name="itens" id="itens" autofocus required class="combobox">
 						<option></option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
 					</select>  
 				</th>  
 				<th class="item">Validade
 					<select name="itens" id="itens" autofocus required class="combobox">
 						<option></option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
 					</select>
 				</th>
 			</tr>
 			<tr>
-				<th id=""><input type="checkbox" id="checkbox"></th>	
+				<td id="" >
+                    <input style="width: 40px" type="number">
+                    <input type="checkbox" id="checkbox">
+
+
+                </td>
 				<td class="item"></td>
 				<td class="item"></td>
 				<td class="item"></td>

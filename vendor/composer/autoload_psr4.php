@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'source\\' => array($baseDir . '/src'),
+    'NANOG\\' => array($baseDir . '/src'),
 );

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<?php require __DIR__ . '..\..\menu_lateral.php' ?>
+	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
 	<h1 style="margin-left:10vw; height: 7vh;margin-right: 60vw;">Criar Usuário</h1>
 
 	<div class="div_horizontal" id="main_div">

@@ -7,34 +7,34 @@ if (!$conn) {
     trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 }
 //$pdo = new ();*/
-///require_once __DIR__ . '/../../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 if($_SERVER['REQUEST_URI']==='/'){
-  require_once __DIR__ . '\..\src\login.php';
+  require_once __DIR__ . '\..\src\views\login.php';
 }
 if($_SERVER['REQUEST_URI']==='/logs'){
-    require_once __DIR__ . '\..\src\logs\logs.php';
+    require_once __DIR__ . '\..\src\views\logs\logs.php';
 }
 // Menu usuários
 if($_SERVER['REQUEST_URI']==='/usuarios'){
-  require_once __DIR__ . '\..\src\usuarios\menu_usuario.php';
+  require_once __DIR__ . '\..\src\views\usuarios\menu_usuario.php';
 }
 if($_SERVER['REQUEST_URI']==='/usuarios/edita-usuario'){
-  require_once __DIR__ . '\..\src\usuarios\edita_usuario.php';
+  require_once __DIR__ . '\..\src\views\usuarios\edita_usuario.php';
 }
 if($_SERVER['REQUEST_URI']==='/usuarios/criar-usuario'){
-  require_once __DIR__ . '\..\src\usuarios\cria_usuario.php';
+  require_once __DIR__ . '\..\src\views\usuarios\cria_usuario.php';
 }
 
 if($_SERVER['REQUEST_URI']==='/saida'){
-  require_once __DIR__ . '\..\src\remocao\remocao_item.php';
+  require_once __DIR__ . '\..\src\views\remocao\remocao_item.php';
 }
 //Menu produtos
 if($_SERVER['REQUEST_URI']==='/produtos'){
-  require_once __DIR__ . '\..\src\produtos\menu_produtos.php';
+  require_once __DIR__ . '\..\src\views\produtos\menu_produtos.php';
 }
 if($_SERVER['REQUEST_URI']==='/produtos/cadastro-lote'){
-  require_once __DIR__ . '\..\src\produtos\cadastro_lote.php';
+  require_once __DIR__ . '\..\src\views\produtos\cadastro_lote.php';
 }
 if($_SERVER['REQUEST_URI']==='/consulta_estoque'){
   require_once __DIR__ . '\..\src\estoque\consulta_estoque.php';
