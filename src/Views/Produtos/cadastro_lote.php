@@ -11,46 +11,52 @@
 
 <body>
 	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
-	<div class="linha">
-		<div class="coluna">
-			<div>
-				<label for="itens">Nome do Item</label><br>
-				<select name="itens" id="itens" autofocus required style="width:16vw"> 
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
-				</select>
-			</div>
-			<div class="junto">
-				<div style="float:left;">
-					<label for="unidade">Unidade</label>
-					<input type="" name="unidade" id="unidades" placeholder="Unidade">
+	<div class="linha" id="main_div">
+		<div id="content_div">
+			<div class="coluna">
+				<div>
+					<label for="itens">Nome do Item</label>
+					<select name="itens" id="itens" autofocus required> 
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+
 				</div>
+				<div class="junto">
+					<div class="div_left">
+						<label for="unidade">Unidade</label>
+						<input type="number" name="unidade" id="unidades" placeholder="Unidade">
+					</div>
+					
+					<div class="div_left">
+						<label for="un_medida">Unidade de Medida</label>
+						<select name="un_medida" id="un_medida" placeholder="XX" readonly>
+							<option disabled selected>XX</option>
+						</select>
+					</div>
+				</div>
+				<div>
+					<label for="valor">Valor</label>
+					<input type="number" name="valor" id="valor" placeholder="Valor">
+				</div>
+			</div>
 				
-				<div style="float:left;">
-					<label for="un_medida">Unidade de Medida</label>
-					<input type="" name="un_medida" id="un_medida" placeholder="KG">
+			<div class="coluna">
+				<div>
+					<label for="validade">Validade do Produto</label>
+				<input type="date" name="validade" id="validade" placeholder="Data de Validade"><br>
 				</div>
-			</div>
-			<div>
-				<label for="valor">Valor</label>
-				<input type="" name="valor" id="valor" style="width:16vw" placeholder="Valor">
-			</div>
-		</div>
-			
-		<div class="coluna">
-			<div>
-				<label for="validade">Validade do Produto</label>
-			<input type="date" name="validade" id="validade" style="width:16vw" placeholder="Data de Validade"><br>
-			</div>
-			<div>
-				<label for="lote" id="label">Lote (Automático)</label>
-				<input type="text" name="lote" id="lote" style="width:16vw" placeholder="XXXXXX"><br>
-			</div>
-			<div>
-				<button id="botao" style="width:16vw">Cadastrar Lote</button>
+				<div>
+					<label for="lote" id="label">Lote (Automático)</label>
+					<input type="text" name="lote" id="lote" placeholder="XXXXXX" readonly><br>
+				</div>
+				<div>
+					<label for="botao" id="label_inv">.</label>
+					<button id="botao">Cadastrar Lote</button>
+				</div>
 			</div>
 		</div>
 	</div>

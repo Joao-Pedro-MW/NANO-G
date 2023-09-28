@@ -51,12 +51,7 @@ label{margin-bottom: 0.4vw;}
 
 
 input[type="date"]{
-	margin: 0;
-	width: 15vw;
 	height: 2.6vw;
-	margin-bottom: 3vw;
-	border: #d0d0d0 2px solid;
-	border-radius: 8px;
 }
 
 input[type="radio"]{

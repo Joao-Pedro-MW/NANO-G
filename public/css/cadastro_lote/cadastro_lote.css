@@ -9,20 +9,53 @@ input, label {
 	display: table-cell;
 }
 
+label{margin-bottom: 0.4vw;}
+
+
+input[type="date"]{
+	height: 2.6vw;
+}
+
+input{
+	margin: 0;
+	width: 15vw;
+	height: 2.5vw;
+	margin-bottom: 3vw;
+	border: #d0d0d0 2px solid;
+	border-radius: 8px;
+}
+
+#un_medida{
+	height: 2.8vw;
+	margin-bottom: 3vw;
+	border: #d0d0d0 2px solid;
+	border-radius: 8px;
+}
+
+#itens{
+	width: 15vw;
+	height: 2.8vw;
+	margin-bottom: 3vw;
+	border: #d0d0d0 2px solid;
+	border-radius: 8px;
+}
+
 button{
-	margin-top: 2vh;
+	height: 2.65vw;
+	width: 10vw;
+	color: #1b88f5; 
+	border: 2px solid #1b88f5;
+	border-radius: 5px;
+}
+
+button:hover {
 	background-color: #1b88f5;
 	color: white;
-	font-weight: bold;
-	font-size: 15px;
-	border-radius: 3px;
-	border: 1px solid #1b88f5;
-	height: 3.5vh;
-	cursor: pointer;
 }
 
 button:active{
-	background-color: #1471e1;
+	background-color: #143057;
+	border: 2px solid #143057;
 }
 
 .coluna{
@@ -32,21 +65,53 @@ button:active{
 	width: 25vw;
 	height: 50vh;
 	font-size: 12px;
-	margin-top: 15vh;
 }
 
 .linha{
 	display: flex;
   	justify-content: center;
-  	clear: both;
   	height: 70vh;
 }
 
-.junto input{
-	width: 8vw;
+.junto input,select{
+	width: 8.2vw;
 }
 
 
 .coluna div{
 	height: 15vh;
+}
+
+#main_div{
+	justify-content: center;
+	align-items: center;
+}
+
+#content_div{
+	align-items: center;
+	height: 50vh;
+	background-color:rgba(208, 208, 208, 0.8);
+	padding: 3vw;
+	border-radius: 3vw;
+}
+
+#label_inv{
+	color: rgba(208, 208, 208,0.0);
+}
+
+#lote{
+	width:16.2vw;
+	pointer-events:none;
+}
+
+#va	idade,#valor,#botao{
+	width:16.4vw;
+}
+
+#itens{
+	width:16.8vw;
+}
+
+.div_left{
+	float: left;
 }
