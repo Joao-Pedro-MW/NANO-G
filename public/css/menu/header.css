@@ -52,8 +52,12 @@ hr{margin: 0;background-color: var(--dodger-blue-950);}
   margin-left: 5%;
 }
 .menu_classe a{
-  display:none;
+  display: block;
+  transition: height 0.3s ease-out;
+  height: 0px;
+  visibility: hidden;
 }
 .menu_classe:hover a{
-  display:block;
+  height: 30px;
+  visibility: visible;
 }
