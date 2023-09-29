@@ -19,11 +19,18 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: var(--cinza-claro-borda);
   -webkit-transition: .4s;
   transition: .4s;
 }
 
+#label_switch{
+  margin-right: 5px;
+}
+
+.nome{
+  margin-left: 10px;
+}
 .slider:before {
   position: absolute;
   content: "";
@@ -31,17 +38,17 @@
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: var(--branco);
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: var(--dodger-blue-600);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px var(--dodger-blue-600);
 }
 
 input:checked + .slider:before {
@@ -58,15 +65,27 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+#top{
+  display:flex;
+  padding: 0px;
+  height: 7vh;
+}
+
+#top_h1{
+  margin-left:10vw;
+  height: 7vh;
+  margin-right: 60.5%;
+}
+
 .tab_usuario{
-  margin-top: 2vh;
+  margin-top: 1.2vw;
   margin-left: 9vw;
   width: 80vw;
   height: 8vh;
   display: flex;
   align-items: center;
   border-radius: 50px;
-  background-color: #e1e1e1;
+  background-color: var(--cinza-bem-claro);
 }
 
 .nome{
@@ -88,52 +107,54 @@ input:checked + .slider:before {
   height: 8vh;
   border-radius: 50px;
   padding: 0px;
-  border: #1b88f5 solid;
+  border: var(--dodger-blue-600) solid;
+  background-color: var(--branco);
 }
 
 .botao_lixeira{
   width: 2vw;
   height: 6vh;
-  background-color: #e1e1e1; 
+  background-color: var(--cinza-bem-claro); 
   padding: 0px;
 }
 
 .botao_editar{
   width: 6vw;
   height: 6vh;
-  background-color: #e1e1e1; 
-  color: #1b88f5; 
-  border: 2px solid #1b88f5;
+  background-color: var(--branco); 
+  color: var(--dodger-blue-600); 
+  border: 2px solid var(--dodger-blue-600);
   border-radius: 10px;
   padding: 0px;
   margin-right: 2vw;
 }
 
 .botao_editar:hover {
-  background-color: #1b88f5;
+  background-color: var(--dodger-blue-600);
   color: white;
 }
 
 .botao_editar:active{
-  background-color: #143057;
-  border: 2px solid #143057;
+  background-color: var(--dodger-blue-950);
+  border: 2px solid var(--dodger-blue-950);
 }
 
 .novo_usuario{
-  height: 7vh
+  width: 8vw;
+  height: 7vh;
   padding: 0px;
   float: right;
-  background-color: #1b88f5;
+  background-color: var(--dodger-blue-600);
   color: white;
   font-weight: bold;
   font-size: 15px;
   border-radius: 5px;
-  border: 1px solid #1b88f5;
+  border: 1px solid var(--dodger-blue-600);
 }
 
 .novo_usuario:active {
-  background-color: #143057;
-  border: 1px solid #143057;
+  background-color: var(--dodger-blue-950);
+  border: 1px solid var(--dodger-blue-950);
 }
 
 button{

@@ -11,9 +11,9 @@
 
 <body>
 	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
-	<div style="display:flex; padding: 0px;height: 7vh;">
-		<h1 style="margin-left:10vw; height: 7vh;margin-right: 60vw;">Usuários</h1>
-		<button class="novo_usuario">Novo Usuário</button>
+	<div id="top">
+		<h1 id="top_h1">Usuários</h1>
+		<button id="top_btn"class="novo_usuario">Novo Usuário</button>
 	</div>
 	<div class="tab_usuario">
 		<img src="/imagens/imagem_usuario.svg" alt="Foto de perfil" class="perfil" >
@@ -23,7 +23,7 @@
 			<p class="nome">Tipo: Administrador</p>
 		</div>
 
-		<label for="switch">Ativado</label>
+		<label for="switch" id="label_switch">Ativado</label>
 		<label id="switch" class="switch">
 			<input type="checkbox">
 			<span class="slider round"></span>
