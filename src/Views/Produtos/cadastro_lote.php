@@ -28,19 +28,21 @@
 				<div class="junto">
 					<div class="div_left">
 						<label for="unidade">Unidade</label>
-						<input type="number" name="unidade" id="unidades" placeholder="Unidade">
+						<input type="number" min="1" name="unidade" id="unidades" placeholder="Unidade">
 					</div>
 					
 					<div class="div_left">
 						<label for="un_medida">Unidade de Medida</label>
 						<select name="un_medida" id="un_medida" placeholder="XX" readonly>
 							<option disabled selected>XX</option>
+							<option value="">a</option>
+							<option value="">b</option>
 						</select>
 					</div>
 				</div>
 				<div>
 					<label for="valor">Valor</label>
-					<input type="number" name="valor" id="valor" placeholder="Valor">
+					<input type="number" min="0" name="valor" id="valor" placeholder="Valor">
 				</div>
 			</div>
 				

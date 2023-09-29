@@ -1,7 +1,7 @@
 input, select{
 	margin-bottom: 10vh;
 	border-radius: 5px;
-	border: #d2d2d2 2px solid;
+	border: var(--cinza-claro-borda) 2px solid;
 
 }
 
@@ -21,14 +21,19 @@ input{
 	width: 15vw;
 	height: 2.5vw;
 	margin-bottom: 3vw;
-	border: #d0d0d0 2px solid;
+	border: var(--cinza-claro-borda) 2px solid;
+	border-radius: 8px;
+}
+
+input:active{
+	border: var(--cinza-claro-borda) 2px solid;
 	border-radius: 8px;
 }
 
 #un_medida{
 	height: 2.8vw;
 	margin-bottom: 3vw;
-	border: #d0d0d0 2px solid;
+	border: var(--cinza-claro-borda) 2px solid;
 	border-radius: 8px;
 }
 
@@ -36,26 +41,27 @@ input{
 	width: 15vw;
 	height: 2.8vw;
 	margin-bottom: 3vw;
-	border: #d0d0d0 2px solid;
+	border: var(--cinza-claro-borda) 2px solid;
 	border-radius: 8px;
 }
 
 button{
 	height: 2.65vw;
 	width: 10vw;
-	color: #1b88f5; 
-	border: 2px solid #1b88f5;
+	color: var(--dodger-blue-600); 
+	border: 2px solid var(--dodger-blue-600);
 	border-radius: 5px;
+	background-color: var(--branco);
 }
 
 button:hover {
-	background-color: #1b88f5;
+	background-color: var(--dodger-blue-600);
 	color: white;
 }
 
 button:active{
-	background-color: #143057;
-	border: 2px solid #143057;
+	background-color: var(--dodger-blue-950);
+	border: 2px solid var(--dodger-blue-950);
 }
 
 .coluna{
@@ -77,7 +83,6 @@ button:active{
 	width: 8.2vw;
 }
 
-
 .coluna div{
 	height: 15vh;
 }
@@ -90,13 +95,13 @@ button:active{
 #content_div{
 	align-items: center;
 	height: 50vh;
-	background-color:rgba(208, 208, 208, 0.8);
+	background-color:var(--cinza-claro);
 	padding: 3vw;
 	border-radius: 3vw;
 }
 
 #label_inv{
-	color: rgba(208, 208, 208,0.0);
+	color: var(--cinza-claro);
 }
 
 #lote{
@@ -104,7 +109,7 @@ button:active{
 	pointer-events:none;
 }
 
-#va	idade,#valor,#botao{
+#validade,#valor,#botao{
 	width:16.4vw;
 }
 
@@ -114,4 +119,10 @@ button:active{
 
 .div_left{
 	float: left;
+}
+
+html{
+	webkit-user-select: none;	
+  	-ms-user-select: none;
+  	user-select: none;
 }
