@@ -42,6 +42,9 @@ if($_SERVER['REQUEST_URI']==='/consulta_estoque'){
 if($_SERVER['REQUEST_URI']==='/teste_banco'){
   require_once __DIR__ . '\..\src\bancodados\teste.php';
 }
+if($_SERVER['REQUEST_URI']==='/erro'){
+  require_once __DIR__ . '\..\src\views\erro\erro.php';
+}
 else {
   http_response_code(404);
 }

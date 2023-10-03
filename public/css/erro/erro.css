@@ -1,0 +1,32 @@
+#titulo_erro{
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#numero{
+    height: 40vh;
+    width: 10vw;
+}
+
+#numero h1{
+    font-size: 30vh;
+    margin: 0;
+}
+
+#subtitulo{
+    width: 0 auto;
+    height: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#subtitulo h1{
+    text-align: center;
+}
+
+
+/*div{outline: solid black;}
