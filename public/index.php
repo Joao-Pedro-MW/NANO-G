@@ -7,6 +7,12 @@ if (!$conn) {
     trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 }
 //$pdo = new ();*/
+
+/*João, está funcionando portanto não reclame.*/
+$array = array('/','/logs','/usuarios','/usuarios/edita-usuario',
+'/usuarios/criar-usuario','/saida','/produtos','/produtos/cadastro-lote',
+'/consulta_estoque','/teste_banco');
+
 require_once __DIR__ . '/../vendor/autoload.php';
 
 if($_SERVER['REQUEST_URI']==='/'){
@@ -42,14 +48,9 @@ if($_SERVER['REQUEST_URI']==='/consulta_estoque'){
 if($_SERVER['REQUEST_URI']==='/teste_banco'){
   require_once __DIR__ . '\..\src\bancodados\teste.php';
 }
-if($_SERVER['REQUEST_URI']==='/erro'){
+if(!in_array($_SERVER['REQUEST_URI'],$array)){
   require_once __DIR__ . '\..\src\views\erro\erro.php';
 }
-else {
-  http_response_code(404);
-}
-// __DIR__ . '../arquivo.php'
-
 
 //php -S 0.0.0.0:80 -t public
 //todas requests vem para public

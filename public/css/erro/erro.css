@@ -1,3 +1,4 @@
+/*div principal*/
 #titulo_erro{
     display: flex;
     width: 100%;
@@ -6,16 +7,34 @@
     align-items: center;
 }
 
+/*box background*/
+#box_numero{
+    display: flex;
+    width: auto;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    height: auto;
+    box-shadow: 0px 0px 10px 10px var(--cinza-bem-claro);
+    border-radius: 8px;
+    outline: solid var(--cinza-bem-claro);
+    background-color: var(--cinza-bem-claro);
+}
+
+/*div para cada numero*/
 #numero{
+    text-align: center;
     height: 40vh;
     width: 10vw;
 }
 
+/*números em si*/
 #numero h1{
+    height: 30vh;
     font-size: 30vh;
     margin: 0;
 }
 
+/*Div do subtitulo*/
 #subtitulo{
     width: 0 auto;
     height: 0 auto;
@@ -24,9 +43,13 @@
     align-items: center;
 }
 
+/*Texto do subtitulo*/
 #subtitulo h1{
+    max-width: 50vw;
     text-align: center;
+    word-wrap: break-word;
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap;
 }
-
 
 /*div{outline: solid black;}

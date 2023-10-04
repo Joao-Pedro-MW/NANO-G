@@ -1,10 +1,16 @@
+.base{
+    margin: 50px;
+}
+
 #botao_filtro{
     background-color: var(--dodger-blue-500);
     color: var(--preto);
 }
+
 #imagem_filtro{
     transform: scale(0.05);
 }
+
 .menu_botoes{
     display: flex;
     justify-content: space-between;
@@ -32,3 +38,5 @@
     background-color: var(--confirmacao);
     color: var(--branco);
 }
+
+/*div{outline: solid black;}

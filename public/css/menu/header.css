@@ -56,8 +56,15 @@ hr{margin: 0;background-color: var(--dodger-blue-950);}
   transition: height 0.3s ease-out;
   height: 0px;
   visibility: hidden;
+  margin: 0;
+  margin-left: 20px;
 }
+
 .menu_classe:hover a{
   height: 30px;
   visibility: visible;
+}
+
+.classe_titulo{
+  margin: 10px;
 }
