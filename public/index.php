@@ -1,14 +1,18 @@
 <?php
-
 declare(strict_types=1);
-/*$conn = oci_connect('SYSTEM', '12345', 'localhost/XEPDB1');
-if (!$conn) {
-    $e = oci_error();
-    trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
-}
-//$pdo = new ();*/
 require_once __DIR__ . '/../vendor/autoload.php';
+use src\Repository\Usuario\UsuarioRepository;
+use src\Controller\ {
+  Controller,
+  NovoUsuarioController,
+  EditaUsuarioController,
+  RemoveUsuarioController,
+  ListarUsuarioController
+};
 
+
+
+/*
 if($_SERVER['REQUEST_URI']==='/'){
   require_once __DIR__ . '\..\src\views\login.php';
 }
@@ -49,7 +53,29 @@ else {
   http_response_code(404);
 }
 // __DIR__ . '../arquivo.php'
+*/
 
+
+
+$pdo = new PDO('oci:dbname=//localhost:1521/XEPDB1', 'system', '12345');
+$rotas = require_once __DIR__ .  '\..\config\rotas.php';
+
+$usuarioRepository = new UsuarioRepository($pdo);
+echo $_SERVER['PATH_INFO'];
+$rotaSolicitada = $_SERVER['PATH_INFO'];
+$meioHTTP = $_SERVER['REQUEST_METHOD'];
+
+$chave = "$meioHTTP|$rotaSolicitada";
+
+if(array_key_exists($chave,$rotas)) {
+    $classeControlador = $rotas["$meioHTTP|$rotaSolicitada"];
+
+    $controlador = new $classeControlador($usuarioRepository);
+} else {
+    $controlador = new Erro404Controlador();
+}
+
+$controlador->processaRequisicao();
 
 //php -S 0.0.0.0:80 -t public
 //todas requests vem para public

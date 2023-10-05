@@ -18,9 +18,9 @@ CREATE TABLE n_item (
     id_un_medida    integer         not null,
     CONSTRAINT pk_item PRIMARY KEY (id_item),
     CONSTRAINT fk_categoria
-        FOREIGN KEY (id_categoria) REFERENCES categoria(id_categoria),
+        FOREIGN KEY (id_categoria) REFERENCES n_categoria(id_categoria),
     CONSTRAINT fk_un_medida
-        FOREIGN KEY (id_un_medida) REFERENCES unidade_medida(id_unidade_medida)
+        FOREIGN KEY (id_un_medida) REFERENCES n_unidade_medida(id_unidade_medida)
 );
 
 CREATE TABLE n_unidade_medida (
@@ -43,5 +43,5 @@ CREATE TABLE n_lote (
     data_validade   date    not null,
     CONSTRAINT pk_lote PRIMARY KEY (id_lote),
     CONSTRAINT fk_item
-        FOREIGN KEY (id_item) REFERENCES item(id_item)
+        FOREIGN KEY (id_item) REFERENCES n_item(id_item)
 );

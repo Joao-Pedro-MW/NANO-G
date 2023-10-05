@@ -52,7 +52,7 @@
 					</div>
 					
 				</div>
-				<button class="botao_salvar">Salvar</button>
+				<button class="botao_salvar" >Salvar</button>
 			</div>
 			
 		</div>

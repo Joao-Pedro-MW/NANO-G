@@ -1,7 +1,10 @@
 {
   "autoload": {
     "psr-4": {
-      "NANOG\\": "src/"
+      "src\\": "src/"
     }
+  },
+  "require": {
+    "ext-pdo": "*"
   }
 }
