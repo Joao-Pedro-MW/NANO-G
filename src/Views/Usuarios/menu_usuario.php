@@ -31,8 +31,8 @@
 			<span class="slider round"></span>
 		</label>
 
-		<a style="float:right;" class="botao_editar" href="/usuario/editar_usuario?id=<?= $usuario["ID_USUARIO"] ?>"> Editar </a>
-		<a style="float:right;" class="botao_lixeira" href="/usuario/remove_usuario?id=<?= $usuario["ID_USUARIO"] ?>"><img src="/imagens/imagem_lixeira.svg" width="50vw" height="50vh" style="transform: scale(0.7)"></a>
+		<a style="float:right;" class="botao_editar" href="/usuarios/editar_usuario?id=<?= $usuario["ID_USUARIO"] ?>"> Editar </a>
+		<a style="float:right;" class="botao_lixeira" href="/usuarios/remove_usuario?id=<?= $usuario["ID_USUARIO"] ?>"><img src="/imagens/imagem_lixeira.svg" width="50vw" height="50vh" style="transform: scale(0.7)"></a>
 	</div>
     <?php endforeach ?>
     <!-- FIM | DIV DE CADA USUÁRIO -->>

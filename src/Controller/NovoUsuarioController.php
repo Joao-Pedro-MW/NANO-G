@@ -11,7 +11,10 @@ class NovoUsuarioController implements Controller
     }
     public function processaRequisicao(): void
     {
-        array
-        
+        // not array -> retorna falso se vazio
+        if($_GET){
+        }
+        require_once "..\src\Views\Usuarios\cria_usuario.php" ;
+    
     }
 }

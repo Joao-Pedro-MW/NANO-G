@@ -29,7 +29,7 @@
             <div class="menu_classe">
                 <h1 class="classe_titulo">Usuarios</h1>
                 <a href="\usuarios">Menu usuarios</a>
-                <a href="\usuarios\criar-usuario">Cadastro de usuários</a>
+                <a href="\usuarios\cria_usuario">Cadastro de usuários</a>
             </div>
 
         </div>
