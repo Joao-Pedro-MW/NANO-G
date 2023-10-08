@@ -15,47 +15,47 @@
 
 	<div class="div_horizontal" id="main_div">
 		<img src="../imagens/imagem_usuario.svg" class="perfil">
+		<form id="form_cria_usuario" method="post"></form>
+			<div class="div_vertical" id="div_dados">
+				<div class="div_horizontal">
+					<div class="div_vertical">
 
-		<div class="div_vertical" id="div_dados">
-			<div class="div_horizontal">
-				<div class="div_vertical">
+						<label for="nome">Nome</label>
+						<input type="text" id="nome" value="" name="nome">
 
-					<label for="nome">Nome</label>
-					<input type="text" id="nome">
+						<label for="cpf">CPF</label>
+						<input type="number" id="cpf" value="" name="cpf">
 
-					<label for="cpf">CPF</label>
-					<input type="number" id="cpf">
-
-				</div>
-				<div class="div_vertical">
-
-					<label for="email" id="label_direita">Email</label>
-					<input type="email" id="email">
-
-					<label for="data_nascimento" id="label_direita">Data de Nascimento</label>
-					<input type="date" id="data_nascimento">
-
-				</div>
-			</div>
-			<div class="div_horizontal" id="low_div">
-				<div id="lower_div">
-					
-					<p id="p">Tipo de Permissão</p>
-					<div>
-						<label for="admin" style="margin-left: 0.5vw">Administrador</label>
-						<input type="radio" name="permissao" id="admin">
 					</div>
-					
-					<div>
-						<label for="user" style="margin-left: 0.5vw">Usuário</label>
-						<input type="radio" name="permissao" id="user">	
+					<div class="div_vertical">
+
+						<label for="email" id="label_direita">Email</label>
+						<input type="email" id="email" value="" name="email">
+
+						<label for="data_nascimento" id="label_direita">Data de Nascimento</label>
+						<input type="date" id="data_nascimento" value="" name="data_nascimento">
+
 					</div>
-					
 				</div>
-				<button class="botao_salvar" >Salvar</button>
+				<div class="div_horizontal" id="low_div">
+					<div id="lower_div">
+						
+						<p id="p">Tipo de Permissão</p>
+						<div>
+							<label for="admin" style="margin-left: 0.5vw">Administrador</label>
+							<input type="radio" name="permissao_admin" value="" id="admin">
+						</div>
+						
+						<div>
+							<label for="user" style="margin-left: 0.5vw">Usuário</label>
+							<input type="radio" name="permissao_user" value="" id="user">	
+						</div>
+					</div>
+				</div>		
+				<button form="form_cria_usuario"  type="submit" class="botao_salvar">Salvar</button>
 			</div>
 			
-		</div>
+		</form>
 	</div>
 
 </body>
