@@ -10,15 +10,23 @@ class UsuarioRepository
     public function __construct(private PDO $pdo)
     {
     }
-    public function CriaUsuario(Usuario $usuario):void
-    {
-        $sql = 'INSERT INTO n_usuario (nome, data_nascimento, tipo_usuario, user_login, user_senha) VALUES (:nome,:data_nascimento,:tipo_usuario,:user_login,:user_senha)';
-        $query = $this->pdo->prepare($sql);
-        query->bindValue();
-        $resultado = $query->execute();
-        $usuario->setId(intval($this->pdo->LastInsertId()));
+    public function CriaUsuario(Usuario $usuario): void
+{
+    $sql = "INSERT INTO n_usuario (id_usuario, nome, dt_nascimento, tipo_usuario, flag_ativo, user_login, senha) 
+    VALUES (4, :nome, TO_DATE(:data_nascimento,'YYYY-MM-DD'), :tipo_usuario, 'S', :user_login, :user_senha)";
+    //(:nome, :data_nascimento, :tipo_usuario, :user_login, :user_senha)
+    
+    $query = $this->pdo->prepare($sql);
+    
+    // Vincule os valores aos parâmetros
+    $query->bindValue(':nome', $usuario->nome);
+    $query->bindValue(':data_nascimento', $usuario->data_nascimento);
+    $query->bindValue(':tipo_usuario', $usuario->tipo_usuario);
+    $query->bindValue(':user_login', $usuario->user_login);
+    $query->bindValue(':user_senha', $usuario->user_senha);
+    $resultado = $query->execute();
+}
 
-    }
 
     public function RemoveUsuario(int $id): void
     {
@@ -28,7 +36,6 @@ class UsuarioRepository
         $query->execute();
         $sql = "commit";
         $query = $this->pdo->query($sql);
-        echo "<script>alert('Usuário Removido com sucesso!')</script>";
     }
     public function AtualizaUsuario(Usuario $usuario): void
     {

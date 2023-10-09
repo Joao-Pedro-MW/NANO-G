@@ -12,7 +12,11 @@ class RemoveUsuarioController implements Controller
     {
         $id_usuario = filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);
         $usuarioLista = $this->usuarioRepository->RemoveUsuario($id_usuario);
+        if($usuarioLista){
+            echo "<script>Usuário removido com sucesso!</script>";
+        }
         $usuarioLista = $this->usuarioRepository->TodosUsuarios();
+        
         require_once __DIR__ . '\..\..\src\Views\Usuarios\menu_usuario.php';
     }
 }

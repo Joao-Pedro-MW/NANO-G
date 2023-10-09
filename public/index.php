@@ -11,6 +11,7 @@ use src\Controller\ {
 };
 
 $pdo = new PDO('oci:dbname=//localhost:1521/XEPDB1', 'system', '12345');
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $rotas = require_once __DIR__ .  '\..\config\rotas.php';
 
 $usuarioRepository = new UsuarioRepository($pdo);

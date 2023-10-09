@@ -1,5 +1,5 @@
 CREATE TABLE n_usuario (
-    id_usuario      int             not nulL,
+    id_usuario      int             not null,
     nome            varchar2(150)   not null,
     dt_nascimento   date            not null,
     tipo_usuario    varchar2(2)     not null,

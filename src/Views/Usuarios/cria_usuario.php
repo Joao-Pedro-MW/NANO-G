@@ -15,25 +15,25 @@
 
 	<div class="div_horizontal" id="main_div">
 		<img src="../imagens/imagem_usuario.svg" class="perfil">
-		<form id="form_cria_usuario" method="post"></form>
+		<form id="form_cria_usuario" method="POST">
 			<div class="div_vertical" id="div_dados">
 				<div class="div_horizontal">
 					<div class="div_vertical">
 
 						<label for="nome">Nome</label>
-						<input type="text" id="nome" value="" name="nome">
+						<input type="text" id="nome"  name="nome">
 
 						<label for="cpf">CPF</label>
-						<input type="number" id="cpf" value="" name="cpf">
+						<input type="number" id="cpf"  name="cpf">
 
 					</div>
 					<div class="div_vertical">
 
 						<label for="email" id="label_direita">Email</label>
-						<input type="email" id="email" value="" name="email">
+						<input type="email" id="email"  name="email">
 
 						<label for="data_nascimento" id="label_direita">Data de Nascimento</label>
-						<input type="date" id="data_nascimento" value="" name="data_nascimento">
+						<input type="date" id="data_nascimento"  name="data_nascimento">
 
 					</div>
 				</div>
@@ -43,20 +43,19 @@
 						<p id="p">Tipo de Permissão</p>
 						<div>
 							<label for="admin" style="margin-left: 0.5vw">Administrador</label>
-							<input type="radio" name="permissao_admin" value="" id="admin">
+							<input type="radio" name="tipo_usuario" value="AD" id="admin">
 						</div>
-						
 						<div>
 							<label for="user" style="margin-left: 0.5vw">Usuário</label>
-							<input type="radio" name="permissao_user" value="" id="user">	
+							<input type="radio" name="tipo_usuario" value="CM" id="user">	
 						</div>
 					</div>
 				</div>		
-				<button form="form_cria_usuario"  type="submit" class="botao_salvar">Salvar</button>
+				<button form="form_cria_usuario" class="botao_salvar">Salvar</button>
 			</div>
 			
-		</form>
+		
 	</div>
-
+	</form>
 </body>
 </html>
