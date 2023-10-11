@@ -13,9 +13,8 @@ use src\Controller\ {
 $pdo = new PDO('oci:dbname=//localhost:1521/XEPDB1', 'system', '12345');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $rotas = require_once __DIR__ .  '\..\config\rotas.php';
-
 $usuarioRepository = new UsuarioRepository($pdo);
-$rotaSolicitada = $_SERVER['PATH_INFO'];
+$rotaSolicitada = $_SERVER['PATH_INFO'] ?? "/";
 $meioHTTP = $_SERVER['REQUEST_METHOD'];
 
 $chave = "$meioHTTP|$rotaSolicitada";
@@ -33,5 +32,3 @@ $controlador->processaRequisicao();
 //todas requests vem para public
 //https://cursos.alura.com.br/course/php-web-conhecendo-padrao-mvc/task/118309
 //http_response_code(404);
-
-

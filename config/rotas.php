@@ -7,4 +7,6 @@ return [
     'GET|/usuarios/remove_usuario' => \src\Controller\RemoveUsuarioController::class,
     'GET|/usuarios/cria_usuario' => \src\Controller\NovoUsuarioController::class,
     'POST|/usuarios/cria_usuario' => \src\Controller\NovoUsuarioController::class,
+    'GET|/usuarios/edita_usuario' => \src\Controller\EditaUsuarioController::class,
+    'POST|/usuarios/edita_usuario' => \src\Controller\EditaUsuarioController::class,
 ];

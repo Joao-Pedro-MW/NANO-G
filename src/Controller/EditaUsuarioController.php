@@ -11,6 +11,6 @@ class EditaUsuarioController implements Controller
     
     public function processaRequisicao(): void
     {
-
+        if()
     }
 }

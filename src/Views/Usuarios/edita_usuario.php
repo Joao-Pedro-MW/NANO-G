@@ -12,7 +12,6 @@
 <body>
 	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
 	<h1 style="margin-left:10vw; height: 7vh;margin-right: 60vw;">Editar Usuário</h1>
-
 	<div style="display:flex;margin-top: -10vh;">
 		<img src="/imagens/imagem_usuario.svg" class="perfil">
 		<div style="display:grid;" class="div_primaria">
