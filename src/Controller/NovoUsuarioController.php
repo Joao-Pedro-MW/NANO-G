@@ -26,7 +26,7 @@ class NovoUsuarioController implements Controller
             );
            
             $sucesso = $this->usuarioRepository->CriaUsuario($novoUsuario);
-            echo $sucesso;
+            echo "<script>alert(\"Usuario $UsuarioNome criado com sucesso\")</script>";
         } 
         require_once __DIR__ . '\..\..\src\Views\Usuarios\cria_usuario.php';
         
