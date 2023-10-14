@@ -7,9 +7,15 @@
 	<link rel="stylesheet" type="text/css" href="..\css\menu\header.css">
 	<link rel="stylesheet" type="text/css" href="..\css\cria_usuario\cria_usuario.css">
 	<script type="text/javascript" src="..\js\menu.js"></script>
+
 </head>
 
 <body>
+	<script>
+	function mudaTipo(){
+		document.getElementById('data_nascimento').type = 'date';
+	}
+	</script>
 	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
 	<h1 style="margin-left:10vw; height: 7vh;margin-right: 60vw;">Editar Usuário</h1>
 
@@ -33,7 +39,7 @@
 						<input type="email" id="email"  name="email" required>
 
 						<label for="data_nascimento" id="label_direita">Data de Nascimento</label>
-						<input type="text" id="data_nascimento"  name="data_nascimento"value="<?=$dadosUsuario['DT_NASCIMENTO']?>" required>
+						<input type="text" id="data_nascimento" onclick="mudaTipo()" name="data_nascimento"value="<?=$dadosUsuario['DT_NASCIMENTO']?>" required>
 
 					</div>
 				</div>
