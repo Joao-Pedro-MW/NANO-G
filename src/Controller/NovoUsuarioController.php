@@ -12,8 +12,12 @@ class NovoUsuarioController implements Controller
     public function processaRequisicao(): void
     {
         // Verifique se a solicitação é POST
+        if($_SERVER['REQUEST_METHOD'] == 'GET'){
+            require_once __DIR__ . '\..\..\src\Views\Usuarios\cria_usuario.php';
+        }
         if(array_key_exists('cpf',$_POST)){
             $UsuarioNome = htmlspecialchars($_POST['nome']);
+            $UsuarioEmail = htmlspecialchars($_POST['email']);
             $UsuarioDataNascimento = htmlspecialchars($_POST['data_nascimento']);
             $UsuarioPermissao = htmlspecialchars($_POST['tipo_usuario']); 
             $UsuarioCPF = filter_input(INPUT_POST, 'cpf', FILTER_VALIDATE_FLOAT);
@@ -21,14 +25,12 @@ class NovoUsuarioController implements Controller
                 $UsuarioNome,
                 $UsuarioDataNascimento,
                 $UsuarioPermissao,
+                $UsuarioEmail,
                 $UsuarioCPF,
                 123
             );
-           
-            $sucesso = $this->usuarioRepository->CriaUsuario($novoUsuario);
-            echo "<script>alert(\"Usuario $UsuarioNome criado com sucesso\")</script>";
-        } 
-        require_once __DIR__ . '\..\..\src\Views\Usuarios\cria_usuario.php';
-        
+            $this->usuarioRepository->CriaUsuario($novoUsuario);
+            header('Location: /usuarios',false,303);
+        }
     }
 }

@@ -30,13 +30,13 @@
 						<input type="text" id="nome"  name="nome" value="<?=$dadosUsuario['NOME']?>" required> 
 
 						<label for="cpf">CPF</label>
-						<input type="number" id="cpf"  name="cpf" value="<?=$dadosUsuario['USER_LOGIN']?>" required>
+						<input type="number" id="cpf"  name="cpf" value="<?=$dadosUsuario['CPF']?>" required>
 
 					</div>
 					<div class="div_vertical">
 
 						<label for="email" id="label_direita">Email</label>
-						<input type="email" id="email"  name="email" required>
+						<input type="email" id="email"  name="email" value="<?=$dadosUsuario['EMAIL']?>" required>
 
 						<label for="data_nascimento" id="label_direita">Data de Nascimento</label>
 						<input type="text" id="data_nascimento" onclick="mudaTipo()" name="data_nascimento"value="<?=$dadosUsuario['DT_NASCIMENTO']?>" required>

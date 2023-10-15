@@ -8,7 +8,8 @@ class Usuario
         public string $nome,
         public string $data_nascimento,
         public string $tipo_usuario,
-        public string $user_login,
+        public string $email,
+        public string $cpf,
         public string $user_senha
     ){}
 

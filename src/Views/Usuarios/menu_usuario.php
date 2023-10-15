@@ -13,7 +13,7 @@
 	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
 	<div id="top">
 		<h1 id="top_h1">Usuários</h1>
-		<button id="top_btn"class="novo_usuario">Novo Usuário</button>
+		<button id="top_btn"class="novo_usuario"> <a href="/usuarios/cria_usuario">Novo Usuário</a></button>
 	</div>
     <!-- INICIO | DIV DE CADA USUÁRIO -->
     <?php foreach ($usuarioLista as $usuario): ?>

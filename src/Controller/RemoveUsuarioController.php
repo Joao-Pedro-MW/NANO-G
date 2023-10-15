@@ -16,7 +16,6 @@ class RemoveUsuarioController implements Controller
             echo "<script>Usuário removido com sucesso!</script>";
         }
         $usuarioLista = $this->usuarioRepository->TodosUsuarios();
-        
-        require_once __DIR__ . '\..\..\src\Views\Usuarios\menu_usuario.php';
+        header('Location: /usuarios');
     }
 }

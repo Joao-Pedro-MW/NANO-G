@@ -26,15 +26,17 @@ class EditaUsuarioController implements Controller
             if(array_key_exists('cpf',$_POST)){
                 $usuarioID = htmlspecialchars($_REQUEST['id']);
                 $UsuarioNome = htmlspecialchars($_POST['nome']);
+                $UsuarioEmail = htmlspecialchars($_POST['email']);
                 $UsuarioDataNascimento = htmlspecialchars($_POST['data_nascimento']);
                 $UsuarioPermissao = htmlspecialchars($_POST['tipo_usuario']); 
                 $UsuarioCPF = filter_input(INPUT_POST, 'cpf', FILTER_VALIDATE_FLOAT);
                 $dadosUsuario = array(
                     'ID_USUARIO' => $usuarioID,
                     'NOME' => $UsuarioNome,
+                    'CPF' => $UsuarioCPF,
                     'DT_NASCIMENTO' => $UsuarioDataNascimento,
                     'TIPO_USUARIO' => $UsuarioPermissao,
-                    'USER_LOGIN' => $UsuarioCPF
+                    'EMAIL' => $UsuarioEmail
                 );
                 $this->UsuarioRepository->AtualizaUsuario($dadosUsuario);
                 echo "<script>alert(\"Usuario $UsuarioNome atualizado com sucesso\")</script>";
