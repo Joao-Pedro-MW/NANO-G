@@ -13,19 +13,21 @@
 	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
 
 	<div id="titulo_erro">
-		<div id="numero">
-			<h1>4</h1>
-		</div>
-		<div id="numero">
-			<h1>0</h1>
-		</div>
-		<div id="numero">
-			<h1>4</h1>
+		<div id="box_numero">
+			<div id="numero">
+				<h1>4</h1>
+			</div>
+			<div id="numero">
+				<h1>0</h1>
+			</div>
+			<div id="numero">
+				<h1>4</h1>
+			</div>
 		</div>
 	</div>
 	<div id="subtitulo">
 		<div>
-			<h1>japa, vai trabalhar</h1>
+			<h1> Japa vai trabalhar </h1>
 		</div>
 	</div>
 </body>

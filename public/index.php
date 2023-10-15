@@ -27,8 +27,3 @@ if(array_key_exists($chave,$rotas)) {
 }
 
 $controlador->processaRequisicao();
-
-//php -S 0.0.0.0:80 -t public
-//todas requests vem para public
-//https://cursos.alura.com.br/course/php-web-conhecendo-padrao-mvc/task/118309
-//http_response_code(404);

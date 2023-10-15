@@ -20,7 +20,6 @@
                 <h1 class="classe_titulo">Produtos</h1>
                 <a href="\produtos\cadastro-lote">Cadastro de lote</a>
                 <a href="\produtos">Menu produtos</a>
-                
             </div>
             <div class="menu_classe">
                 <h1 class="classe_titulo">Saída</h1>

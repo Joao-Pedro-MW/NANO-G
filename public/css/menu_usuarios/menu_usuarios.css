@@ -1,8 +1,8 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 4vw;
+  height: 4vh;
   margin-right: 2vw;
 }
 
@@ -31,13 +31,12 @@
 .nome{
   margin-left: 10px;
 }
+
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: 4vh;
+  width: 4vh;
   background-color: var(--branco);
   -webkit-transition: .4s;
   transition: .4s;
@@ -52,13 +51,13 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(1.999vw);
+  -ms-transform: translateX(1.999vw);
+  transform: translateX(1.999vw);
 }
 
 .slider.round {
-  border-radius: 34px;
+  border-radius: 4vw;
 }
 
 .slider.round:before {
@@ -89,11 +88,11 @@ input:checked + .slider:before {
 }
 
 .nome{
+  position: relative;
   width: 30vw;
   height: 7vh;
   display: block;
   align-items: center;
-  margin-right: 22vw;
 }
 
 .nome p{
@@ -124,7 +123,7 @@ input:checked + .slider:before {
   background-color: var(--branco); 
   color: var(--dodger-blue-600); 
   border: 2px solid var(--dodger-blue-600);
-  border-radius: 10px;
+  border-radius: 0.7vw;
   padding: 0px;
   margin-right: 2vw;
 }
