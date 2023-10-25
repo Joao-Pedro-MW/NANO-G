@@ -23,5 +23,6 @@ return [
     //Estoque
     'GET|/remocao'=> \src\Controller\ListarSaidaController::class,
 
-    //404
+    //Login
+    'GET|/'=> \src\Controller\LoginController::class,
     ];
