@@ -17,9 +17,9 @@
                 
             </div>
             <div class="menu_classe">
-                <h1 class="classe_titulo">Produtos</h1>
-                <a href="\produtos">Menu produtos</a>
-                <a href="\produtos\cadastro_produto">Cadastro de produtos</a>
+                <h1 class="classe_titulo">Estoque</h1>
+                <a href="\produtos">Menu Itens</a>
+                <a href="\produtos\cadastro_item">Cadastro de itens</a>
                 <a href="\produtos\cadastro_lote">Cadastro de lote</a>
 
             </div>

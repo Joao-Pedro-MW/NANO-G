@@ -10,7 +10,6 @@
 </head>
 <body>
 	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
-
    	<div class="base">
         <h1>Consulta de itens</h1>
         <button type="button" class="botao" ><a href="/produtos/cadastro_item"> Cadastrar novo item</a>
@@ -22,17 +21,17 @@
 				<th>Tipo</th>
 				<th>Operações</th>
 			</tr>
-            <?php //foreach ($listaProdutos as $produto): ?>
+            <?php foreach ($listaProdutos as $produto): ?>
 			<tr>
 				<td class="td_produto">Produto 1</td>
 				<td class="td_un_medida">Kg</td>
 				<td class="td_tipo">Materia-Prima</td>
 				<td class="td_opcoes">
-                    <img src="..\imagens\imagem_lapis_edicao.svg" alt="Lapis" id="icones">
-                    <img src="..\imagens\imagem_lixeira.svg" alt="Lixeira" id="icones">
+                    <a style="float:right;" class="botao_editar" href="/produtos    /edita_item"><img src="..\imagens\imagem_lapis_edicao.svg" alt="Lapis" id="icones">
+                    <a style="float:right;" class="botao_lixeira" href="/produtos/remove_item"><img src="..\imagens\imagem_lixeira.svg" alt="Lixeira" id="icones">
                 </td>
 			</tr>
-            <?php //endforeach ?>
+            <?php endforeach ?>
         </table>
     </div>
 </body>

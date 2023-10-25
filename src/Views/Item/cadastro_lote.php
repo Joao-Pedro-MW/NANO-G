@@ -28,7 +28,7 @@
 				<div class="junto">
 					<div class="div_left">
 						<label for="unidade">Unidade</label>
-						<input type="number" min="1" name="unidade" id="unidades" placeholder="Unidade">
+						<input type="number" min="1" name="unidade" id="unidade" placeholder="Unidade">
 					</div>
 					
 					<div class="div_left">
