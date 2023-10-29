@@ -17,11 +17,7 @@
 				<div>
 					<label for="itens">Nome do Item</label>
 					<select name="itens" id="itens" autofocus required> 
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
+						<!-- Pega os itens da tabela itens/produtos -->
 					</select>
 
 				</div>
@@ -34,9 +30,7 @@
 					<div class="div_left">
 						<label for="un_medida">Unidade de Medida</label>
 						<select name="un_medida" id="un_medida" placeholder="XX" readonly>
-							<option disabled selected>XX</option>
-							<option value="">a</option>
-							<option value="">b</option>
+							<!--Pega as unidades de medida da tabela un_medida-->
 						</select>
 					</div>
 				</div>
@@ -53,6 +47,7 @@
 				</div>
 				<div>
 					<label for="lote" id="label">Lote (Automático)</label>
+                    <!--Necessario ser validado pela Alynne-->
 					<input type="text" name="lote" id="lote" placeholder="XXXXXX" readonly><br>
 				</div>
 				<div>
