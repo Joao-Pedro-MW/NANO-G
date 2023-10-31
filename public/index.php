@@ -3,6 +3,9 @@ declare(strict_types=1);
 require_once __DIR__ . '/../vendor/autoload.php';
 use src\Repository\Usuario\UsuarioRepository;
 use src\Repository\Itens\ItensRepository;
+use src\Repository\UnidadesMedida\UnidadesMedidaRepository;
+use src\Repository\Lote\LoteRepository;
+use src\Repository\Titan;
 use src\Controller\ {
   Controller,
   NovoUsuarioController,
@@ -26,6 +29,13 @@ switch ($repositorioNecessario){
         break;
     case 'UsuariosRepository':
         $repositorioNecessario = new UsuarioRepository($pdo);
+        break;
+    case 'LotesRepository':
+        $loteRepository = new LoteRepository($pdo);
+        $unidadesMedidaRepository = new UnidadesMedidaRepository($pdo);
+        $repositorioNecessario = new Titan(
+            $loteRepository, $unidadesMedidaRepository
+        );
         break;
 }
 if(array_key_exists($chave,$rotas)) {

@@ -20,7 +20,7 @@
                 <h1 class="classe_titulo">Estoque</h1>
                 <a href="\itens">Menu Itens</a>
                 <a href="\itens\cadastro_item">Cadastro de itens</a>
-                <a href="\itens\cadastro_lote">Cadastro de lote</a>
+                <a href="\lotes\cadastro_lote">Cadastro de lote</a>
 
             </div>
             <div class="menu_classe">

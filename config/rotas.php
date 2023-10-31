@@ -5,7 +5,7 @@ declare(strict_types=1);
 return [
     //Item
     'GET|/itens' => \src\Controller\ListarItemController::class,
-    'GET|/itens/cadastro_lote' => \src\Controller\NovoLoteController::class,
+    'GET|/lotes/cadastro_lote' => \src\Controller\NovoLoteController::class,
     'GET|/itens/cadastro_item' => \src\Controller\NovoItemController::class,
     'GET|/itens/remove_item' => \src\Controller\RemoveItemController::class,
 
