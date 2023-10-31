@@ -2,25 +2,22 @@
 
 namespace src\Controller;
 use src\Repository\Itens\ItensRepository;
-use src\Repository\Titan;
 use src\Repository\UnidadesMedida\UnidadesMedidaRepository;
 use src\Controller\Controller;
 
 class NovoLoteController implements Controller
 {
-    public function __construct(private Titan $Titan)
+    public function __construct(private ItensRepository $itensRepository)
     {
-        $this->Titan = $Titan;
     }
     public function processaRequisicao(): void
     {
-        $listaUnidadesMedida = $this->Titan->RetornaLoteRepository();
-        var_dump($listaUnidadesMedida);
+        $unidadesMedida =
         //Pegamos os produtos necessários
-        //$listaProdutos = $this->itensRepository->TodosProdutos();
+        $listaProdutos = $this->itensRepository->TodosProdutos();
 
         //Pegamos as unidades de medida que vamos usar
-        //$listaUnidadesMedida =
-        //require_once __DIR__ . '\..\..\src\Views\Item\cadastro_lote.php';
+        $listaUnidadesMedida =
+        require_once __DIR__ . '\..\..\src\Views\Item\cadastro_lote.php';
     }
 }

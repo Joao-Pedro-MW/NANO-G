@@ -1,6 +1,6 @@
 <?php
 
-namespace src\Repository\UnidadesMedida;
+namespace src\Repository;
 use PDO;
 class UnidadesMedidaRepository
 {
