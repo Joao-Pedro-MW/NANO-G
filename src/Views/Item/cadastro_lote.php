@@ -29,9 +29,7 @@
 					
 					<div class="div_left">
 						<label for="un_medida">Unidade de Medida</label>
-						<select name="un_medida" id="un_medida" placeholder="XX" readonly>
-							<!--Pega as unidades de medida da tabela un_medida-->
-						</select>
+                        <input type="text" name="un_medida" id="un_medida" placeholder="ZX" readonly><br>
 					</div>
 				</div>
 				<div>

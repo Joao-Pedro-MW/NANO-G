@@ -12,8 +12,10 @@
 <body>
 	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
 
-	<div id="titulo_erro">
+	<div style="padding-top: 120px" id="titulo_erro">
+
 		<div id="box_numero">
+
 			<div id="numero">
 				<h1>4</h1>
 			</div>
@@ -26,8 +28,10 @@
 		</div>
 	</div>
 	<div id="subtitulo">
-		<div>
-			<h1> Japa vai trabalhar </h1>
+		<div style="padding: 50px">
+            <h1>◑﹏◐</h1>
+            <h2>Parece que você se perdeu de sua rota</h2>
+            <h3 align="center">Clique <a href="/itens" style="color: var(--dodger-blue-500)">aqui</a> para voltar a tela de itens</h3>
 		</div>
 	</div>
 </body>

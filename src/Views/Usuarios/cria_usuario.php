@@ -26,6 +26,7 @@
 						<label for="cpf">CPF</label>
 						<input type="number" id="cpf"  name="cpf">
 
+
 					</div>
 					<div class="div_vertical">
 
@@ -34,6 +35,8 @@
 
 						<label for="data_nascimento" id="label_direita">Data de Nascimento</label>
 						<input type="date" id="data_nascimento"  name="data_nascimento">
+
+
 
 					</div>
 				</div>
