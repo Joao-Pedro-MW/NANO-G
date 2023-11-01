@@ -34,3 +34,9 @@ td, th {
 .td_un_medida, .td_tipo, .td_opcoes{
     width: 11em;
 };
+
+html{
+	-webkit-user-select: none;	
+  	-ms-user-select: none;
+  	user-select: none;
+}

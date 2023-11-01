@@ -68,3 +68,9 @@ hr{margin: 0;background-color: var(--dodger-blue-950);}
 .classe_titulo{
   margin: 10px;
 }
+
+html{
+	-webkit-user-select: none;	
+  	-ms-user-select: none;
+  	user-select: none;
+}

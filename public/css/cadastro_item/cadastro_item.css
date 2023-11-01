@@ -1,0 +1,66 @@
+.input{
+    margin: 0;
+	width: 15vw;
+	height: 2.5vw;
+	margin-bottom: 1vw;
+	border: var(--cinza-claro-borda) 2px solid;
+	border-radius: 8px;
+}
+
+.input:active{
+	border: var(--cinza-claro-borda) 2px solid;
+	border-radius: 8px;
+}
+
+.input_combo{
+    width: 5vw;
+	height: 3vw;
+	margin-bottom: 2vw;
+	border: var(--cinza-claro-borda) 2px solid;
+	border-radius: 8px;
+}
+
+.main_div{
+	height: 70vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.content_div{
+	width: 20vw;
+	height: 40vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color:var(--cinza-claro);
+	padding: 3vw;
+	border-radius: 3vw;
+}
+
+.botao{
+	height: 2.65vw;
+	width: 10vw;
+	color: var(--dodger-blue-600); 
+	border: 2px solid var(--dodger-blue-600);
+	border-radius: 5px;
+	background-color: var(--branco);
+}
+
+.botao:hover {
+	background-color: var(--dodger-blue-600);
+	color: white;
+}
+
+.botao:active{
+	background-color: var(--dodger-blue-950);
+	border: 2px solid var(--dodger-blue-950);
+}
+
+label{margin-bottom: 0.4vw;}
+
+html{
+	-webkit-user-select: none;	
+  	-ms-user-select: none;
+  	user-select: none;
+}
