@@ -12,7 +12,7 @@
 <body>
 	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
     <div class="main_div">
-        <form action="" method="GET" id="form_item">
+        <form action="" method="GET" id="form_item" name="form_item">
 
             <div class="content_div">
                     <label for="nome">Nome</label>
@@ -24,13 +24,13 @@
                         <option name="<?= $categoria["ID_CATEGORIA"]?>" value="<?= $categoria["ID_CATEGORIA"]?>"> <?= $categoria["CATEGORIA_NOME"]?></option>
                         <?php endforeach?>
                     </select>
-                
+
                     <label for="unidade_medida">Unidade de medida</label>
                     <select id="unidade_medida" class="input_combo">
                         <option value="">1</option>
                     </select>
 
-                    <input type="submit" value="Cadastrar item" class="botao">
+                <button form="form_item" value="Cadastrar item" class="botao">Cadastrar item</button>
             </div>
 
         </form>
