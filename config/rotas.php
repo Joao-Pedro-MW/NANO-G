@@ -6,6 +6,7 @@ return [
     //Item
     'GET|/itens' => \src\Controller\ListarItemController::class,
     'GET|/itens/cadastro_lote' => \src\Controller\NovoLoteController::class,
+    'POST|/itens/cadastro_lote' => \src\Controller\NovoLoteController::class,
     'GET|/itens/cadastro_item' => \src\Controller\NovoItemController::class,
     'GET|/itens/remove_item' => \src\Controller\RemoveItemController::class,
 

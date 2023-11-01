@@ -11,7 +11,6 @@
 
 <body>
 	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
-
     <div class="main_div">
         <form action="" method="GET" id="form_item">
 
@@ -20,13 +19,15 @@
                     <input id="nome" type="text" class="input">
 
                     <label for="categoria">Categoria</label>
-                    <input id="categoria" type="text" class="input">
-
+                    <select id="unidade_medida" class="input">
+                        <?php foreach($listaCategorias as $categoria):?>
+                        <option name="<?= $categoria["ID_CATEGORIA"]?>" value="<?= $categoria["ID_CATEGORIA"]?>"> <?= $categoria["CATEGORIA_NOME"]?></option>
+                        <?php endforeach?>
+                    </select>
+                
                     <label for="unidade_medida">Unidade de medida</label>
                     <select id="unidade_medida" class="input_combo">
                         <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
                     </select>
 
                     <input type="submit" value="Cadastrar item" class="botao">

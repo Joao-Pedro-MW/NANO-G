@@ -21,7 +21,7 @@
   --confirmacao:#0acf0a;
   --confirmacao-escuro:#008000;
 }
-a{text-decoration: none;}
+a{text-decoration: none;color: black}
 
 /*FONTE VIA GOOGLE FONTS*/
 /* cyrillic-ext */

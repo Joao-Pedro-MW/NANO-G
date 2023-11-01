@@ -12,7 +12,7 @@
 	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
    	<div class="base">
         <h1>Consulta de itens</h1>
-        <button type="button" class="botao" ><a href="/produtos/cadastro_item"> Cadastrar novo item</a>
+        <button type="button" class="botao" ><a href="/itens/cadastro_item"> Cadastrar novo item</a>
         </button>
         <table class="tabela_dados" id="tabela_dados">
 			<tr>

@@ -19,14 +19,12 @@
 					<select name="itens" id="itens" autofocus required> 
 						<!-- Pega os itens da tabela itens/produtos -->
 					</select>
-
 				</div>
 				<div class="junto">
 					<div class="div_left">
 						<label for="unidade">Unidade</label>
 						<input type="number" min="1" name="unidade" id="unidade" placeholder="Unidade">
 					</div>
-					
 					<div class="div_left">
 						<label for="un_medida">Unidade de Medida</label>
                         <input type="text" name="un_medida" id="un_medida" placeholder="ZX" readonly><br>
@@ -37,7 +35,6 @@
 					<input type="number" min="0" name="valor" id="valor" placeholder="Valor">
 				</div>
 			</div>
-				
 			<div class="coluna">
 				<div>
 					<label for="validade">Validade do Produto</label>
