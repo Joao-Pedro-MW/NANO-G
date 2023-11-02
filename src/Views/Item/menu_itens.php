@@ -28,8 +28,8 @@
 				<td class="td_un_medida"><?= $item["ID_CATEGORIA"]?></td>
 				<td class="td_tipo"><?= $item["ID_UN_MEDIDA"]?></td>
 				<td class="td_opcoes">
-                    <a style="float:right;" class="botao_editar" href="/itens/edita_item?id_item=<?= $item["ID_ITEM"] ?>"><img src="..\imagens\imagem_lapis_edicao.svg" title="Editar item" alt="Lapis" id="icones">
-                    <a style="float:right;" class="botao_lixeira" href="/itens/remove_item?id_item=<?= $item["ID_ITEM"] ?>"> <img src="..\imagens\imagem_lixeira.svg" title="Excluir item" alt="Lixeira" id="icones">
+                    <a style="float:right;" class="botao_editar" href="/itens/edita_item?item=<?= $item["ID_ITEM"] ?>"><img src="..\imagens\imagem_lapis_edicao.svg" title="Editar item" alt="Lapis" id="icones">
+                    <a style="float:right;" class="botao_lixeira" href="/itens/remove_item?item=<?= $item["ID_ITEM"] ?>"> <img src="..\imagens\imagem_lixeira.svg" title="Excluir item" alt="Lixeira" id="icones">
                 </td>
 			</tr>
             <?php endforeach ?>

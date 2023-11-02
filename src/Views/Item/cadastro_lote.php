@@ -22,8 +22,8 @@
 				</div>
 				<div class="junto">
 					<div class="div_left">
-						<label for="unidade">Unidade</label>
-						<input type="number" min="1" name="unidade" id="unidade" placeholder="Unidade">
+						<label for="unidade">Quantidade</label>
+						<input type="number" min="1" name="quantidade" id="quantidade" placeholder="quantidade">
 					</div>
 					<div class="div_left">
 						<label for="un_medida">Unidade de Medida</label>
@@ -32,7 +32,7 @@
 				</div>
 				<div>
 					<label for="valor">Valor</label>
-					<input type="number" min="0" name="valor" id="valor" placeholder="Valor">
+					<input type="number" min="0" name="valor" id="valor" placeholder="R$ Reais">
 				</div>
 			</div>
 			<div class="coluna">

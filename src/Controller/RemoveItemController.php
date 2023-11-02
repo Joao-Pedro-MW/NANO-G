@@ -12,10 +12,8 @@ class RemoveItemController implements Controller
     }
     public function processaRequisicao(): void
     {
-        $id_usuario = filter_input(INPUT_GET,'id_item',FILTER_VALIDATE_INT);
-        $usuarioLista = $this->itensRepository->RemoveItem($id_usuario);
-        if($usuarioLista){
-            echo "<script>Usuário removido com sucesso!</script>";
-        }
+        $id_usuario = filter_input(INPUT_GET,'item',FILTER_VALIDATE_INT);
+        $this->itensRepository->RemoveItem($id_usuario);
+        header('Location: /itens');
     }
 }
