@@ -70,4 +70,15 @@ class ItensRepository
         $query->bindValue(':idUnidadeMedidaItem',$dadositem->itemUnidadeMedida);
         $query->execute();
     }
+
+    public function GetUnidadeMedidaPorId(int $idItem):array
+    {
+        $sql = "SELECT unidade_nome FROM n_unidade_medida WHERE id_unidade_medida =
+        (SELECT id_un_medida FROM n_item WHERE id_item = :idItem)";
+        $query = $this->pdo->prepare($sql);
+        $query->bindValue(':idItem', $idItem);
+        $query->execute();  // Execute a consulta preparada
+        $unidadeMedidaItem = $query->fetch(PDO::FETCH_ASSOC);
+        return $unidadeMedidaItem;
+    }
 }

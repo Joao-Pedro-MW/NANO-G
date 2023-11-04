@@ -17,6 +17,12 @@ return [
 
     'GET|/itens/remove_item' => \src\Controller\RemoveItemController::class,
 
+    /*TESTE DE SISTEMA - NÃO ALTERAR - JPMW*/
+    'POST|/itens/consulta_un_medida' => \src\Controller\ConsultaUnidadeMedida::class,
+    /*TESTE DE SISTEMA - NÃO ALTERAR - JPMW*/
+
+
+
     // Usuarios
     'GET|/usuarios' => \src\Controller\ListarUsuarioController::class,
     'GET|/usuarios/remove_usuario' => \src\Controller\RemoveUsuarioController::class,
