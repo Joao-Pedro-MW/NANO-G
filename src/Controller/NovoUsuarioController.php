@@ -11,10 +11,6 @@ class NovoUsuarioController implements Controller
     }
     public function processaRequisicao(): void
     {
-        // Verifique se a solicitação é POST
-        if($_SERVER['REQUEST_METHOD'] == 'GET'){
-            require_once __DIR__ . '\..\..\src\Views\Usuarios\cria_usuario.php';
-        }
         if(array_key_exists('cpf',$_POST)){
             $UsuarioNome = htmlspecialchars($_POST['nome']);
             $UsuarioEmail = htmlspecialchars($_POST['email']);
