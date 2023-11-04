@@ -8,8 +8,8 @@
             data: { idItem: idItem },
             dataType: 'json'
         }).done(function(result) {
-
-            $('#un_medida').val(result["UNIDADE_NOME"]);
+            //necessario alterar o value da variáveis, não apenas o nome
+            $('#un_medida').val(result.attr("value")["UNIDADE_NOME"]);
             console.log(result);
         });
     });
