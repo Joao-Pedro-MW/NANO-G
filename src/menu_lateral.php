@@ -1,7 +1,7 @@
 <?php $imagens_url = '..' . DIRECTORY_SEPARATOR . 'imagens' . DIRECTORY_SEPARATOR ?>
 
 <div class="titulo_sistema">
-    <div id="mySidenav" class="sidenav">
+    <div id="menu_lateral" class="menu_lateral">
         <!-- primeiro botão para FECHAR o menu -->
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
           <div class="menu-botao-claro">
