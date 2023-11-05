@@ -2,8 +2,6 @@
 
 namespace src\Controller;
 
-use src\Controller\Controller;
-
 class Erro404Controller implements Controller
 {
 

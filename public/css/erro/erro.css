@@ -14,7 +14,7 @@
     padding-left: 2vw;
     padding-right: 2vw;
     height: auto;
-    box-shadow: 0px 0px 10px 10px var(--cinza-bem-claro);
+    box-shadow: 0 0 10px 10px var(--cinza-bem-claro);
     border-radius: 8px;
     outline: solid var(--cinza-bem-claro);
     background-color: var(--cinza-bem-claro);

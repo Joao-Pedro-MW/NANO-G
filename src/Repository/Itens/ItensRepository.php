@@ -7,7 +7,7 @@ use src\Entity\Lote;
 
 class ItensRepository
 {
-    public function __construct(private PDO $pdo)
+    public function __construct(private readonly PDO $pdo)
     {
     }
 
@@ -15,16 +15,14 @@ class ItensRepository
     {
         $sql = 'SELECT * FROM n_item';
         $listaProdutos = $this->pdo->query($sql);
-        $listaProdutos = $listaProdutos->fetchAll(PDO::FETCH_ASSOC);
-        return $listaProdutos;
+        return $listaProdutos->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function ListaCategorias():array
     {
         $sql = "SELECT * from n_categoria";
         $listaCategorias = $this->pdo->query($sql);
-        $listaCategorias = $listaCategorias->fetchAll(PDO::FETCH_ASSOC);
-        return $listaCategorias;
+        return $listaCategorias->fetchAll(PDO::FETCH_ASSOC);
 
     }
 
@@ -50,8 +48,7 @@ class ItensRepository
     {
         $sql = "SELECT * FROM n_item WHERE ID_ITEM = $idItem";
         $dadosItem = $this->pdo->query($sql);
-        $dadosItem = $dadosItem->fetch(PDO::FETCH_ASSOC);
-        return $dadosItem;
+        return $dadosItem->fetch(PDO::FETCH_ASSOC);
     }
 
     public function AtualizaItem(int $itemId, Item $dadositem):void
@@ -72,16 +69,14 @@ class ItensRepository
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':idItem', $idItem);
         $query->execute();  // Execute a consulta preparada
-        $unidadeMedidaItem = $query->fetch(PDO::FETCH_ASSOC);
-        return $unidadeMedidaItem;
+        return $query->fetch(PDO::FETCH_ASSOC);
     }
 
     public function ListaUnidadesMedida():array
     {
         $sql = "SELECT * FROM n_unidade_medida";
         $listaUnidadesMedida = $this->pdo->query($sql);
-        $listaUnidadesMedida = $listaUnidadesMedida->fetchAll(PDO::FETCH_ASSOC);
-        return $listaUnidadesMedida;
+        return $listaUnidadesMedida->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function CriaLote(Lote $lote):void

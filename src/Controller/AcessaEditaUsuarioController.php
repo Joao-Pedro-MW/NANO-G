@@ -2,10 +2,9 @@
 
 namespace src\Controller;
 
-use src\Controller\Controller;
 use src\Repository\Usuario\UsuarioRepository;
 
-class AcessaEditaUsuarioController implements Controller
+readonly class AcessaEditaUsuarioController implements Controller
 {
     public function __construct(private UsuarioRepository $UsuarioRepository)
     {
@@ -17,7 +16,7 @@ class AcessaEditaUsuarioController implements Controller
         }
         $idUsuario = filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);
         if($idUsuario === false || $idUsuario === null){
-            header('Location: /usuarios');;
+            header('Location: /usuarios');
         }
         $dadosUsuario = $this->UsuarioRepository->RetornaUsuario($idUsuario);
         require_once __DIR__ . '\..\..\src\Views\Usuarios\edita_usuario.php';

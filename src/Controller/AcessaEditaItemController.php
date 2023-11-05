@@ -2,10 +2,9 @@
 
 namespace src\Controller;
 
-use src\Controller\Controller;
 use src\Repository\Itens\ItensRepository;
 
-class AcessaEditaItemController implements Controller
+readonly class AcessaEditaItemController implements Controller
 {
     public function __construct(private ItensRepository $itensRepository)
     {

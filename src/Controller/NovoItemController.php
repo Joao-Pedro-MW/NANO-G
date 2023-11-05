@@ -2,20 +2,19 @@
 
 namespace src\Controller;
 
-use src\Controller\Controller;
 use src\Entity\Item;
 use src\Repository\Itens\ItensRepository;
 
-class NovoItemController implements Controller
+readonly class NovoItemController implements Controller
 {
     public function __construct(private ItensRepository $itensRepository)
     {
     }
     public function processaRequisicao(): void
     {
-        $itemNome = htmlspecialchars($_POST["nome_item"]);
-        $itemCategoria = htmlspecialchars($_POST["categoria_item"]);
-        $itemUnidadeMedida = htmlspecialchars($_POST["unidade_medida_item"]);
+        $itemNome = htmlspecialchars(filter_input(INPUT_POST,'nome_item',FILTER_SANITIZE_SPECIAL_CHARS));
+        $itemCategoria = htmlspecialchars(filter_input(INPUT_POST,'categoria_item',FILTER_SANITIZE_SPECIAL_CHARS));
+        $itemUnidadeMedida = htmlspecialchars(filter_input(INPUT_POST,'unidade_medida_item',FILTER_SANITIZE_SPECIAL_CHARS));
         $novoItem = new Item($itemNome, $itemCategoria, $itemUnidadeMedida);
         $this->itensRepository->CriaItem($novoItem);
         header('Location: /itens',false,303);

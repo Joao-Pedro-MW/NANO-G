@@ -3,7 +3,7 @@
 namespace src\Controller;
 use src\Repository\Itens\ItensRepository;
 
-class ListarItemController implements Controller
+readonly class ListarItemController implements Controller
 {
     public function __construct(private ItensRepository $itensRepository)
     {

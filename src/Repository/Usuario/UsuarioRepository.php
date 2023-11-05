@@ -7,7 +7,7 @@ USE PDO;
 class UsuarioRepository
 
 {
-    public function __construct(private PDO $pdo)
+    public function __construct(private readonly PDO $pdo)
     {
     }
     public function CriaUsuario(Usuario $usuario): void 
@@ -37,8 +37,8 @@ class UsuarioRepository
 
     public function AtualizaUsuario(array $dadosUsuario): void
     {
-        $sql = 'UPDATE n_usuario SET nome = :nome, cpf = :cpf, email = :email, dt_nascimento = TO_DATE(:dt_nascimento), 
-                      tipo_usuario = :tipo_usuario WHERE id_usuario = :id_usuario';
+        $sql = "UPDATE n_usuario SET nome = :nome, cpf = :cpf, email = :email, dt_nascimento = TO_DATE(:dt_nascimento,'YYYY-MM-DD'), 
+                      tipo_usuario = :tipo_usuario WHERE id_usuario = :id_usuario";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':id_usuario',(int) $dadosUsuario['ID_USUARIO']);
         $query->bindValue(':nome',$dadosUsuario['NOME']);
@@ -55,15 +55,13 @@ class UsuarioRepository
         $sql = 'SELECT id_usuario , nome,
         DECODE (tipo_usuario,\'AD\', \'Administrador\',\'CM\',\'Usuário Comum\') as tipo_usuario FROM n_usuario ' ;
         $ListaUsuarios = $this->pdo->query($sql);
-        $ListaUsuarios = $ListaUsuarios->fetchAll(PDO::FETCH_ASSOC);
-        return $ListaUsuarios;
+        return $ListaUsuarios->fetchAll(PDO::FETCH_ASSOC);
         
     }
     public function RetornaUsuario(int $idUsuario):array
     {
         $sql = "SELECT id_usuario , nome, cpf, dt_nascimento, tipo_usuario, email FROM n_usuario WHERE id_usuario = $idUsuario" ;
         $dadosUsuario = $this->pdo->query($sql);
-        $dadosUsuario = $dadosUsuario->fetch(PDO::FETCH_ASSOC);
-        return $dadosUsuario;        
+        return $dadosUsuario->fetch(PDO::FETCH_ASSOC);
     }
 }

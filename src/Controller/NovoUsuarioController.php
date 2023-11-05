@@ -4,7 +4,7 @@ namespace src\Controller;
 use src\Entity\Usuario;
 use src\Repository\Usuario\UsuarioRepository;
 
-class NovoUsuarioController implements Controller
+readonly class NovoUsuarioController implements Controller
 {
     public function __construct(private UsuarioRepository $usuarioRepository)
     {
@@ -12,11 +12,11 @@ class NovoUsuarioController implements Controller
     public function processaRequisicao(): void
     {
         if(array_key_exists('cpf',$_POST)){
-            $UsuarioNome = htmlspecialchars($_POST['nome']);
-            $UsuarioEmail = htmlspecialchars($_POST['email']);
-            $UsuarioDataNascimento = htmlspecialchars($_POST['data_nascimento']);
-            $UsuarioPermissao = htmlspecialchars($_POST['tipo_usuario']); 
-            $UsuarioCPF = filter_input(INPUT_POST, 'cpf', FILTER_VALIDATE_FLOAT);
+            $UsuarioNome = htmlspecialchars(filter_input(INPUT_POST,'nome',FILTER_SANITIZE_SPECIAL_CHARS));
+            $UsuarioEmail = htmlspecialchars(filter_input(INPUT_POST,'email',FILTER_SANITIZE_SPECIAL_CHARS));
+            $UsuarioDataNascimento = htmlspecialchars(filter_input(INPUT_POST,'data_nascimento',FILTER_SANITIZE_SPECIAL_CHARS));
+            $UsuarioPermissao = htmlspecialchars(filter_input(INPUT_POST,'tipo_usuario',FILTER_SANITIZE_SPECIAL_CHARS));
+            $UsuarioCPF = htmlspecialchars(filter_input(INPUT_POST,'cpf',FILTER_SANITIZE_SPECIAL_CHARS));
             $novoUsuario = new Usuario(
                 $UsuarioNome,
                 $UsuarioDataNascimento,

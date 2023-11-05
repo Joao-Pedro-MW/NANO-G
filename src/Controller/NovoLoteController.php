@@ -2,12 +2,10 @@
 
 namespace src\Controller;
 
-use Couchbase\ValueRecorder;
 use src\Entity\Lote;
 use src\Repository\Itens\ItensRepository;
-use src\Repository\UnidadesMedida\UnidadesMedidaRepository;
 
-class NovoLoteController implements Controller
+readonly class NovoLoteController implements Controller
 {
     public function __construct(private ItensRepository $itensRepository)
     {

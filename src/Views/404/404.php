@@ -31,7 +31,7 @@
 		<div style="padding: 50px">
             <h1>◑﹏◐</h1>
             <h2>Parece que você se perdeu de sua rota</h2>
-            <h3 align="center">Clique <a href="/itens" style="color: var(--dodger-blue-500)">aqui</a> para voltar a tela de itens</h3>
+            <h3>Clique <a href="/itens" style="color: var(--dodger-blue-500)">aqui</a> para voltar a tela de itens</h3>
 		</div>
 	</div>
 </body>

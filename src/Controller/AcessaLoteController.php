@@ -2,10 +2,9 @@
 
 namespace src\Controller;
 
-use src\Controller\Controller;
 use src\Repository\Itens\ItensRepository;
 
-class AcessaLoteController implements Controller
+readonly class AcessaLoteController implements Controller
 {
     public function __construct(private ItensRepository $itensRepository)
     {

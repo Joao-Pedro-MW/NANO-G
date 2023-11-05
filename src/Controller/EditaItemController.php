@@ -2,12 +2,10 @@
 
 namespace src\Controller;
 
-use Couchbase\ValueRecorder;
-use src\Controller\Controller;
 use src\Entity\Item;
 use src\Repository\Itens\ItensRepository;
 
-class EditaItemController implements Controller
+readonly class EditaItemController implements Controller
 {
     public function __construct(private ItensRepository $itensRepository)
     {
