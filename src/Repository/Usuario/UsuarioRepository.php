@@ -2,6 +2,7 @@
 
 namespace src\Repository\Usuario;
 
+use mysql_xdevapi\Exception;
 use src\Entity\Usuario;
 USE PDO;
 class UsuarioRepository

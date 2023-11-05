@@ -109,10 +109,6 @@ button:active{
 	pointer-events:none;
 }
 
-#validade,#valor,#botao{
-	width:16.4vw;
-}
-
 .div_left{
 	float: left;
 }

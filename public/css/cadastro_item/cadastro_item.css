@@ -12,14 +12,6 @@
 	border-radius: 8px;
 }
 
-.input_combo{
-    width: 5vw;
-	height: 3vw;
-	margin-bottom: 2vw;
-	border: var(--cinza-claro-borda) 2px solid;
-	border-radius: 8px;
-}
-
 .main_div{
 	height: 70vh;
 	display: flex;

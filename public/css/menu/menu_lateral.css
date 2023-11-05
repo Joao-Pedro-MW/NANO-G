@@ -13,6 +13,7 @@
 }
 
 /* The navigation menu links */
+/*noinspection ALL*/
 .menu_lateral a, .classe_titulo{
   padding-left: 8px 8px 8px 32px;
   text-decoration: none;
@@ -42,10 +43,6 @@
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left 0.5s;
-  padding: 20px;
-}
 
 /* On smaller screens, where height is less than 450px, change the style of the menu_lateral (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {

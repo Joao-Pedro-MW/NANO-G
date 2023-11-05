@@ -36,8 +36,8 @@
 
 /*Div do subtitulo*/
 #subtitulo{
-    width: 0 auto;
-    height: 0 auto;
+    width: auto;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;

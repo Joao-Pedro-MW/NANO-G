@@ -1,9 +1,5 @@
 .base{
     margin: 50px;
-}   
-
-#imagem_filtro{
-    transform: scale(0.05);
 }
 
 .menu_botoes{
@@ -21,7 +17,7 @@
     color: var(--dodger-blue-600); 
     border: 2px solid var(--dodger-blue-600);
     border-radius: 0.7vw;
-    padding: 0px;
+    padding: 0;
 }
   
 .botao:not([type="date"]):hover{
@@ -57,7 +53,7 @@
 }
 
 #data_inicio,#data_fim{
-    height: 46.5px;
+    height: 47px;
 }
 
 html{

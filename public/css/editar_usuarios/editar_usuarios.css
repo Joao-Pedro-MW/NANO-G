@@ -18,23 +18,6 @@ input[type="checkbox"] {
 	transform: translateY(-0.075em);
 }
 
-.form-control--disabled {
-	cursor: not-allowed;
-}
-
-
-.div_primaria{
-	float:right;
-	width: 30vw;
-	margin-right: 0;
-	align-content: center;
-	justify-content: center;
-}
-
-.div_secundaria{
-	width: 30vw;
-	height: 10vh;
-}
 
 .input{
 	border-radius: 5px;
