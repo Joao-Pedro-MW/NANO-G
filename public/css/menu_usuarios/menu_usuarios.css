@@ -117,8 +117,8 @@ input:checked + .slider:before {
   padding: 0px;
 }
 
-.botao_editar{
-  width: 6vw;
+.botao_editar,.novo_usuario {
+  width: 10vw;
   height: 6vh;
   background-color: var(--branco); 
   color: var(--dodger-blue-600); 
@@ -128,43 +128,26 @@ input:checked + .slider:before {
   margin-right: 2vw;
 }
 
-.botao_editar:hover {
-  background-color: var(--dodger-blue-600);
-  color: white;
+.novo_usuario a{
+  color: var(--dodger-blue-600);
 }
 
-.botao_editar:active{
+.botao_editar:hover,.novo_usuario:hover,.novo_usuario a:hover{
+  background-color: var(--dodger-blue-600);
+  color: var(--branco);
+}
+
+.botao_editar:active,.novo_usuario:active,.novo_usuario a:active{
   background-color: var(--dodger-blue-950);
   border: 2px solid var(--dodger-blue-950);
 }
 
-.novo_usuario{
-  width: 8vw;
-  height: 7vh;
-  padding: 0px;
-  float: right;
-  background-color: var(--dodger-blue-600);
-  color: white;
-  font-weight: bold;
-  font-size: 15px;
-  border-radius: 5px;
-  border: 1px solid var(--dodger-blue-600);
+html{
+	-webkit-user-select: none;	
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.novo_usuario:active {
-  background-color: var(--dodger-blue-950);
-  border: 1px solid var(--dodger-blue-950);
-}
-
-button{
-  border: none;
-  color: #1b88f5;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
+input:focus {
+  outline-width: 0;
 }

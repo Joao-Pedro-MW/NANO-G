@@ -33,17 +33,17 @@
 				<div class="div_horizontal" id="low_div">
 					<div id="lower_div">
 						<p id="p">Tipo de Permissão</p>
-						<div>
+						<div id="lowest_div">
 							<label for="admin" style="margin-left: 0.5vw">Administrador</label>
 							<input type="radio" name="tipo_usuario" value="AD" id="admin">
 						</div>
-						<div>
+						<div id="lowest_div">
 							<label for="user" style="margin-left: 0.5vw">Usuário</label>
 							<input type="radio" name="tipo_usuario" value="CM" id="user">	
 						</div>
 					</div>
+					<button form="form_cria_usuario" class="botao_salvar">Salvar</button>
 				</div>		
-				<button form="form_cria_usuario" class="botao_salvar">Salvar</button>
 			</div>
         </form>
 	</div>

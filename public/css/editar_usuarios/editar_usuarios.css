@@ -77,4 +77,8 @@ html{
 	-webkit-user-select: none;	
   	-ms-user-select: none;
   	user-select: none;
-}w
+}
+
+input:focus {
+    outline-width: 0;
+}
