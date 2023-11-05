@@ -15,10 +15,10 @@
 </script>
 <body>
     <?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
-    <h1 style="margin-left:10vw; height: 7vh;margin-right: 60vw;">Criar Usuário</h1>
+    <h1 style="margin-left:10vw; height: 7vh;margin-right: 60vw;">Editar Usuário</h1>
     <div class="div_horizontal" id="main_div">
         <img src="../imagens/imagem_usuario.svg" class="perfil">
-        <form id="form_cria_usuario" method="POST">
+        <form id="form_edita_usuario" method="POST">
             <div class="div_vertical" id="div_dados">
                 <div class="div_horizontal">
                     <div class="div_vertical">
@@ -46,7 +46,7 @@
                             <input <?php echo ($dadosUsuario['TIPO_USUARIO'] == 'CM') ? 'checked' : '' ?> type="radio" name="tipo_usuario" value="CM" id="user">
                         </div>
                     </div>
-                    <button form="form_cria_usuario" class="botao_salvar">Salvar</button>
+                    <button form="form_edita_usuario" class="botao_salvar">Salvar</button>
                 </div>
             </div>
         </form>
