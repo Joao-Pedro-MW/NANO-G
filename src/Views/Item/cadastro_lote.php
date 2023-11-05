@@ -33,7 +33,7 @@
                 <div class="junto">
                     <div class="div_left">
                         <label for="quantidade">Quantidade</label>
-                        <input type="number" min="1" name="quantidade" id="quantidade" placeholder="quantidade">
+                        <input type="number" min="1" name="quantidade" id="quantidade" placeholder="quantidade" required>
                     </div>
                     <div class="div_left">
                         <label for="un_medida">Unidade de Medida</label>
@@ -43,13 +43,13 @@
                 </div>
                 <div>
                     <label for="valor">Valor por item</label>
-                    <input type="number" step="0.01" min="0" name="valor" id="valor" placeholder="R$ Reais">
+                    <input type="number" step="0.01" min="0" name="valor" id="valor" placeholder="R$ Reais" required>
                 </div>
             </div>
             <div class="coluna">
                 <div>
                     <label for="validade">Validade do Produto</label>
-                    <input type="date" name="data_validade" id="data_validade" placeholder="Data de Validade"><br>
+                    <input type="date" name="data_validade" id="data_validade" placeholder="Data de Validade" required><br>
                 </div>
                 <div>
                     <label for="lote" id="label">Lote (Automático)</label>
