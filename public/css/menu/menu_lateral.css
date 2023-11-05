@@ -1,5 +1,5 @@
 /* The side navigation menu */
-.sidenav {
+.menu_lateral {
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
@@ -9,11 +9,11 @@
   background-color: var(--dodger-blue-700); /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the menu_lateral */
 }
 
 /* The navigation menu links */
-.sidenav a, .classe_titulo{
+.menu_lateral a, .classe_titulo{
   padding-left: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -21,19 +21,19 @@
   display: block;
   transition: 0.3s;
 }
-.sidenav a{
+.menu_lateral a{
   font-size: 20px !important;
   margin-left: 20px;
   margin-bottom: 10px;
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
+.menu_lateral a:hover {
   color: var(--branco);
 }
 
 /* Position and style the close button (top right corner) */
-.sidenav .closebtn {
+.menu_lateral .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
@@ -47,10 +47,10 @@
   padding: 20px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+/* On smaller screens, where height is less than 450px, change the style of the menu_lateral (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .menu_lateral {padding-top: 15px;}
+  .menu_lateral a {font-size: 18px;}
 }
 
 html{

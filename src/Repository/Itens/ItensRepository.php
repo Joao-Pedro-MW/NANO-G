@@ -3,6 +3,7 @@
 namespace src\Repository\Itens;
 use PDO;
 use src\Entity\Item;
+use src\Entity\Lote;
 
 class ItensRepository
 {
@@ -27,13 +28,6 @@ class ItensRepository
 
     }
 
-    public function ListaUnidadesMedida():array
-    {
-        $sql = "SELECT * FROM n_unidade_medida";
-        $listaUnidadesMedida = $this->pdo->query($sql);
-        $listaUnidadesMedida = $listaUnidadesMedida->fetchAll(PDO::FETCH_ASSOC);
-        return $listaUnidadesMedida;
-    }
     public function RemoveItem(int $id_item): void
     {
         $sql = 'DELETE FROM n_item WHERE id_item = :id';
@@ -49,7 +43,7 @@ class ItensRepository
         $query->bindValue(':nomeItem',$novoItem->itemNome);
         $query->bindValue(':idCategoriaItem',$novoItem->itemCategoria);
         $query->bindValue(':idUnidadeMedidaItem',$novoItem->itemUnidadeMedida);
-        $resultado = $query->execute();
+        $query->execute();
     }
 
     public function RetornaItem(int $idItem):array
@@ -80,5 +74,25 @@ class ItensRepository
         $query->execute();  // Execute a consulta preparada
         $unidadeMedidaItem = $query->fetch(PDO::FETCH_ASSOC);
         return $unidadeMedidaItem;
+    }
+
+    public function ListaUnidadesMedida():array
+    {
+        $sql = "SELECT * FROM n_unidade_medida";
+        $listaUnidadesMedida = $this->pdo->query($sql);
+        $listaUnidadesMedida = $listaUnidadesMedida->fetchAll(PDO::FETCH_ASSOC);
+        return $listaUnidadesMedida;
+    }
+
+    public function CriaLote(Lote $lote):void
+    {
+        $sql = "INSERT INTO n_lote (id_lote,id_item,quantidade,data_validade)
+VALUES (S_LOTE_ID.nextval, :itemID, :quantidadeItem, TO_DATE(:data_validade, 'YYYY-MM-DD'))";
+        $query = $this->pdo->prepare($sql);
+        $query->bindValue(':itemId',$lote->itemId);
+        $query->bindValue(':quantidadeItem',$lote->quantidadeItens);
+        $query->bindValue(':data_validade',$lote->dataValidadeItem);
+        $query->execute();
+        header('Location: /itens');
     }
 }
