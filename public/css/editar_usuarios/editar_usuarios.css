@@ -1,0 +1,66 @@
+input[type="checkbox"] {
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	margin: 0;
+}
+
+input[type="checkbox"] {
+	appearance: none;
+	background-color: #fff;
+	margin: 0;
+	font: inherit;
+	color: currentColor;
+	width: 1.15em;
+	height: 1.15em;
+	border: 0.15em solid currentColor;
+	border-radius: 0.15em;
+	transform: translateY(-0.075em);
+}
+
+
+.input{
+	border-radius: 5px;
+	border: #d0d0d0 2px solid;
+	width: 20vw;
+	height: 5vh;
+}
+
+.perfil{
+	transform: scale(0.35);
+	width: 34vw;
+	margin-top: -10vh;
+}
+
+.botao_salvar{
+	width: 10vw;
+	height: 6vh;
+	color: #1b88f5;
+	background-color: #ffffff;
+	border: 2px solid #1b88f5;
+	border-radius: 5px;
+	padding: 0;
+	margin-right: 2vw;
+	float:right;
+	margin-right: 15vw;
+}
+
+.botao_salvar:hover {
+	background-color: #1b88f5;
+	color: white;
+}
+
+.botao_salvar:active{
+	background-color: #143057;
+	border: 2px solid #143057;
+}
+
+html{
+	-webkit-user-select: none;	
+  	-ms-user-select: none;
+  	user-select: none;
+}
+
+input:focus {
+    outline-width: 0;
+}

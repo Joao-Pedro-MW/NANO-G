@@ -1,0 +1,15 @@
+
+.base table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+th{
+    background-color:var(--dodger-blue-600);
+    color: var(--branco);
+}
+td, th {
+    width: 10em;
+    border: 1px solid var(--dodger-blue-600);
+}
+tr:nth-child(even){background-color:var(--cinza-bem-claro)}

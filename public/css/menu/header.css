@@ -1,0 +1,76 @@
+@import "../cores.css";
+@import "menu_lateral.css";
+
+.titulo_sistema{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+#usuario{
+height:3em;
+display: flex;
+align-content: flex-end;}
+
+#usuario img{
+  transform: scale(1.0);
+}
+/*COMEÇO DO MENU*/
+/*Ajustamos os tamanhos das imagens*/
+#botao_menu, #botao_menu_branco {
+  transform: scale(0.4);
+  width: 100px;
+  margin: -15px;
+}
+
+/*Texto do menu claro*/
+.menu-botao-claro p {
+  color: var(--dodger-blue-50);
+}
+/*Ajuste da posição da imagem e do texto MENU*/
+.menu-botao-escuro, .menu-botao-claro {
+  width: min-content;
+  display: flex;
+}
+/*MENU*/
+/* aplicamos o espaçamento apenas ao primeiro <a> depois de closebtn*/
+.closebtn + a {padding-top: 40px;}
+/*Ajuste da posição da imagem e do texto FECHAR*/
+.menu-botao-claro  {
+  padding-top: 10px;
+  margin-left: -150%;
+}
+/*FIM DO MENU*/
+hr{margin: 0;background-color: var(--dodger-blue-950);}
+/*COMECO DA IMAGEM DO USUÁRIO*/
+
+/*Funcionamento dos links do menu*/
+.menu_container{
+  text-align: left;
+  margin-top: 45px;
+  margin-left: 5%;
+}
+.menu_classe a{
+  display: block;
+  transition: height 0.3s ease-out;
+  height: 0;
+  visibility: hidden;
+  margin: 0;
+  margin-left: 20px;
+}
+
+.menu_classe:hover a{
+  height: 30px;
+  visibility: visible;
+}
+
+.classe_titulo{
+  margin: 10px;
+}
+
+html{
+	-webkit-user-select: none;	
+  	-ms-user-select: none;
+  	user-select: none;
+}

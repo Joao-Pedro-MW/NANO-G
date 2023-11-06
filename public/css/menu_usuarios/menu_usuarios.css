@@ -1,0 +1,153 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 4vw;
+  height: 4vh;
+  margin-right: 2vw;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--cinza-claro-borda);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#label_switch{
+  margin-right: 5px;
+}
+
+.nome{
+  margin-left: 10px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 4vh;
+  width: 4vh;
+  background-color: var(--branco);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--dodger-blue-600);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--dodger-blue-600);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(1.999vw);
+  -ms-transform: translateX(1.999vw);
+  transform: translateX(1.999vw);
+}
+
+.slider.round {
+  border-radius: 4vw;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#top{
+  display:flex;
+  padding: 0;
+  height: 7vh;
+}
+
+#top_h1{
+  margin-left:10vw;
+  height: 7vh;
+  margin-right: 60.5%;
+}
+
+.tab_usuario{
+  margin-top: 1.2vw;
+  margin-left: 9vw;
+  width: 80vw;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  background-color: var(--cinza-bem-claro);
+}
+
+.nome{
+  position: relative;
+  width: 30vw;
+  height: 7vh;
+  display: block;
+  align-items: center;
+}
+
+.nome p{
+  font-size: 2.5vh;
+  margin: 0;
+  height: 3.8vh;
+}
+
+.perfil{
+  width: 8vh;
+  height: 8vh;
+  border-radius: 50px;
+  padding: 0;
+  border: var(--dodger-blue-600) solid;
+  background-color: var(--branco);
+}
+
+.botao_lixeira{
+  width: 2vw;
+  height: 6vh;
+  background-color: var(--cinza-bem-claro); 
+  padding: 0;
+}
+
+.botao_editar,.novo_usuario {
+  width: 10vw;
+  height: 6vh;
+  background-color: var(--branco); 
+  color: var(--dodger-blue-600); 
+  border: 2px solid var(--dodger-blue-600);
+  border-radius: 0.7vw;
+  padding: 0;
+  margin-right: 2vw;
+}
+
+.novo_usuario a{
+  color: var(--dodger-blue-600);
+}
+
+.botao_editar:hover,.novo_usuario:hover,.novo_usuario a:hover{
+  background-color: var(--dodger-blue-600);
+  color: var(--branco);
+}
+
+.botao_editar:active,.novo_usuario:active,.novo_usuario a:active{
+  background-color: var(--dodger-blue-950);
+  border: 2px solid var(--dodger-blue-950);
+}
+
+html{
+	-webkit-user-select: none;	
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input:focus {
+  outline-width:0;
+}

@@ -1,0 +1,114 @@
+.div_vertical{
+	display: flex;
+	flex-direction:column ;
+}
+
+.div_horizontal{
+	display: flex;
+	flex-direction:row ;
+}
+
+#main_div{
+	justify-content: center;
+	align-items: center;
+	height: 60vh;
+}
+
+#div_dados{
+	background-color:var(--cinza-claro);
+	width: 40vw;
+	height: 50%;
+	align-items: center;
+	padding: 3vw;
+	border-radius: 3vw;
+}
+
+#low_div{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	height: 40%;
+	width: 40vw;
+	align-items: center;
+}
+
+#lower_div{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 20vw;
+}
+
+#lowest_div{
+	height: 50%;
+}
+
+#nome{margin-right: 2vw;}
+#cpf{margin-right: 2vw;}
+
+#email{margin-left: 2vw;}
+#data_nascimento{margin-left: 2vw;}
+#label_direita{margin-left: 2vw;}
+
+label{margin-bottom: 0.4vw;}
+
+input[type="date"]{height: 2.6vw;}
+
+input[type="radio"]{
+	float:left;
+	width: 1vw;
+	height: 1vw;
+	margin-bottom: 0.5vw;
+}
+
+
+input:not([type="radio"]){
+	margin: 0;
+	width: 15vw;
+	height: 2.5vw;
+	margin-bottom: 3vw;
+	border: var(--cinza-claro-borda) 2px solid;
+	border-radius: 8px;
+}
+
+.perfil{
+	border: 8px var(--dodger-blue-600) solid;
+	border-radius: 34vw;
+	transform: scale(0.35);
+	width: 34vw;
+	height: 34vw;
+	margin-right: -5vw;
+	margin-left: -10vw;
+}
+
+.botao_salvar{
+  width: 10vw;
+  height: 6vh;
+  color: var(--dodger-blue-600); 
+  border: 2px solid var(--dodger-blue-600);
+  border-radius: 5px;
+  background-color: var(--branco);
+}
+
+.botao_salvar:hover {
+  background-color: var(--dodger-blue-600);
+  color: var(--branco);
+}
+
+.botao_salvar:active{
+  background-color: var(--dodger-blue-950);
+  border: 2px solid var(--dodger-blue-950);
+}
+
+html{
+	-webkit-user-select: none;	
+  	-ms-user-select: none;
+  	user-select: none;
+}
+
+input:focus {
+    outline-width: 0;
+}
+
+
+/*div{outline: solid black;}*/
