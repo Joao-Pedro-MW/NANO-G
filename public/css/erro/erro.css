@@ -14,7 +14,7 @@
     padding-left: 2vw;
     padding-right: 2vw;
     height: auto;
-    box-shadow: 0px 0px 10px 10px var(--cinza-bem-claro);
+    box-shadow: 0 0 10px 10px var(--cinza-bem-claro);
     border-radius: 8px;
     outline: solid var(--cinza-bem-claro);
     background-color: var(--cinza-bem-claro);
@@ -36,8 +36,8 @@
 
 /*Div do subtitulo*/
 #subtitulo{
-    width: 0 auto;
-    height: 0 auto;
+    width: auto;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,6 +50,12 @@
     word-wrap: break-word;
     white-space: -moz-pre-wrap;
     white-space: pre-wrap;
+}
+
+html{
+	-webkit-user-select: none;	
+  	-ms-user-select: none;
+  	user-select: none;
 }
 
 /*div{outline: solid black;}

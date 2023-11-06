@@ -6,64 +6,85 @@
 	<title>Remover item</title>
 	<link rel="stylesheet" type="text/css" href="..\css\menu\header.css">
 	<link rel="stylesheet" type="text/css" href="..\css\remocao_itens\remocao_itens.css">
+	<link rel="stylesheet" type="text/css" href="..\css\tabelas.css">
 	<script type="text/javascript" src="..\js\menu.js"></script>
 </head>
 <body>
 
 	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
 	<div class="container">
-		
-		<button id="" class="pesquisa">Pesquisar</button>
+		<button id="remocao" class="remocao">Remover Item</button>
+		<button id="pesquisa" class="pesquisa">Pesquisar</button>
 	</div>
 	
-	<div id="tabela">
-		<table>
+	<div class="base">
+		<table id="tabela_dados">
 			<tr>
-				<th style="background-color:white;border:none">
-				<button id="" class="remocao">Remover Item</button></th>
+
+				<th style="background-color:white;border:none"></th>
+				
 			    <th class="item">Produto 
 					<select name="itens" id="itens" autofocus required class="combobox">
 						<option></option>
 					</select>
 				</th>
-			    <th class="item">Qtd.
-						<option></option>
-					</select>
-				</th>
+
+			    <th class="item">Qtd.</th>
+
 			    <th class="item">Tipo
 					<select name="itens" id="itens" autofocus required class="combobox">
 						<option></option>
 					</select>
 				</th>
+
 			    <th class="item">Valor
 					<select name="itens" id="itens" autofocus required class="combobox">
 						<option></option>
 					</select>
 				</th>
+
 			    <th class="item">Lote
 					<select name="itens" id="itens" autofocus required class="combobox">
 						<option></option>
 					</select>  
 				</th>  
+
 				<th class="item">Validade
 					<select name="itens" id="itens" autofocus required class="combobox">
 						<option></option>
 					</select>
 				</th>
+
 			</tr>
 			<tr>
-				<td id="" >
-                    <input style="width: 40px" type="number">
+
+				<td id="select" >
+                    <input type="number">
                     <input type="checkbox" id="checkbox">
-
-
                 </td>
+
 				<td class="item"></td>
 				<td class="item"></td>
 				<td class="item"></td>
 				<td class="item"></td>
 				<td class="item"></td>
 				<td class="item"></td>
+
+			</tr>
+			<tr>
+
+				<td id="select" >
+                    <input type="number">
+                    <input type="checkbox" id="checkbox">
+                </td>
+
+				<td class="item"></td>
+				<td class="item"></td>
+				<td class="item"></td>
+				<td class="item"></td>
+				<td class="item"></td>
+				<td class="item"></td>
+
 			</tr>
 		</table>	
 	</div>

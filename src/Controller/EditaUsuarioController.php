@@ -3,45 +3,29 @@
 namespace src\Controller;
 use src\Repository\Usuario\UsuarioRepository;
 
-class EditaUsuarioController implements Controller
+readonly class EditaUsuarioController implements Controller
 {
-    public function __construct(private UsuarioRepository $UsuarioRepository)
+
+    public function __construct(private UsuarioRepository $usuarioRepository)
     {
     }
-    
     public function processaRequisicao(): void
-    {   
-        if($_SERVER['REQUEST_METHOD'] === 'GET'){
-            if(!array_key_exists('id',$_GET)){
-                header('Location: /usuarios');
-            }
-            $idUsuario = filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);
-            if($idUsuario === false || $idUsuario === null){
-                header('Location: /usuarios');;
-            }
-            $dadosUsuario = $this->UsuarioRepository->RetornaUsuario($idUsuario);
-            require_once __DIR__ . '\..\..\src\Views\Usuarios\edita_usuario.php';
-        }
-        if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            if(array_key_exists('cpf',$_POST)){
-                $usuarioID = htmlspecialchars($_REQUEST['id']);
-                $UsuarioNome = htmlspecialchars($_POST['nome']);
-                $UsuarioEmail = htmlspecialchars($_POST['email']);
-                $UsuarioDataNascimento = htmlspecialchars($_POST['data_nascimento']);
-                $UsuarioPermissao = htmlspecialchars($_POST['tipo_usuario']); 
-                $UsuarioCPF = filter_input(INPUT_POST, 'cpf', FILTER_VALIDATE_FLOAT);
-                $dadosUsuario = array(
-                    'ID_USUARIO' => $usuarioID,
-                    'NOME' => $UsuarioNome,
-                    'CPF' => $UsuarioCPF,
-                    'DT_NASCIMENTO' => $UsuarioDataNascimento,
-                    'TIPO_USUARIO' => $UsuarioPermissao,
-                    'EMAIL' => $UsuarioEmail
-                );
-                $this->UsuarioRepository->AtualizaUsuario($dadosUsuario);
-                echo "<script>alert(\"Usuario $UsuarioNome atualizado com sucesso\")</script>";
-                header('Location: /usuarios');
-            } 
-        }
+    {
+        $usuarioID = filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);
+        $UsuarioNome = htmlspecialchars(filter_input(INPUT_POST,'nome',FILTER_SANITIZE_SPECIAL_CHARS));
+        $UsuarioEmail = htmlspecialchars(filter_input(INPUT_POST,'email',FILTER_SANITIZE_SPECIAL_CHARS));
+        $UsuarioDataNascimento = htmlspecialchars(filter_input(INPUT_POST,'data_nascimento',FILTER_SANITIZE_SPECIAL_CHARS));
+        $UsuarioPermissao = htmlspecialchars(filter_input(INPUT_POST,'tipo_usuario',FILTER_SANITIZE_SPECIAL_CHARS));
+        $UsuarioCPF = htmlspecialchars(filter_input(INPUT_POST,'cpf',FILTER_SANITIZE_SPECIAL_CHARS));
+        $dadosUsuario = array(
+            'ID_USUARIO' => $usuarioID,
+            'NOME' => $UsuarioNome,
+            'CPF' => $UsuarioCPF,
+            'DT_NASCIMENTO' => $UsuarioDataNascimento,
+            'TIPO_USUARIO' => $UsuarioPermissao,
+            'EMAIL' => $UsuarioEmail
+        );
+        $this->usuarioRepository->AtualizaUsuario($dadosUsuario);
+        header('Location: /usuarios');
     }
 }

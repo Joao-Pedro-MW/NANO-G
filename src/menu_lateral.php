@@ -1,7 +1,7 @@
 <?php $imagens_url = '..' . DIRECTORY_SEPARATOR . 'imagens' . DIRECTORY_SEPARATOR ?>
 
 <div class="titulo_sistema">
-    <div id="mySidenav" class="sidenav">
+    <div id="menu_lateral" class="menu_lateral">
         <!-- primeiro botão para FECHAR o menu -->
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
           <div class="menu-botao-claro">
@@ -17,13 +17,15 @@
                 
             </div>
             <div class="menu_classe">
-                <h1 class="classe_titulo">Produtos</h1>
-                <a href="\produtos\cadastro-lote">Cadastro de lote</a>
-                <a href="\produtos">Menu produtos</a>
+                <h1 class="classe_titulo">Estoque</h1>
+                <a href="\itens">Menu Itens</a>
+                <a href="\itens\cadastro_item">Cadastro de itens</a>
+                <a href="\itens\cadastro_lote">Cadastro de lote</a>
+
             </div>
             <div class="menu_classe">
                 <h1 class="classe_titulo">Saída</h1>
-                <a href="\saida">Saída de estoque</a>
+                <a href="\remocao">Saída de estoque</a>
             </div>
             <div class="menu_classe">
                 <h1 class="classe_titulo">Usuarios</h1>

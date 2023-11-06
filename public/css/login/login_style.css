@@ -9,7 +9,6 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
   transform: translate(-50%, -50%);
 }
 #painel_login form {
-  background-color: var(--preto);
   backdrop-filter: blur(5px);
   background: transparent;
   border:7px solid ;
@@ -55,7 +54,6 @@ html{
   display: block;
   position: relative;
   background-color:var(--branco);
-  background-image: url('');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -64,4 +62,10 @@ html{
 html {
   overflow-x: hidden;
   overflow-y: hidden;
+}
+
+html{
+	-webkit-user-select: none;	
+  	-ms-user-select: none;
+  	user-select: none;
 }

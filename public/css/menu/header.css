@@ -54,7 +54,7 @@ hr{margin: 0;background-color: var(--dodger-blue-950);}
 .menu_classe a{
   display: block;
   transition: height 0.3s ease-out;
-  height: 0px;
+  height: 0;
   visibility: hidden;
   margin: 0;
   margin-left: 20px;
@@ -67,4 +67,10 @@ hr{margin: 0;background-color: var(--dodger-blue-950);}
 
 .classe_titulo{
   margin: 10px;
+}
+
+html{
+	-webkit-user-select: none;	
+  	-ms-user-select: none;
+  	user-select: none;
 }

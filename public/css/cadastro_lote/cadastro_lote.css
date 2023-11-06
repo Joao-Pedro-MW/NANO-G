@@ -38,7 +38,7 @@ input:active{
 }
 
 #itens{
-	width: 15vw;
+	width: 16.8vw;
 	height: 2.8vw;
 	margin-bottom: 3vw;
 	border: var(--cinza-claro-borda) 2px solid;
@@ -107,14 +107,6 @@ button:active{
 #lote{
 	width:16.2vw;
 	pointer-events:none;
-}
-
-#validade,#valor,#botao{
-	width:16.4vw;
-}
-
-#itens{
-	width:16.8vw;
 }
 
 .div_left{

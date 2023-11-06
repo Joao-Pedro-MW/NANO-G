@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="utf-8" user-scalable=no initial-scale=1 maximum-scale=1>
+    <meta charset="utf-8" initial-scale=1 maximum-scale=1>
     <title>Acesso ao Nano-G</title>
     <meta name="description" content="Pagina de login para o sistema NANO-G">
     <meta name="author" content="JAV" />

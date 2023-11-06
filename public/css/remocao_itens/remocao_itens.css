@@ -1,48 +1,78 @@
-#tabela{
-    width: 100%;
-    text-align: center;
-    border-collapse: collapse;
+td[id="select"]{
+    border: 0;
+	background-color:var(--branco);
+	width: 5%;
 }
 
-th{
-    background-color:var(--dodger-blue-600);
+#select input{
+	float: right;
+	width: 60%;
+	height: 100%;
+}
+
+#checkbox{
+	text-justify: auto;
+}
+
+#select #checkbox{
+	align-self: center;
+	width: 1vw;
+	height: 1vw;
+}
+
+.container{
+	display: flex;
+	justify-content: center;
+	height: 50px;
+}
+
+button{
+    text-align: center;
+    height: 50px;
+    width: 17%;
+    margin: 0.5em;
+    background-color: var(--branco); 
+    color: var(--dodger-blue-600); 
+    border: 2px solid var(--dodger-blue-600);
+    border-radius: 0.7vw;
+    padding: 0px;
+}
+  
+button:hover{
+    background-color: var(--dodger-blue-600);
+    color: white;
+}
+  
+button:active{
+    background-color: var(--dodger-blue-950);
+    border: 2px solid var(--dodger-blue-950);
+}
+
+.remocao{
+	margin-right: 50%;
+}
+
+.remocao:hover{
+    border-color: var(--aviso);
+    background-color: var(--aviso);
     color: var(--branco);
 }
 
-.item {
-    width: 14vw;
-    height: 5vh;
-    border: 1px solid var(--dodger-blue-500);
+.remocao:active{
+    border-color: var(--aviso-escuro);
+    background-color: var(--aviso-escuro);
 }
 
-tr:nth-child(even){background-color:var(--dodger-blue-100)}
-
-#checkbox{
-	width: 20px;
-	height: 20px;
-}
-.remocao{
-	background-color: var(--aviso);
-	color: white;
-	font-size: 20px;
-	border-radius: 5px;
-	border: 1px solid var(--aviso);
-	width: ;
-	padding-left: 20px;
-	padding-right: 20px;	
-	height:50px;
+.base{
+	margin: 50px;
 }
 
-.pesquisa{
-	align:left;
-	background-color: var(--dodger-blue-600);
-	color: white;
-	font-size: 20px;
-	border-radius: 5px;
-	border: none;
-	height: 50px;
-	width: 100%;
+html{
+	-webkit-user-select: none;	
+  	-ms-user-select: none;
+  	user-select: none;
 }
-.remocao, .pesquisa{
-	
+
+input:focus {
+    outline-width: 0;
 }

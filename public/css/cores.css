@@ -1,26 +1,27 @@
 /*CORES BASE PARA TODO O SISTEMA*/
 :root {
-	--dodger-blue-50: #eef9ff;
-	--dodger-blue-100: #d9f1ff;
-	--dodger-blue-200: #bce8ff;
-	--dodger-blue-300: #8edaff;
-	--dodger-blue-400: #59c3ff;
-	--dodger-blue-500: #33a7ff;
-	--dodger-blue-600: #1b88f5;
-	--dodger-blue-700: #1471e1;
-	--dodger-blue-800: #175ab6;
-	--dodger-blue-900: #194d8f;
-	--dodger-blue-950: #143057;
-  --cinza-bem-claro: #e1e1e1;
-  --cinza-claro: #d0d0d0cc;
-  --cinza-claro-borda: #d0d0d0;
-	--preto: #000;
-	--branco:#FFF;
-  --aviso:#e22513;
-  --aviso-escuro:#901207;
-  --confirmacao:#0acf0a;
-  --confirmacao-escuro:#008000;
+	--dodger-blue-50: #eef9ff; /* var(--dodger-blue-50) */
+	--dodger-blue-100: #d9f1ff; /* var(--dodger-blue-100) */
+	--dodger-blue-200: #bce8ff; /* var(--dodger-blue-200) */
+	--dodger-blue-300: #8edaff; /* var(--dodger-blue-300) */
+	--dodger-blue-400: #59c3ff; /* var(--dodger-blue-400) */
+	--dodger-blue-500: #33a7ff; /* var(--dodger-blue-500) */
+	--dodger-blue-600: #1b88f5; /* var(--dodger-blue-600) */
+	--dodger-blue-700: #1471e1; /* var(--dodger-blue-700) */
+	--dodger-blue-800: #175ab6; /* var(--dodger-blue-800) */
+	--dodger-blue-900: #194d8f; /* var(-dodger-blue-900) */
+	--dodger-blue-950: #143057; /* var(--dodger-blue-950) */
+  --cinza-bem-claro: #e1e1e1; /* var(--cinza-bem-claro) */
+  --cinza-claro: #d0d0d0cc; /* var(--cinza-claro) */
+  --cinza-claro-borda: #d0d0d0; /* var(--cinza-claro-borda) */
+	--preto: #000; /* var(--preto) */
+	--branco: #FFF; /* var(--branco) */
+  --aviso: #e22513; /* var( --aviso) */
+  --aviso-escuro: #901207; /* var(--aviso-escuro) */
+  --confirmacao: #0acf0a; /* var(--confirmacao) */
+  --confirmacao-escuro: #008000; /* var(--confirmacao-escuro) */
 }
+a{text-decoration: none;color: black}
 
 /*FONTE VIA GOOGLE FONTS*/
 /* cyrillic-ext */
