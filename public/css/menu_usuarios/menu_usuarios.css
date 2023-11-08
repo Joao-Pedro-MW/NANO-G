@@ -23,7 +23,6 @@
   background-color: var(--cinza-claro-borda);
   -webkit-transition: .4s;
   transition: .4s;
-  border: 1px solid var(--dodger-blue-600);
   border-radius: 25px;
 }
 
@@ -56,16 +55,9 @@ input:checked + .slider:before {
   transform: translateX(1.999vw);
 }
 
-.slider.round {
-  border-radius: 4vw;
-}
-
 .slider.round:before {
-  margin-top: -1px;
-  margin-left: -1px;
   border-radius: 50%;
-  border: 1px solid var(--dodger-blue-600);
-  border-radius: 50%;
+  height: 100%;
 }
 
 #top{
