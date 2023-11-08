@@ -31,7 +31,6 @@
             <p class="nome">Tipo: <?= $usuario["TIPO_USUARIO"] ?> </p>
 		</div>
 
-		<label for="switch" id="label_switch">Ativado</label>
 		<label id="switch" class="switch">
 			<input type="checkbox">
 			<span class="slider round"></span>

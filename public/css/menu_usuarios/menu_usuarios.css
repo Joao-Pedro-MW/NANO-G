@@ -1,4 +1,5 @@
 .switch {
+  margin-left: 28%;
   position: relative;
   display: inline-block;
   width: 4vw;
@@ -22,11 +23,8 @@
   background-color: var(--cinza-claro-borda);
   -webkit-transition: .4s;
   transition: .4s;
-}
-
-#label_switch{
-  margin-right: 5px;
-  margin-left: 22%;
+  border: 1px solid var(--dodger-blue-600);
+  border-radius: 25px;
 }
 
 .nome{
@@ -41,6 +39,7 @@
   background-color: var(--branco);
   -webkit-transition: .4s;
   transition: .4s;
+  
 }
 
 input:checked + .slider {
@@ -62,6 +61,10 @@ input:checked + .slider:before {
 }
 
 .slider.round:before {
+  margin-top: -1px;
+  margin-left: -1px;
+  border-radius: 50%;
+  border: 1px solid var(--dodger-blue-600);
   border-radius: 50%;
 }
 
