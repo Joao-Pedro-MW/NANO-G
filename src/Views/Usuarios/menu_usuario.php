@@ -15,7 +15,7 @@
 
 		<h1 id="top_h1">Usuários</h1>
 
-		<a href="/usuarios/cria_usuario">
+		<a href="/usuarios/cria_usuario" class="a">
 			<button id="top_btn" class="novo_usuario">Novo Usuário</button>
 		</a>
 		 
@@ -36,11 +36,11 @@
 			<span class="slider round"></span>
 		</label>
 		
-		<a href="/usuarios/edita_usuario?id=<?= $usuario["ID_USUARIO"] ?>">
+		<a class="a" href="/usuarios/edita_usuario?id=<?= $usuario["ID_USUARIO"] ?>">
 			<button class="botao_editar">Editar</button>
 		</a>
 		
-		<a style="float:right;" class="botao_lixeira" href="/usuarios/remove_usuario?id=<?= $usuario["ID_USUARIO"] ?>">
+		<a href="/usuarios/remove_usuario?id=<?= $usuario["ID_USUARIO"] ?>" class="botao_lixeira">
 			<img title="Excluir Usuário" src="/imagens/imagem_lixeira.svg" width="50vw" height="50vh" style="transform: scale(0.7)">
 		</a>
 

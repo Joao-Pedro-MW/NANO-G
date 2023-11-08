@@ -107,6 +107,7 @@ input:checked + .slider:before {
 }
 
 .botao_lixeira{
+  margin-left: 1vw;
   width: 2vw;
   height: 6vh;
   background-color: var(--cinza-bem-claro); 
@@ -134,4 +135,9 @@ input:checked + .slider:before {
 .botao_editar:active, .novo_usuario:active{
   background-color: var(--dodger-blue-950);
   border: 2px solid var(--dodger-blue-950);
+}
+
+.a{
+  width: 10vw;
+  height: 6vh;
 }
