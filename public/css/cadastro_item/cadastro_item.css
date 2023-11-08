@@ -50,9 +50,3 @@
 }
 
 label{margin-bottom: 0.4vw;}
-
-html{
-	-webkit-user-select: none;	
-  	-ms-user-select: none;
-  	user-select: none;
-}

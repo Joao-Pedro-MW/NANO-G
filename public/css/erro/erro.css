@@ -51,11 +51,3 @@
     white-space: -moz-pre-wrap;
     white-space: pre-wrap;
 }
-
-html{
-	-webkit-user-select: none;	
-  	-ms-user-select: none;
-  	user-select: none;
-}
-
-/*div{outline: solid black;}

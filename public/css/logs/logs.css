@@ -59,9 +59,3 @@ table{
 #data_inicio,#data_fim{
     height: 47px;
 }
-
-html{
-	-webkit-user-select: none;	
-  	-ms-user-select: none;
-  	user-select: none;
-}

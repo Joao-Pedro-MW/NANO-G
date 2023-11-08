@@ -13,7 +13,7 @@
 	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
 	<div id="top">
 		<h1 id="top_h1">Usuários</h1>
-		<button id="top_btn" class="novo_usuario"> <a href="/usuarios/cria_usuario">Novo Usuário</a></button>
+		<button id="top_btn" class="novo_usuario"> <a href="/usuarios/cria_usuario"><span class="link-top">Novo Usuário</span></a></button>
 	</div>
     <!-- INICIO | DIV DE CADA USUÁRIO -->
     <?php foreach ($usuarioLista as $usuario): ?>
@@ -31,7 +31,7 @@
 			<span class="slider round"></span>
 		</label>
 
-		<a style="float:right;" class="botao_editar" href="/usuarios/edita_usuario?id=<?= $usuario["ID_USUARIO"] ?>"> Editar </a>
+		<button class="botao_editar"><a href="/usuarios/edita_usuario?id=<?= $usuario["ID_USUARIO"] ?>"><span class="link">Editar</span></a></button>
 		<a style="float:right;" class="botao_lixeira" href="/usuarios/remove_usuario?id=<?= $usuario["ID_USUARIO"] ?>"><img title="Excluir Usuário" src="/imagens/imagem_lixeira.svg" width="50vw" height="50vh" style="transform: scale(0.7)"></a>
 	</div>
     <?php endforeach ?>
