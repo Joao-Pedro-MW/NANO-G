@@ -107,6 +107,7 @@ input:checked + .slider:before {
 }
 
 .botao_lixeira{
+  align-self: center;
   margin-left: 1vw;
   width: 2vw;
   height: 6vh;
