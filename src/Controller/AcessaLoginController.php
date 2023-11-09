@@ -9,7 +9,7 @@ class AcessaLoginController implements Controller
 
     public function processaRequisicao(): void
     {
-        if(array_key_exists('autenticado',$_SESSION) && $_SESSION['autenticado']=== true){
+        if(array_key_exists('AUTENTICADO',$_SESSION) && $_SESSION['AUTENTICADO']=== true){
             header('Location: /itens');
         }
         require_once __DIR__ . '\..\..\src\login.php';

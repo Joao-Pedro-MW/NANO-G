@@ -64,7 +64,7 @@ class UsuarioRepository
     {
         $sql = "SELECT id_usuario , nome, cpf, dt_nascimento, tipo_usuario, email FROM n_usuario WHERE id_usuario = $idUsuario" ;
         $dadosUsuario = $this->pdo->query($sql);
-        return var_dump($dadosUsuario->fetch(PDO::FETCH_ASSOC));
+        return $dadosUsuario->fetch(PDO::FETCH_ASSOC);
     }
 
     public function RetornaDadosLogin(string $emailusuario):array
