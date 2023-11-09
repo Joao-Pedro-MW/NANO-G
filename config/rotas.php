@@ -39,5 +39,6 @@ return [
     'GET|/remocao'=> \src\Controller\ListarSaidaController::class,
 
     //Login
-    'GET|/'=> \src\Controller\LoginController::class,
+    'GET|/'=> \src\Controller\AcessaLoginController::class,
+    'POST|/'=> \src\Controller\ProcessaLoginController::class
     ];

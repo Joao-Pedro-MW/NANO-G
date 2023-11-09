@@ -23,7 +23,7 @@ readonly class NovoUsuarioController implements Controller
                 $UsuarioPermissao,
                 $UsuarioEmail,
                 $UsuarioCPF,
-                123
+                password_hash($UsuarioCPF,PASSWORD_ARGON2ID)
             );
             $this->usuarioRepository->CriaUsuario($novoUsuario);
             header('Location: /usuarios',false,303);
