@@ -12,7 +12,7 @@ CREATE TABLE n_usuario (
  tipo_usuario VARCHAR2(2) NOT NULL,
  flag_ativo CHAR(1) NOT NULL,
  email VARCHAR2(200) NOT NULL,
- senha VARCHAR2(50) NOT NULL,
+ senha VARCHAR2(200) NOT NULL,
  CONSTRAINT pk_usuario PRIMARY KEY (id_usuario)
 );
 

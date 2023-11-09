@@ -43,7 +43,7 @@
     <p>Menu</p></span>
     <h2>NANO-G</h2>
         <div id="usuario" class="usuario">
-            <p>Usuário</p>
+            <p>askd</p>
             <img src="<?php echo $imagens_url . 'imagem_usuario.svg'?>" alt="imagem do usuario">
         </div>
 </div>

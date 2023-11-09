@@ -13,19 +13,19 @@
 <!-- fundo de particulas -->
 <div id="particles-js">
     <div id="painel_login">
-        <form method="post">
+        <form method="post" id="form_login">
+
             <h2>Nano-G</h2>
-            <label>Usuário:</label>
-            <input type="text">
-            <label>Senha:</label>
-            <input type="password">
-            <input type="submit" value="Entrar" id="bt_login">
+            <label for="usuario">Usuário:</label>
+            <input id="usuario" type="email" name="usuario" required>
+            <label for="senha">Senha:</label>
+            <input id="senha" type="password" name="senha_usuario" required>
+            <input type="submit" form="form_login" value="Entrar" id="bt_login">
         </form>
     </div>
 </div>
 <!-- Scripts JS -->
 <script src="libs\particulas\particles.js"></script>
 <script src="js\login_particulas.js"></script>
-
 </body>
 </html>
