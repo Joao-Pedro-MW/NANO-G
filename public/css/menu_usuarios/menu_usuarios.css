@@ -1,4 +1,5 @@
 .switch {
+  margin-left: 28%;
   position: relative;
   display: inline-block;
   width: 4vw;
@@ -22,11 +23,7 @@
   background-color: var(--cinza-claro-borda);
   -webkit-transition: .4s;
   transition: .4s;
-}
-
-#label_switch{
-  margin-right: 5px;
-  margin-left: 22%;
+  border-radius: 25px;
 }
 
 .nome{
@@ -41,6 +38,7 @@
   background-color: var(--branco);
   -webkit-transition: .4s;
   transition: .4s;
+  
 }
 
 input:checked + .slider {
@@ -57,12 +55,9 @@ input:checked + .slider:before {
   transform: translateX(1.999vw);
 }
 
-.slider.round {
-  border-radius: 4vw;
-}
-
 .slider.round:before {
   border-radius: 50%;
+  height: 100%;
 }
 
 #top{
@@ -112,6 +107,8 @@ input:checked + .slider:before {
 }
 
 .botao_lixeira{
+  align-self: center;
+  margin-left: 1vw;
   width: 2vw;
   height: 6vh;
   background-color: var(--cinza-bem-claro); 
@@ -139,4 +136,9 @@ input:checked + .slider:before {
 .botao_editar:active, .novo_usuario:active{
   background-color: var(--dodger-blue-950);
   border: 2px solid var(--dodger-blue-950);
+}
+
+.a{
+  width: 10vw;
+  height: 6vh;
 }

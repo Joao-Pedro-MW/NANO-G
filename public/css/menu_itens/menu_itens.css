@@ -1,14 +1,36 @@
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head h1{
+    margin-right: 75%;
+}
+
 .base{margin:50px}
 
 .botao{
-    border: 2px solid var(--dodger-blue-500);
-    border-radius: 3px;
-    background-color: var(--branco);
-    color: var(--dodger-blue-900);
-    text-align: center;
-    height: 50px;
-    width: 17%;
-    margin: 0.5em;
+    overflow: hidden;
+    align-self: center;
+    width: 10vw;
+    height: 6vh;
+    background-color: var(--branco); 
+    color: var(--dodger-blue-600); 
+    border: 2px solid var(--dodger-blue-600);
+    border-radius: 0.7vw;
+    padding: 0;
+    margin-right: 2vw;
+}
+  
+.botao:hover{
+    background-color: var(--dodger-blue-600);
+    color: var(--branco);
+}
+  
+.botao:active{
+    background-color: var(--dodger-blue-950);
+    border: 2px solid var(--dodger-blue-950);
 }
 
 #icones{
@@ -16,26 +38,14 @@
     width:30px;
 }
 
-/*Estilização da tabela*/
+#nome{
+    width: 70%;
+}
+
+#lixeira{
+    margin-left: 5%;
+}
+
 .tabela_dados{
-    margin-top: 30px;
-    width: 100%;
-    text-align: center;
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-th{
-    background-color:var(--dodger-blue-600);
-    color: var(--branco);
-}
-td, th {
-    border: 1px solid var(--dodger-blue-500);
-}   
-.td_un_medida, .td_tipo, .td_opcoes{
-    width: 11em;
-}
-html{
-	-webkit-user-select: none;	
-  	-ms-user-select: none;
-  	user-select: none;
+    margin-top: 20px;
 }
