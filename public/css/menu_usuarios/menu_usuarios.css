@@ -26,6 +26,7 @@
 
 #label_switch{
   margin-right: 5px;
+  margin-left: 22%;
 }
 
 .nome{
@@ -118,6 +119,8 @@ input:checked + .slider:before {
 }
 
 .botao_editar,.novo_usuario {
+  overflow: hidden;
+  align-self: center;
   width: 10vw;
   height: 6vh;
   background-color: var(--branco); 
@@ -128,26 +131,12 @@ input:checked + .slider:before {
   margin-right: 2vw;
 }
 
-.novo_usuario a{
-  color: var(--dodger-blue-600);
-}
-
-.botao_editar:hover,.novo_usuario:hover,.novo_usuario a:hover{
+.botao_editar:hover, .novo_usuario:hover{
   background-color: var(--dodger-blue-600);
   color: var(--branco);
 }
 
-.botao_editar:active,.novo_usuario:active,.novo_usuario a:active{
+.botao_editar:active, .novo_usuario:active{
   background-color: var(--dodger-blue-950);
   border: 2px solid var(--dodger-blue-950);
-}
-
-html{
-	-webkit-user-select: none;	
-  -ms-user-select: none;
-  user-select: none;
-}
-
-input:focus {
-  outline-width:0;
 }

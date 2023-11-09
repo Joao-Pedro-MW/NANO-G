@@ -99,16 +99,3 @@ input:not([type="radio"]){
   background-color: var(--dodger-blue-950);
   border: 2px solid var(--dodger-blue-950);
 }
-
-html{
-	-webkit-user-select: none;	
-  	-ms-user-select: none;
-  	user-select: none;
-}
-
-input:focus {
-    outline-width: 0;
-}
-
-
-/*div{outline: solid black;}*/

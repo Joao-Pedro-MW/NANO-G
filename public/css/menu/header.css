@@ -1,6 +1,16 @@
 @import "../cores.css";
 @import "menu_lateral.css";
 
+html{
+	-webkit-user-select: none;	
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input:focus {
+  outline-width:0;
+}
+
 .titulo_sistema{
   display: flex;
   justify-content: space-between;
@@ -67,10 +77,4 @@ hr{margin: 0;background-color: var(--dodger-blue-950);}
 
 .classe_titulo{
   margin: 10px;
-}
-
-html{
-	-webkit-user-select: none;	
-  	-ms-user-select: none;
-  	user-select: none;
 }
