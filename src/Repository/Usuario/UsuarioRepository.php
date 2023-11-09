@@ -59,22 +59,10 @@ class UsuarioRepository
         return $ListaUsuarios->fetchAll(PDO::FETCH_ASSOC);
         
     }
-
     public function RetornaUsuario(int $idUsuario):array
     {
         $sql = "SELECT id_usuario , nome, cpf, dt_nascimento, tipo_usuario, email FROM n_usuario WHERE id_usuario = $idUsuario" ;
         $dadosUsuario = $this->pdo->query($sql);
-        return var_dump($dadosUsuario->fetch(PDO::FETCH_ASSOC));
-    }
-
-    public function RetornaDadosLogin(string $emailusuario):array
-    {
-        $sql = "SELECT nome, cpf, senha, email FROM N_USUARIO where EMAIL = :email";
-        $query = $this->pdo->prepare($sql);
-        $query->bindValue(':email',$emailusuario);
-        var_dump($sql);
-        $query->execute();
-
-        return $query->fetch(PDO::FETCH_ASSOC);
+        return $dadosUsuario->fetch(PDO::FETCH_ASSOC);
     }
 }

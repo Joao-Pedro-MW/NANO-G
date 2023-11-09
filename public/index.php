@@ -13,25 +13,18 @@ use src\Controller\ {
 
 $rotas = require_once __DIR__ .  '\..\config\rotas.php';
 
-
 $pdo = new PDO('oci:dbname=//localhost:1521/XEPDB1', 'system', '12345');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $rotaSolicitada = $_SERVER['PATH_INFO'] ?? "/";
 $meioHTTP = $_SERVER['REQUEST_METHOD'];
-$rotaLogin = $rotaSolicitada === "/";
-session_start();
-if(!array_key_exists('autenticado',$_SESSION) && !$rotaLogin){
-    header('Location: /');
-    return;
-}
-
 $chave = "$meioHTTP|$rotaSolicitada";
 $repositorioNecessario = ucfirst(explode('/',$rotaSolicitada)[1]) . 'Repository';
+
 switch ($repositorioNecessario){
     case 'ItensRepository':
         $repositorioNecessario = new ItensRepository($pdo);
         break;
-    case 'UsuariosRepository' || 'Repository':
+    case 'UsuariosRepository':
         $repositorioNecessario = new UsuarioRepository($pdo);
         break;
 }
