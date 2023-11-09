@@ -13,7 +13,7 @@ class ItensRepository
 
     public function TodosItens():array
     {
-        $sql = 'SELECT * FROM n_item';
+        $sql = 'SELECT it.item_nome, c.categoria_nome, um.unidade_nome FROM n_item it, n_categoria c, n_unidade_medida um WHERE it.id_categoria = c.id_categoria AND it.id_un_medida = um.id_unidade_medida AND it.id_item = $idItem';
         $listaProdutos = $this->pdo->query($sql);
         return $listaProdutos->fetchAll(PDO::FETCH_ASSOC);
     }
