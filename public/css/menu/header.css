@@ -78,3 +78,36 @@ hr{margin: 0;background-color: var(--dodger-blue-950);}
 .classe_titulo{
   margin: 10px;
 }
+
+#sair{
+  height: 0px;
+  overflow: hidden;
+  visibility: hidden;
+  position: absolute;
+}
+
+#usuario:hover + #sair,#sair:hover{
+  transition: height 0.3s ease-in;
+  visibility: visible;
+  height: 50px;
+}
+
+.button{
+	height: 3.5vh;
+	width: 11vw;
+	color: var(--dodger-blue-600); 
+	border: 2px solid var(--dodger-blue-600);
+	border-radius: 5px;
+	background-color: var(--branco);
+}
+
+.button:hover {
+	border-color: var(--aviso);
+  background-color: var(--aviso);
+  color: var(--branco);
+}
+
+.button:active{
+	border-color: var(--aviso-escuro);
+    background-color: var(--aviso-escuro);
+}

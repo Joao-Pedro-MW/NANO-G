@@ -42,8 +42,22 @@
         <img id="botao_menu" src="<?php echo $imagens_url . 'botao_menu.svg'?>">
     <p>Menu</p></span>
     <h2>NANO-G</h2>
+    <div id="logout">
+
         <div id="usuario" class="usuario">
             <p><?= $_SESSION['USUARIO']?></p>
+            
             <img src="<?php echo $imagens_url . 'imagem_usuario.svg'?>" alt="imagem do usuario">
         </div>
+
+        <div id="sair">
+
+            <a href="">
+                <button class="button">Sair</button>
+            </a>
+            
+        </div>
+        
+    </div>
+        
 </div>
