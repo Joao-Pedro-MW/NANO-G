@@ -109,5 +109,15 @@ hr{margin: 0;background-color: var(--dodger-blue-950);}
 
 .button:active{
 	border-color: var(--aviso-escuro);
-    background-color: var(--aviso-escuro);
+  background-color: var(--aviso-escuro);
+}
+
+h2{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  justify-self: center;
 }

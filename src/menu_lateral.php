@@ -4,10 +4,12 @@
     <div id="menu_lateral" class="menu_lateral">
         <!-- primeiro botão para FECHAR o menu -->
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
-          <div class="menu-botao-claro">
-            <img id="botao_menu_branco" src="<?php echo $imagens_url . "botao_menu_branco.svg"?> ">
-            <p>Fechar</p>
-          </div>
+
+            <div class="menu-botao-claro">
+                <img id="botao_menu_branco" src="<?php echo $imagens_url . "botao_menu_branco.svg"?> ">
+                <p>Fechar</p>
+            </div>
+
         </a>
         
         <div class="menu_container">
@@ -37,14 +39,25 @@
         
     </div>
     <!-- primeiro botão para ABRIR o menu -->
-    <span class="menu-botao-escuro" onclick="openNav()">
-        <!-- <img id="botao_menu" src="<?php echo __DIR__ . 'imagens' . DIRECTORY_SEPARATOR . 'botao_menu.svg'?>" -->
-        <img id="botao_menu" src="<?php echo $imagens_url . 'botao_menu.svg'?>">
-    <p>Menu</p></span>
+    <div>
+
+        <a href="javascript:void(0)" class="closebtn" onclick="openNav()">
+        
+            <div style="display:flex;">
+                <img id="botao_menu" src="<?php echo $imagens_url . 'botao_menu.svg'?>">
+                <p>Menu</p>
+            </div>
+
+        </a>
+
+    </div>
+    
+
     <h2>NANO-G</h2>
+    
     <div id="logout">
 
-        <div id="usuario" class="usuario">
+        <div id="usuario" class="usuario" >
             <p><?= $_SESSION['USUARIO']?></p>
             
             <img src="<?php echo $imagens_url . 'imagem_usuario.svg'?>" alt="imagem do usuario">
