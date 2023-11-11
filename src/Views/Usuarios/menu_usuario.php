@@ -31,19 +31,24 @@
             <p class="nome">Tipo: <?= $usuario["TIPO_USUARIO"] ?> </p>
 		</div>
 
-		<label id="switch" class="switch">
-			<input type="checkbox">
-			<span class="slider round"></span>
-		</label>
-		
-		<a class="a" href="/usuarios/edita_usuario?id=<?= $usuario["ID_USUARIO"] ?>">
-			<button class="botao_editar">Editar</button>
-		</a>
-		
-		<a href="/usuarios/remove_usuario?id=<?= $usuario["ID_USUARIO"] ?>" class="botao_lixeira">
-			<img title="Excluir Usuário" src="/imagens/imagem_lixeira.svg" width="50vw" height="50vh" style="transform: scale(0.7)">
-		</a>
+		<div class="gerenciar">
 
+			<label id="switch" class="switch">
+				<input type="checkbox">
+				<span class="slider round"></span>
+			</label>
+			
+			<a class="a" href="/usuarios/edita_usuario?id=<?= $usuario["ID_USUARIO"] ?>">
+				<button class="botao_editar">Editar</button>
+			</a>
+			
+			<a href="/usuarios/remove_usuario?id=<?= $usuario["ID_USUARIO"] ?>" class="botao_lixeira">
+				<img title="Excluir Usuário" src="/imagens/imagem_lixeira.svg" width="50vw" height="50vh" style="transform: scale(0.7)">
+			</a>
+
+		</div>
+
+		
 	</div>
     <?php endforeach ?>
     <!-- FIM | DIV DE CADA USUÁRIO -->

@@ -18,7 +18,7 @@ input[type="date"]{
 
 input{
 	margin: 0;
-	width: 15vw;
+	width: 100%;
 	height: 2.5vw;
 	margin-bottom: 3vw;
 	border: var(--cinza-claro-borda) 2px solid;
@@ -31,14 +31,14 @@ input:active{
 }
 
 #un_medida{
-	height: 2.8vw;
+	height: 2.5vw;
 	margin-bottom: 3vw;
 	border: var(--cinza-claro-borda) 2px solid;
 	border-radius: 8px;
 }
 
-#itens{
-	width: 16.8vw;
+#item{
+	width: 100%;
 	height: 2.8vw;
 	margin-bottom: 3vw;
 	border: var(--cinza-claro-borda) 2px solid;
@@ -47,7 +47,7 @@ input:active{
 
 button{
 	height: 2.65vw;
-	width: 10vw;
+	width: 100%;
 	color: var(--dodger-blue-600); 
 	border: 2px solid var(--dodger-blue-600);
 	border-radius: 5px;
@@ -65,10 +65,11 @@ button:active{
 }
 
 .coluna{
-	display: grid;
+	display: flex;
+	flex-direction: column;
   	justify-content: center;
 	float: left;
-	width: 25vw;
+	width: 45%;
 	height: 50vh;
 	font-size: 12px;
 }
@@ -80,7 +81,7 @@ button:active{
 }
 
 .junto input,select{
-	width: 8.2vw;
+	width: 95%;
 }
 
 .coluna div{
@@ -93,6 +94,9 @@ button:active{
 }
 
 #content_div{
+	display: flex;
+	width: 50%;
+	justify-content: center;
 	align-items: center;
 	height: 50vh;
 	background-color:var(--cinza-claro);
@@ -104,11 +108,7 @@ button:active{
 	color: var(--cinza-claro);
 }
 
-#lote{
-	width:16.2vw;
-	pointer-events:none;
-}
-
 .div_left{
 	float: left;
+	width: 50%;
 }

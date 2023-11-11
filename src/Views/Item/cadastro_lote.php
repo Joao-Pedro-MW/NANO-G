@@ -33,12 +33,12 @@
                 <div class="junto">
                     <div class="div_left">
                         <label for="quantidade">Quantidade</label>
-                        <input type="number" min="1" name="quantidade" id="quantidade" placeholder="quantidade" required>
+                        <input type="number" min="0" name="quantidade" id="quantidade" placeholder="quantidade" required>
                     </div>
                     <div class="div_left">
                         <label for="un_medida">Unidade de Medida</label>
                         <!-- Este campo é alterado conforme a option selecionada do item-->
-                        <input type="text" name="un_medida" id="un_medida" value="" disabled><br>
+                        <input type="text" name="un_medida" id="un_medida" value="" disabled>
                     </div>
                 </div>
                 <div>
@@ -46,7 +46,7 @@
                     <input type="number" step="0.01" min="0" name="valor" id="valor" placeholder="R$ Reais" required>
                 </div>
             </div>
-            <div class="coluna">
+            <div class="coluna" style="margin-left:5%;">
                 <div>
                     <label for="validade">Validade do Produto</label>
                     <input type="date" name="data_validade" id="data_validade" placeholder="Data de Validade" required><br>

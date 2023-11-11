@@ -1,5 +1,4 @@
 .switch {
-  margin-left: 28%;
   position: relative;
   display: inline-block;
   width: 4vw;
@@ -107,18 +106,23 @@ input:checked + .slider:before {
 }
 
 .botao_lixeira{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   align-self: center;
   margin-left: 1vw;
-  width: 2vw;
-  height: 6vh;
-  background-color: var(--cinza-bem-claro); 
   padding: 0;
+}
+
+.botao_lixeira img{
+  width: 7vh;
+  height: 7vh;
 }
 
 .botao_editar,.novo_usuario {
   overflow: hidden;
   align-self: center;
-  width: 10vw;
+  width: 100%;
   height: 6vh;
   background-color: var(--branco); 
   color: var(--dodger-blue-600); 
@@ -138,7 +142,10 @@ input:checked + .slider:before {
   border: 2px solid var(--dodger-blue-950);
 }
 
-.a{
-  width: 10vw;
-  height: 6vh;
+.gerenciar{
+  width: 20%;
+  margin-left: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
