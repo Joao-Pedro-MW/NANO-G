@@ -25,7 +25,7 @@ class ListarSaidaController implements Controller
             foreach ($listaUnidadesMedida as $unidade_medida){
                 if($lote["ID_ITEM"] === $unidade_medida["ID_ITEM"]){
                     //pegamos o nome do item conforme o ID de item do lote
-                    $listaLotes[$chave]["NOME_ITEM"] = $unidade_medida['ITEM_NOME'];
+                    $listaLotes[$chave]["NOME_ITEM"] = $unidade_medida['unidade_nome'];
                 }
             }
         }

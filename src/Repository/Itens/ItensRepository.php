@@ -89,7 +89,7 @@ class ItensRepository
     public function CriaLote(Lote $lote):void
     {
         var_dump($_REQUEST);
-        $sql = "INSERT INTO n_lote (id_lote,id_item,quantidade,data_validade)
+        $sql = "INSERT INTO n_lote (id_lote,id_item,quantidade,data_validade, )
 VALUES (S_LOTE_ID.nextval, :itemID, :quantidadeItem, TO_DATE(:data_validade, 'YYYY-MM-DD'))";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':itemId',$lote->itemId);
