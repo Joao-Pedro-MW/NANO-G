@@ -18,12 +18,24 @@ class ItensRepository
         return $listaProdutos->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function TodosLotes():array
+    {
+        $sql = "SELECT * FROM n_lote";
+        $listaLotes = $this->pdo->query($sql);
+        return $listaLotes->fetchAll(PDO::FETCH_ASSOC);
+    }
     public function ListaCategorias():array
     {
         $sql = "SELECT * from n_categoria";
         $listaCategorias = $this->pdo->query($sql);
         return $listaCategorias->fetchAll(PDO::FETCH_ASSOC);
 
+    }
+    public function ListaUnidadesMedida():array
+    {
+        $sql = "SELECT * FROM n_unidade_medida";
+        $listaUnidadesMedida = $this->pdo->query($sql);
+        return $listaUnidadesMedida->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function RemoveItem(int $id_item): void
@@ -72,15 +84,11 @@ class ItensRepository
         return $query->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function ListaUnidadesMedida():array
-    {
-        $sql = "SELECT * FROM n_unidade_medida";
-        $listaUnidadesMedida = $this->pdo->query($sql);
-        return $listaUnidadesMedida->fetchAll(PDO::FETCH_ASSOC);
-    }
+
 
     public function CriaLote(Lote $lote):void
     {
+        var_dump($_REQUEST);
         $sql = "INSERT INTO n_lote (id_lote,id_item,quantidade,data_validade)
 VALUES (S_LOTE_ID.nextval, :itemID, :quantidadeItem, TO_DATE(:data_validade, 'YYYY-MM-DD'))";
         $query = $this->pdo->prepare($sql);
