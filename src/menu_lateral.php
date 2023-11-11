@@ -27,7 +27,7 @@
             </div>
             <div class="menu_classe">
                 <h1 class="classe_titulo">Saída</h1>
-                <a href="\remocao">Saída de estoque</a>
+                <a href="\itens\remocao">Saída de estoque</a>
             </div>
             <div class="menu_classe">
                 <h1 class="classe_titulo">Usuarios</h1>

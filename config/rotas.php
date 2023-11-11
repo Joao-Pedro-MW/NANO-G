@@ -36,7 +36,7 @@ return [
     //Logs
     'GET|/logs' => \src\Controller\ListarLogController::class,
     //Estoque
-    'GET|/remocao'=> \src\Controller\ListarSaidaController::class,
+    'GET|/itens/remocao'=> \src\Controller\ListarSaidaController::class,
 
     //Login
     'GET|/'=> \src\Controller\AcessaLoginController::class,

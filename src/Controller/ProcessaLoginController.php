@@ -8,8 +8,7 @@ use src\Repository\Usuario\UsuarioRepository;
 class ProcessaLoginController implements Controller
 {
     public function __construct(private UsuarioRepository $usuarioRepository)
-    {
-    }
+    {}
     public function processaRequisicao(): void
     {
 

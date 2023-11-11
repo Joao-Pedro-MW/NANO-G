@@ -39,6 +39,7 @@ CREATE TABLE n_item (
 CREATE TABLE n_lote (
  id_lote NUMBER(10) NOT NULL,
  id_item NUMBER(10) NOT NULL,
+ valor_item NUMBER NOT NULL,
  quantidade NUMBER(10) NOT NULL,
  data_validade DATE NOT NULL,
  CONSTRAINT pk_lote PRIMARY KEY (id_lote),

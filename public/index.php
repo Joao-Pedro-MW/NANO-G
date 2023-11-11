@@ -26,11 +26,13 @@ if(!array_key_exists('AUTENTICADO',$_SESSION) && !$rotaLogin){
 
 $chave = "$meioHTTP|$rotaSolicitada";
 $repositorioNecessario = ucfirst(explode('/',$rotaSolicitada)[1]) . 'Repository';
+
 switch ($repositorioNecessario){
+
     case 'ItensRepository':
         $repositorioNecessario = new ItensRepository($pdo);
         break;
-    case 'UsuariosRepository' || 'Repository':
+    case 'UsuariosRepository' OR 'Repository':
         $repositorioNecessario = new UsuarioRepository($pdo);
         break;
 }
