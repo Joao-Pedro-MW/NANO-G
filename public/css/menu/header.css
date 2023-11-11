@@ -85,6 +85,9 @@ hr{margin: 0;background-color: var(--dodger-blue-950);}
   visibility: hidden;
   position: absolute;
 }
+#sair button{
+  width: 100%;
+}
 
 #usuario:hover + #sair,#sair:hover{
   transition: height 0.3s ease-in;
@@ -94,7 +97,6 @@ hr{margin: 0;background-color: var(--dodger-blue-950);}
 
 .button{
 	height: 3.5vh;
-	width: 11vw;
 	color: var(--dodger-blue-600); 
 	border: 2px solid var(--dodger-blue-600);
 	border-radius: 5px;

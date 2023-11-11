@@ -30,9 +30,15 @@
 					</select>
 				</th>
 
+                <th class="item">Unidade Medida
+                    <select name="itens" id="itens" autofocus class="combobox">
+                        <option></option>
+                    </select>
+                </th>
+
 			    <th class="item">Qtd.</th>
 
-			    <th class="item">Valor
+			    <th class="item">Valor por Item
 					<select name="itens" id="itens" autofocus class="combobox">
 						<option></option>
 					</select>
@@ -51,16 +57,16 @@
 				</th>
 
 			</tr>
-            <?php var_dump($listaItens);foreach ($listaLotes as $lote): ?>
+            <?php foreach ($listaLotes as $lote): ?>
 			<tr>
-
 				<td id="select" >
-                    <input type="number">
-                    <input type="checkbox" id="checkbox">
+                    <input type="number" name="quantidade_itens_lote">
+                    <input type="checkbox" id="checkbox" name="marcacao_lote">
                 </td>
 				<td class="item" id="nome_item"><?=$lote["NOME_ITEM"]?></td>
+                <td class="item" id="unidade_medida_item"><?= $lote["UNIDADE_MEDIDA"]?></td>
 				<td class="item" id="quantidade_item"><?= $lote["QUANTIDADE"]?></td>
-				<td class="item" id="valor_item">Valor Item</td>
+				<td class="item" id="valor_item"><?= $lote["VALOR_ITEM"]?></td>
 				<td class="item" id="lote_item"><?= $lote['ID_LOTE']?></td>
 				<td class="item" id="validade_lote"><?= $lote['DATA_VALIDADE'] ?></td>
 			</tr>
