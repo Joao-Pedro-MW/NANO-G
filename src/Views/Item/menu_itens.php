@@ -26,8 +26,8 @@
     <table class="tabela_dados" id="tabela_dados">
         <tr>
             <th>Nome</th>
-            <th>Unidade de Medida</th>
-            <th>Tipo</th>
+            <th>Categoria</th>
+            <th>Unidade de medida</th>
             <th>Operações</th>
         </tr>
 
