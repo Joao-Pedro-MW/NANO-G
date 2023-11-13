@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="..\css\menu\header.css">
     <link rel="stylesheet" type="text/css" href="..\css\cadastro_lote\cadastro_lote.css">
     <script type="text/javascript" src="..\js\menu.js"></script>
-
 </head>
 <body>
     <?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
@@ -64,6 +63,6 @@
         </div>
     </form>
 </body>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script type="text/javascript" src="..\js\novo_lote.js"></script>
+<script type="text/javascript" src="\..\js\jquery.js"></script>
+<script type="text/javascript" src="\..\js\novo_lote.js"></script>
 </html>

@@ -3,6 +3,7 @@
 namespace src\Repository\Usuario;
 
 use mysql_xdevapi\Exception;
+use PDOException;
 use src\Entity\Usuario;
 USE PDO;
 class UsuarioRepository
@@ -60,11 +61,16 @@ class UsuarioRepository
         
     }
 
-    public function RetornaUsuario(int $idUsuario):array
+    public function RetornaUsuario(int $idUsuario)
     {
-        $sql = "SELECT id_usuario , nome, cpf, dt_nascimento, tipo_usuario, email FROM n_usuario WHERE id_usuario = $idUsuario" ;
-        $dadosUsuario = $this->pdo->query($sql);
+        try {
+            $sql = "SELECT id_usuario , nome, cpf, dt_nascimento, tipo_usuario, email FROM n_usuario WHERE id_usuario = $idUsuario";
+            $dadosUsuario = $this->pdo->query($sql);
+        } catch (PDOException $e){
+            return "error";
+        }
         return $dadosUsuario->fetch(PDO::FETCH_ASSOC);
+
     }
 
     public function RetornaDadosLogin(string $emailusuario):array

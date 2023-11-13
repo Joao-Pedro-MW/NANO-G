@@ -15,18 +15,18 @@ class ListarSaidaController implements Controller
         $listaLotes = $this->itensRepository->TodosLotes();
         $listaItens = $this->itensRepository->TodosItens();
         $listaUnidadesMedida = $this->itensRepository->ListaUnidadesMedida();
-        foreach ($listaLotes as $index => $lote){
-            foreach ($listaItens as $item) {
+        foreach ($listaLotes as $index_lote => $lote){
+            foreach ($listaItens as $index_item => $item) {
                 if ($lote["ID_ITEM"] === $item["ID_ITEM"]) {
                     $itemNome = $item['ITEM_NOME'];
                     $itemUnidadeMedida = $item["ID_UN_MEDIDA"];
-                    $listaLotes[$index]['NOME_ITEM'] = $itemNome;
+                    $listaLotes[$index_lote]['NOME_ITEM'] = $item['ITEM_NOME'];
                 }
             }
             foreach ($listaUnidadesMedida as $unidade_medida){
                 if($itemUnidadeMedida === $unidade_medida["ID_UNIDADE_MEDIDA"]){
                     $unidade_medidaLote = $unidade_medida["UNIDADE_NOME"];
-                    $listaLotes[$index]["UNIDADE_MEDIDA"] = $unidade_medidaLote;
+                    $listaLotes[$index_lote]["UNIDADE_MEDIDA"] = $unidade_medidaLote;
                     break;
                 }
             }

@@ -15,14 +15,14 @@ class ProcessaLoginController implements Controller
         $usuarioEmail = filter_input(INPUT_POST,'usuario',FILTER_VALIDATE_EMAIL);
         $Usuariosenha = htmlspecialchars($_POST['senha_usuario']);
         $dadosDBLogin = $this->usuarioRepository->RetornaDadosLogin($usuarioEmail);
-        $senhaCorreta = (password_verify($Usuariosenha,$dadosDBLogin['SENHA']));
+        $senhaCorreta = password_verify($Usuariosenha,$dadosDBLogin['SENHA']);
         if(!$senhaCorreta)
         {
             header('Location: /?erro');
         } else {
             $_SESSION['USUARIO'] = $dadosDBLogin['NOME'];
             $_SESSION['AUTENTICADO'] = true;
-            header('Location: /itens');
+            header('Location: /');
         }
     }
 }

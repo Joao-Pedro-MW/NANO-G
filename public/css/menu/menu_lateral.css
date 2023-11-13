@@ -12,14 +12,14 @@
 }
 
 .menu_lateral a, .classe_titulo{
-  padding-left: 8px 8px 8px 32px;
+  padding-left: 8px;
   text-decoration: none;
   font-size: 25px;
   color: var(--dodger-blue-300);
   display: block;
   transition: 0.3s;
 }
-
+#botao_div{display:flex;}
 .menu_lateral a{
   font-size: 20px !important;
   margin-left: 20px;
@@ -41,4 +41,8 @@
 @media screen and (max-height: 450px) {
   .menu_lateral {padding-top: 15px;}
   .menu_lateral a {font-size: 18px;}
+}
+
+.closebtn{
+  cursor: pointer;
 }

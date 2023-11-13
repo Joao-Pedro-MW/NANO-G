@@ -3,15 +3,12 @@
 <div class="titulo_sistema">
     <div id="menu_lateral" class="menu_lateral">
         <!-- primeiro botão para FECHAR o menu -->
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
-
-            <div class="menu-botao-claro">
-                <img id="botao_menu_branco" src="<?php echo $imagens_url . "botao_menu_branco.svg"?> ">
+        <a class="closebtn" onclick="closeNav()">
+            <div class="menu-botao-claro" onclick="closeNav()">
+                <img id="botao_menu_branco" onclick="closeNav()" src="<?php echo $imagens_url . "botao_menu_branco.svg"?> " alt="Caixa">
                 <p>Fechar</p>
             </div>
-
         </a>
-        
         <div class="menu_container">
             <div class="menu_classe">
                 <h1 class="classe_titulo">Logs</h1>
@@ -36,41 +33,25 @@
             </div>
 
         </div>
-        
     </div>
     <!-- primeiro botão para ABRIR o menu -->
     <div>
-
-        <a href="javascript:void(0)" class="closebtn" onclick="openNav()">
-        
-            <div style="display:flex;">
+        <a class="closebtn" onclick="openNav()">
+            <div id="botao_div" ">
                 <img id="botao_menu" src="<?php echo $imagens_url . 'botao_menu.svg'?>">
                 <p>Menu</p>
             </div>
-
-        </a>
-
     </div>
-    
-
     <h2>NANO-G</h2>
-    
     <div id="logout">
-
         <div id="usuario" class="usuario" >
             <p><?= $_SESSION['USUARIO']?></p>
-            
             <img src="<?php echo $imagens_url . 'imagem_usuario.svg'?>" alt="imagem do usuario">
         </div>
-
         <div id="sair">
-
             <a href="">
                 <button class="button">Sair</button>
             </a>
-            
         </div>
-        
     </div>
-        
 </div>
