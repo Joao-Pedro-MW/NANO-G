@@ -41,6 +41,8 @@ return [
     'GET|/itens/remocao'=> \src\Controller\ListarSaidaController::class,
     'POST|/itens/remocao' => \src\Controller\ProcessaSaidaController::class,
 
+    'GET|/itens/excluir_lote' => \src\Controller\AcessaExcluirLote::class,
+
 
     //Login
     'GET|/'=> \src\Controller\AcessaLoginController::class,
