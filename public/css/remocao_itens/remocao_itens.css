@@ -82,12 +82,15 @@ select{
     background: unset;
     border: none;
 }
+
 select:focus{
     outline:none;
 }
+
 option{
     color: black;
 }
+
 #campo_select{
     background-color:white;
     border:none
