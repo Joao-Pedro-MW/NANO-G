@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,8 +26,8 @@
     <table class="tabela_dados" id="tabela_dados">
         <tr>
             <th>Nome</th>
-            <th>Unidade de Medida</th>
-            <th>Tipo</th>
+            <th>Categoria</th>
+            <th>Unidade de medida</th>
             <th>Operações</th>
         </tr>
 

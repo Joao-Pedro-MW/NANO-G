@@ -15,21 +15,22 @@ class ListarSaidaController implements Controller
         $listaLotes = $this->itensRepository->TodosLotes();
         $listaItens = $this->itensRepository->TodosItens();
         $listaUnidadesMedida = $this->itensRepository->ListaUnidadesMedida();
-        foreach ($listaLotes as $chave=>$lote){
-            foreach ($listaItens as $item){
-                if($lote["ID_ITEM"] === $item["id_unidade_medida"]){
-                    //pegamos o nome do item conforme o ID de item do lote
-                    $listaLotes[$chave]["NOME_ITEM"] = $item['ITEM_NOME'];
+        foreach ($listaLotes as $index_lote => $lote){
+            foreach ($listaItens as $index_item => $item) {
+                if ($lote["ID_ITEM"] === $item["ID_ITEM"]) {
+                    $itemNome = $item['ITEM_NOME'];
+                    $itemUnidadeMedida = $item["ID_UN_MEDIDA"];
+                    $listaLotes[$index_lote]['NOME_ITEM'] = $item['ITEM_NOME'];
                 }
             }
             foreach ($listaUnidadesMedida as $unidade_medida){
-                if($lote["ID_ITEM"] === $unidade_medida["ID_ITEM"]){
-                    //pegamos o nome do item conforme o ID de item do lote
-                    $listaLotes[$chave]["NOME_ITEM"] = $unidade_medida['unidade_nome'];
+                if($itemUnidadeMedida === $unidade_medida["ID_UNIDADE_MEDIDA"]){
+                    $unidade_medidaLote = $unidade_medida["UNIDADE_NOME"];
+                    $listaLotes[$index_lote]["UNIDADE_MEDIDA"] = $unidade_medidaLote;
+                    break;
                 }
             }
         }
-        var_dump($listaLotes);
         require_once __DIR__ . '\..\..\src\Views\Remocao\remocao_item.php';
     }
 }

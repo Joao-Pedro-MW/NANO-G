@@ -5,8 +5,7 @@ td[id="select"]{
 }
 
 #select input{
-	float: right;
-	width: 60%;
+	width: 80%;
 	height: 100%;
 }
 
@@ -75,4 +74,21 @@ html{
 
 input:focus {
     outline-width: 0;
+}
+
+select{
+    width:15px;
+    color: white;
+    background: unset;
+    border: none;
+}
+select:focus{
+    outline:none;
+}
+option{
+    color: black;
+}
+#campo_select{
+    background-color:white;
+    border:none
 }
