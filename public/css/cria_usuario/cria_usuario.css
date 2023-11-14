@@ -82,20 +82,20 @@ input:not([type="radio"]){
 }
 
 .botao_salvar{
-  width: 10vw;
-  height: 6vh;
-  color: var(--dodger-blue-600); 
-  border: 2px solid var(--dodger-blue-600);
-  border-radius: 5px;
-  background-color: var(--branco);
+	width: 10vw;
+	height: 6vh;
+	color: var(--dodger-blue-600); 
+	border: 2px solid var(--dodger-blue-600);
+	border-radius: 5px;
+	background-color: var(--branco);
 }
 
 .botao_salvar:hover {
-  background-color: var(--dodger-blue-600);
-  color: var(--branco);
+	background-color: var(--dodger-blue-600);
+	color: var(--branco);
 }
 
 .botao_salvar:active{
-  background-color: var(--dodger-blue-950);
-  border: 2px solid var(--dodger-blue-950);
+	background-color: var(--dodger-blue-950);
+	border: 2px solid var(--dodger-blue-950);
 }

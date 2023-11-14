@@ -46,8 +46,9 @@ input:active{
 }
 
 button{
-	height: 2.65vw;
 	width: 100%;
+    height: fit-content;
+    min-height: 6vh;
 	color: var(--dodger-blue-600); 
 	border: 2px solid var(--dodger-blue-600);
 	border-radius: 5px;

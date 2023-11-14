@@ -35,7 +35,7 @@
                         <input type="number" min="0" name="quantidade" id="quantidade" placeholder="quantidade" required>
                     </div>
                     <div class="div_left">
-                        <label for="un_medida">Unidade de Medida</label>
+                        <label for="un_medida">Un. Medida</label>
                         <!-- Este campo é alterado conforme a option selecionada do item-->
                         <input type="text" name="un_medida" id="un_medida" value="" disabled>
                     </div>

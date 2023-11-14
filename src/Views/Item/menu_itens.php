@@ -27,7 +27,7 @@
         <tr>
             <th>Nome</th>
             <th>Categoria</th>
-            <th>Unidade de medida</th>
+            <th>Un. medida</th>
             <th>Operações</th>
         </tr>
 

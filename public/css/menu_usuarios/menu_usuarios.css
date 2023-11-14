@@ -122,8 +122,10 @@ input:checked + .slider:before {
 .botao_editar,.novo_usuario {
   overflow: hidden;
   align-self: center;
-  width: 100%;
-  height: 6vh;
+  width: fit-content;
+  min-width: 100%;
+  height: fit-content;
+  min-height: 6vh;
   background-color: var(--branco); 
   color: var(--dodger-blue-600); 
   border: 2px solid var(--dodger-blue-600);
