@@ -22,14 +22,14 @@
                 <tr>
                     <th id="campo_select"></th>
                     <th class="item">Item
-                        <select  autofocus class="combobox">
+                        <select autofocus class="combobox">
                             <?php foreach ($listaLotes as $lote): ?>
                                 <option class="opcao" id="pesquisa_nome_item"><?=$lote["NOME_ITEM"]?></option>
                             <?php endforeach;?>
                         </select>
                     </th>
                     <th class="item">Unidade Medida
-                        <select  autofocus class="combobox">
+                        <select autofocus class="combobox">
                             <?php foreach ($listaLotes as $lote): ?>
                                 <option class="opcao" id="pesquisa_un_medida"><?= $lote["UNIDADE_MEDIDA"]?></option>
                             <?php endforeach;?>>
@@ -43,21 +43,28 @@
                         </select>
                     </th>
                     <th class="item">Valor por Item
-                        <select  autofocus class="combobox">
+                        <select autofocus class="combobox">
+                            <?php foreach ($listaLotes as $lote): ?>
+                                <option class="opcao" id="pesquisa_valor"><?= $lote["VALOR_ITEM"]?></option>
+                            <?php endforeach;?>
+                        </select>
+                    </th>
+                    <th class="item">Categoria
+                        <select autofocus class="combobox">
                             <?php foreach ($listaLotes as $lote): ?>
                                 <option class="opcao" id="pesquisa_valor"><?= $lote["VALOR_ITEM"]?></option>
                             <?php endforeach;?>
                         </select>
                     </th>
                     <th class="item">Número do lote
-                        <select  autofocus class="combobox">
+                        <select autofocus class="combobox">
                             <?php foreach ($listaLotes as $lote): ?>
-                            <option class="opcao" id="pesquisa_lote"><?= $lote['ID_LOTE']?></option>
+                            <option class="opcao" id="pesquisa_lote"><?= $lote["CATEGORIA"]?></option>
                             <?php endforeach;?>
                         </select>
                     </th>
                     <th class="item">Validade
-                        <select  autofocus class="combobox">
+                        <select autofocus class="combobox">
                             <?php foreach ($listaLotes as $lote): ?>
                                 <option class="opcao" id="pesquisa_data_validade"><?= $lote['DATA_VALIDADE']?></option>
                             <?php endforeach;?>
@@ -73,6 +80,7 @@
                     <td class="item" id="unidade_medida_item"><?= $lote["UNIDADE_MEDIDA"]?></td>
                     <td class="item" id="quantidade_item"><?= $lote["QUANTIDADE"]?></td>
                     <td class="item" id="valor_item"><?= $lote["VALOR_ITEM"]?></td>
+                    <td class="item" id="categoria_item"><?= $lote['CATEGORIA']?></td>
                     <td class="item" id="lote_item"><?= $lote['ID_LOTE']?></td>
                     <td class="item" id="validade_lote"><?= $lote['DATA_VALIDADE']?></td>
                 </tr>
