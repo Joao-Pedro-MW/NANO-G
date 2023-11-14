@@ -13,8 +13,8 @@ readonly class AcessaEditaItemController implements Controller
     {
         $itemId = htmlspecialchars($_GET['item']);
         $dadosItem = $this->itensRepository->RetornaItem($itemId);
-        $listaCategorias = $this->itensRepository->ListaCategorias();
-        $listaUnidadesMedida = $this->itensRepository->ListaUnidadesMedida();
+        $listaCategorias = $this->itensRepository->TodasCategorias();
+        $listaUnidadesMedida = $this->itensRepository->TodosUnidadesMedidas();
         require_once __DIR__ . '\..\..\src\Views\Item\edita_item.php';
     }
 }

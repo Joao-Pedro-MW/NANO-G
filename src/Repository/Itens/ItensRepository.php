@@ -24,26 +24,33 @@ class ItensRepository
         $listaLotes = $this->pdo->query($sql);
         return $listaLotes->fetchAll(PDO::FETCH_ASSOC);
     }
-    public function ListaCategorias():array
+    public function TodasCategorias():array
     {
         $sql = "SELECT * from n_categoria";
         $listaCategorias = $this->pdo->query($sql);
         return $listaCategorias->fetchAll(PDO::FETCH_ASSOC);
 
     }
-    public function ListaUnidadesMedida():array
+    public function TodosUnidadesMedidas():array
     {
         $sql = "SELECT * FROM n_unidade_medida";
         $listaUnidadesMedida = $this->pdo->query($sql);
         return $listaUnidadesMedida->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function RemoveItem(int $id_item): void
+    public function RemoveItem(int $id_item):bool
     {
-        $sql = 'DELETE FROM n_item WHERE id_item = :id';
-        $query = $this->pdo->prepare($sql);
-        $query->bindValue(':id',$id_item);
-        $query->execute();
+        try {
+            $sql = 'DELETE FROM n_item WHERE id_item = :id';
+            $query = $this->pdo->prepare($sql);
+            $query->bindValue(':id', $id_item);
+            $query->execute();
+            return True;
+        } catch (\PDOException $erro) {
+            // Use um log ou imprima a mensagem de erro para fins de depuração
+            return False;
+        }
+
     }
 
     public function CriaItem(Item $novoItem):void

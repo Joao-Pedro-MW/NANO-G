@@ -10,7 +10,7 @@ use src\Controller\ {
   RemoveUsuarioController,
   ListarUsuarioController, Erro404Controller
 };
-ini_set('display_errors', 0);
+//ini_set('display_errors', 0);
 ini_set('log_errors', 1);
 $rotas = require_once __DIR__ .  '\..\config\rotas.php';
 session_set_cookie_params(3600,'/','localhost',true,true);

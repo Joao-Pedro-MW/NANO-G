@@ -36,8 +36,8 @@
             <tr>
 
                 <td class="td_produto" id="nome"><?= $item["ITEM_NOME"] ?></td>
-                <td class="td_un_medida" id="un_medida"v><?= $item["ID_CATEGORIA"] ?></td>
-                <td class="td_tipo" id="tipo"><?= $item["ID_UN_MEDIDA"] ?></td>
+                <td class="td_un_medida" id="un_medida"v><?= $item["NOME_CATEGORIA"] ?></td>
+                <td class="td_tipo" id="tipo"><?= $item["NOME_UN_MEDIDA"] ?></td>
 
                 <td class="td_opcoes">
 
