@@ -33,6 +33,8 @@ return [
     'GET|/usuarios/edita_usuario' => \src\Controller\AcessaEditaUsuarioController::class,
     'POST|/usuarios/edita_usuario' => \src\Controller\EditaUsuarioController::class,
 
+    'GET|/login/troca_senha' => \src\Controller\AcessaTrocaSenha::class,
+
     //Logs
     'GET|/logs' => \src\Controller\ListarLogController::class,
     //Estoque
