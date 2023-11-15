@@ -10,12 +10,13 @@ class ProcessaSaidaController implements Controller
     public function __construct(private ItensRepository $itensRepository){}
     public function processaRequisicao(): void
     {
-        $dadosLotes = $this->itensRepository->TodosLotes();
+        //$dadosLotes = $this->itensRepository->TodosLotes();
         $dadosForm = $_POST;
-        var_dump($dadosForm);
-        foreach ($dadosLotes as $lote) {
-            if($lote{})
-            //if($qtd_saida != 0 and $dadosLotes[$id])
+        foreach ($dadosForm as $id_lote => $quantidade) {
+            $quantidade = filter_var($quantidade,FILTER_VALIDATE_INT);
+            $id_lote = filter_var($id_lote,FILTER_VALIDATE_INT);
+            $this->itensRepository->ReduzQuantidadeLote($id_lote,$quantidade);
+            header('Location: /itens/remocao');
         }
         //}
     }

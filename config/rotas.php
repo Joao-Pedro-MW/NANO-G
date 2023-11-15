@@ -17,9 +17,6 @@ return [
 
     'GET|/itens/remove_item' => \src\Controller\RemoveItemController::class,
 
-    /*TESTE DE SISTEMA - NÃO ALTERAR - JPMW*/
-    'POST|/itens/consulta_un_medida' => \src\Controller\ConsultaUnidadeMedida::class,
-    /*TESTE DE SISTEMA - NÃO ALTERAR - JPMW*/
 
 
 
@@ -33,18 +30,20 @@ return [
     'GET|/usuarios/edita_usuario' => \src\Controller\AcessaEditaUsuarioController::class,
     'POST|/usuarios/edita_usuario' => \src\Controller\EditaUsuarioController::class,
 
-    'GET|/login/troca_senha' => \src\Controller\AcessaTrocaSenha::class,
+    'GET|/login/troca_senha' => \src\Controller\AcessaTrocaSenhaController::class,
 
     //Logs
     'GET|/logs' => \src\Controller\ListarLogController::class,
     //Estoque
     'GET|/itens/remocao'=> \src\Controller\ListarSaidaController::class,
     'POST|/itens/remocao' => \src\Controller\ProcessaSaidaController::class,
-
-    'GET|/itens/excluir_lote' => \src\Controller\AcessaExcluirLote::class,
-
+    'GET|/itens/exclusao_lote' => \src\Controller\ListarExcluirLote::class,
+    'GET|/itens/excluir_lote' => \src\Controller\ProcessaRemoverLoteController::class,
 
     //Login
     'GET|/'=> \src\Controller\AcessaLoginController::class,
-    'POST|/'=> \src\Controller\ProcessaLoginController::class
+    'POST|/'=> \src\Controller\ProcessaLoginController::class,
+
+    //API AJAX
+    'POST|/itens/consulta_un_medida' => \src\Controller\ConsultaUnidadeMedidaController::class,
     ];

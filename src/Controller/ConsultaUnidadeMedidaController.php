@@ -4,7 +4,7 @@ namespace src\Controller;
 
 use src\Repository\Itens\ItensRepository;
 
-readonly class ConsultaUnidadeMedida
+readonly class ConsultaUnidadeMedidaController
 {
     public function __construct(private ItensRepository $itensRepository)
     {

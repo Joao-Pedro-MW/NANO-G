@@ -42,7 +42,7 @@
                 <td class="td_opcoes">
 
                     <a class="botao_editar" href="/itens/edita_item?item=<?= $item["ID_ITEM"] ?>">
-                        <img src="..\imagens\imagem_lapis_edicao.svg" title="Editar item" alt="Lapis" id="icones">
+                        <img src="..\imagens\imagem_lapis_edicao.svg" title="Editar item" alt="Editar" id="icones">
                     </a>
 
                     <a id="lixeira" class="botao_lixeira" href="/itens/remove_item?item=<?= $item["ID_ITEM"] ?>">

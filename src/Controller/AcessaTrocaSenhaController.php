@@ -4,7 +4,7 @@ namespace src\Controller;
 
 use src\Controller\Controller;
 
-class AcessaTrocaSenha implements Controller
+class AcessaTrocaSenhaController implements Controller
 {
 
     public function processaRequisicao(): void

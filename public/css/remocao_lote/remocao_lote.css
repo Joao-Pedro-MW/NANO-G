@@ -1,8 +1,4 @@
-td[id="select"]{
-    border: 0;
-	background-color:var(--branco);
-	width: 5%;
-}
+
 
 .container{
 	display: flex;
@@ -77,4 +73,14 @@ option{
 #campo_select{
     background-color:white;
     border:none
+}
+select{
+    width:15px;
+    color: white;
+    background: unset;
+    border: none;
+}
+
+select:focus{
+    outline:none;
 }

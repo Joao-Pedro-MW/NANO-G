@@ -11,75 +11,75 @@
 </head>
 <body>
 	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
-
+    <!--
 	<div class="container">
-		<button id="remocao" class="remocao" type="submit" form="form_remocao">Remover Lote</button>
+		<button id="remocao" class="remocao" type="submit" form="form_remocao">Excluir Lote</button>
 		<button id="pesquisa" class="pesquisa" type="button">Pesquisar</button>
 	</div>
+	-->
 	<div class="base">
         <form method="post" name="form_remocao" id="form_remocao">
             <table id="tabela_dados">
                 <tr>
                     <th class="item">lote
                         <select autofocus class="combobox">
-                            <?php /* foreach ($listaLotes as $lote): ?>
+                            <?php foreach ($listaLotes as $lote): ?>
                             <option class="opcao" id="pesquisa_lote"><?= $lote["CATEGORIA"]?></option>
-                            <?php endforeach;*/?>
+                            <?php endforeach;?>
                         </select>
                     </th>
                     <th class="item">item
                         <select autofocus class="combobox">
-                            <?php /* foreach ($listaLotes as $lote): ?>
+                            <?php foreach ($listaLotes as $lote): ?>
                                 <option class="opcao" id="pesquisa_nome_item"><?=$lote["NOME_ITEM"]?></option>
-                            <?php endforeach;*/?>
+                            <?php endforeach;?>
                         </select>
                     </th>
                     <th class="item">Quantidade
                         <select id="quantidade" autofocus class="combobox">
-                            <?php /* foreach ($listaLotes as $lote): ?>
+                            <?php foreach ($listaLotes as $lote): ?>
                                 <option class="opcao" id="pesquisa_quantidade"><?= $lote["QUANTIDADE"]?></option>
-                            <?php endforeach;*/?>
+                            <?php endforeach;?>
                         </select>
                     </th>
                     <th class="item">Unidade Medida
                         <select autofocus class="combobox">
-                            <?php /* foreach ($listaLotes as $lote): ?>
+                            <?php foreach ($listaLotes as $lote): ?>
                                 <option class="opcao" id="pesquisa_un_medida"><?= $lote["UNIDADE_MEDIDA"]?></option>
-                            <?php endforeach;*/?>
+                            <?php endforeach;?>
                         </select>
                     </th>
                     <th class="item">Valor por Item
                         <select autofocus class="combobox">
-                            <?php /* foreach ($listaLotes as $lote): ?>
+                            <?php foreach ($listaLotes as $lote): ?>
                                 <option class="opcao" id="pesquisa_valor"><?= $lote["VALOR_ITEM"]?></option>
-                            <?php endforeach;*/?>
+                            <?php endforeach;?>
                         </select>
                     </th>
                     <th class="item">Validade
                         <select autofocus class="combobox">
-                            <?php /* foreach ($listaLotes as $lote): ?>
+                            <?php foreach ($listaLotes as $lote): ?>
                                 <option class="opcao" id="pesquisa_data_validade"><?= $lote['DATA_VALIDADE']?></option>
-                            <?php endforeach;*/?>
+                            <?php endforeach;?>
                         </select>
                     </th>
-                    <th class="item">Operações</th>
+                    <th class="item">Excluir lote</th>
                 </tr>
-                <?php /* foreach ($listaLotes as $lote): */?>
+                <?php foreach ($listaLotes as $lote): ?>
                 <tr>
-                    <td class="item" id="lote_item"></td>
-                    <td class="item" id="nome_item"></td>
-                    <td class="item" id="quantidade_item"></td>
-                    <td class="item" id="unidade_medida_item"></td>
-                    <td class="item" id="valor_item"></td>
-                    <td class="item" id="validade_lote"></td>
+                    <td class="item" id="lote_item"><?= $lote['ID_LOTE']?></td>
+                    <td class="item" id="nome_item"><?= $lote['NOME_ITEM']?></td>
+                    <td class="item" id="quantidade_item"><?= $lote['QUANTIDADE']?></td>
+                    <td class="item" id="unidade_medida_item"><?= $lote['UNIDADE_MEDIDA']?></td>
+                    <td class="item" id="valor_item"><?= $lote['VALOR_ITEM']?></td>
+                    <td class="item" id="validade_lote"><?= $lote['DATA_VALIDADE']?></td>
                     <td id="lixeira">
-                        <a href="">
-                            <img src="..\imagens\imagem_lixeira.svg">
+                        <a href="/itens/excluir_lote?id=<?=$lote['ID_LOTE']?>">
+                        <img alt="Lixeira" title="Excluir permantentente este lote" src="..\imagens\imagem_lixeira.svg">
                         </a>
-                        
                     </td>
                 </tr>
-                <?php /*endforeach;*/?>
+                <?php endforeach;?>
             </table>
         </form>
 	</div>

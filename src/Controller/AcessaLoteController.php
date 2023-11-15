@@ -13,7 +13,6 @@ readonly class AcessaLoteController implements Controller
     {
         $listaItens = $this->itensRepository->TodosItens();
         $listaUnidadesMedida = $this->itensRepository->TodosUnidadesMedidas();
-        $listaItensJSON = json_encode($listaItens);
         require_once __DIR__ . '\..\..\src\Views\Item\cadastro_lote.php';
     }
 }
