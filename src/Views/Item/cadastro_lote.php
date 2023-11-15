@@ -2,8 +2,9 @@
 <html lang="pt-BR">
 <head>
     <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="..\imagens\favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cadastro lote</title>
+    <title>Nano-G | Cadastro lote</title>
     <link rel="stylesheet" type="text/css" href="..\css\menu\header.css">
     <link rel="stylesheet" type="text/css" href="..\css\cadastro_lote\cadastro_lote.css">
     <script type="text/javascript" src="..\js\menu.js"></script>
@@ -48,7 +49,7 @@
             <div class="coluna" style="margin-left:5%;">
                 <div>
                     <label for="validade">Validade do Produto</label>
-                    <input type="date" name="data_validade" id="data_validade" placeholder="Data de Validade" required><br>
+                    <input type="date" name="data_validade" id="data_validade" min="<?=date('Y-m-d');?>" placeholder="Data de Validade" required><br>
                 </div>
                 <div>
                     <label for="lote" id="label">Lote (Automático)</label>

@@ -2,8 +2,9 @@
 <html lang="pt-BR">
 <head>
 	<meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="..\imagens\favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Erro</title>
+	<title>Nano-G | Erro</title>
 	<link rel="stylesheet" type="text/css" href="..\css\menu\header.css">
 	<link rel="stylesheet" type="text/css" href="..\css\erro\erro.css">
 	<script type="text/javascript" src="..\js\menu.js"></script>

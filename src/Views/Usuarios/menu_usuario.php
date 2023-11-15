@@ -2,8 +2,9 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF8" >
+    <link rel="icon" type="image/x-icon" href="..\imagens\favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Menu usuários</title>
+	<title>Nano-G | Menu usuários</title>
 	<link rel="stylesheet" type="text/css" href="..\css\menu\header.css">
 	<link rel="stylesheet" type="text/css" href="..\css\menu_usuarios\menu_usuarios.css">
 	<script type="text/javascript" src="..\js\menu.js"></script>
