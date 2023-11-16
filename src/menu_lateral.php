@@ -38,10 +38,11 @@
     <!-- primeiro botão para ABRIR o menu -->
     <div>
         <a class="closebtn" onclick="openNav()">
-            <div id="botao_div" ">
+            <div id="botao_div" >
                 <img id="botao_menu" src="<?php echo $imagens_url . 'botao_menu.svg'?>">
                 <p>Menu</p>
             </div>
+        </a>
     </div>
     <h2>NANO-G</h2>
     <div id="logout">

@@ -45,7 +45,9 @@ align-content: flex-end;}
 }
 /*MENU*/
 /* aplicamos o espaçamento apenas ao primeiro <a> depois de closebtn*/
-.closebtn + a {padding-top: 40px;}
+.closebtn + a {
+  padding-top: 40px;
+}
 /*Ajuste da posição da imagem e do texto FECHAR*/
 .menu-botao-claro  {
   padding-top: 10px;
@@ -80,13 +82,14 @@ hr{margin: 0;background-color: var(--dodger-blue-950);}
 }
 
 #sair{
+  width: 220px;
   height: 0px;
-  overflow: hidden;
   visibility: hidden;
   position: absolute;
 }
+
 #sair button{
-  width: 100%;
+  width: 90%;
 }
 
 #usuario:hover + #sair,#sair:hover{
@@ -96,7 +99,11 @@ hr{margin: 0;background-color: var(--dodger-blue-950);}
 }
 
 .button{
-	height: 3.5vh;
+  overflow: hidden;
+  align-self: center;
+  width: fit-content;
+  height: fit-content;
+  min-height: 3.5vh;
 	color: var(--dodger-blue-600); 
 	border: 2px solid var(--dodger-blue-600);
 	border-radius: 5px;
@@ -122,4 +129,10 @@ h2{
   right: 0;
   text-align: center;
   justify-self: center;
+  width: fit-content;
+}
+
+#logout{
+  width:fit-content;
+  display:inline-block;
 }
