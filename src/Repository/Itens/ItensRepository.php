@@ -20,7 +20,7 @@ class ItensRepository
 
     public function TodosLotes():array
     {
-        $sql = "SELECT * FROM n_lote";
+        $sql = "SELECT * FROM n_lote WHERE QUANTIDADE > 0";
         $listaLotes = $this->pdo->query($sql);
         return $listaLotes->fetchAll(PDO::FETCH_ASSOC);
     }
@@ -50,9 +50,15 @@ class ItensRepository
             // Use um log ou imprima a mensagem de erro para fins de depuração
             return False;
         }
-
     }
 
+    public function RemoveLote(int $id_lote):void
+    {
+        $sql = "DELETE FROM N_LOTE WHERE ID_LOTE = :id_lote";
+        $query = $this->pdo->prepare($sql);
+        $query->bindValue(':id_lote',$id_lote);
+        $query->execute();
+    }
     public function CriaItem(Item $novoItem):void
     {
         $sql = "INSERT INTO n_item VALUES (s_item_id.nextval, :nomeItem,:idCategoriaItem,:idUnidadeMedidaItem)";
@@ -91,19 +97,25 @@ class ItensRepository
         return $query->fetch(PDO::FETCH_ASSOC);
     }
 
-
-
     public function CriaLote(Lote $lote):void
     {
-        var_dump($_REQUEST);
         $sql = "INSERT INTO n_lote (id_lote,id_item,quantidade,data_validade, VALOR_ITEM )
-VALUES (S_LOTE_ID.nextval, :itemID, :quantidadeItem, TO_DATE(:data_validade, 'YYYY-MM-DD'), :valorItem)";
+        VALUES (S_LOTE_ID.nextval, :itemID, :quantidadeItem, TO_DATE(:data_validade, 'YYYY-MM-DD'), :valorItem)";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':itemId',$lote->itemId);
         $query->bindValue(':quantidadeItem',$lote->quantidadeItens);
         $query->bindValue(':data_validade',$lote->dataValidadeItem);
         $query->bindValue(':valorItem',$lote->valorItem);
         $query->execute();
-        header('Location: /itens');
+    }
+    public function ReduzQuantidadeLote(int $id_lote, int $quantidade):void
+    {
+        if($quantidade !== 0){
+            $sql = "UPDATE N_LOTE SET QUANTIDADE = (QUANTIDADE - :quantidade) WHERE ID_LOTE = :id_lote";
+            $query = $this->pdo->prepare($sql);
+            $query->bindValue(':quantidade',$quantidade);
+            $query->bindValue(':id_lote',$id_lote);
+            $query->execute();
+        }
     }
 }

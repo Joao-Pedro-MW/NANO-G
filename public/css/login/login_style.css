@@ -11,13 +11,19 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 #painel_login form {
   backdrop-filter: blur(5px);
   background: transparent;
-  border:7px solid ;
-  border-image: linear-gradient(45deg,var(--dodger-blue-500), var(--dodger-blue-100),var(--dodger-blue-500)) 1 round;
+  border: 7px solid ;
+  border-image: linear-gradient(45deg, var(--dodger-blue-500), var(--dodger-blue-100), var(--dodger-blue-500)) 1 round;
   font-size: 2vw;
-  padding: 15vh;
+  padding: 6vh 15vh; /* Ajuste o valor de padding conforme necessário */
   align-self: center;
   justify-content: center;
   display: grid;
+  text-align: center;
+}
+
+#logo {
+  width: 100px;
+  margin: auto;
 }
 #painel_login input{
   height: 100%;
@@ -48,6 +54,17 @@ html{
   -webkit-tap-highlight-color: var(--branco);
 }
 
+html {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+html{
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 /* ---- fundo de particulas ---- */
 
 #particles-js{
@@ -56,16 +73,4 @@ html{
   background-color:var(--branco);
   background-size: cover;
   background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
-html {
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
-html{
-	-webkit-user-select: none;	
-  	-ms-user-select: none;
-  	user-select: none;
 }

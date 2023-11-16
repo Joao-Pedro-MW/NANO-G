@@ -2,8 +2,9 @@
 <html lang="pt-BR">
 <head>
 	<meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="..\imagens\favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Criar Usuário</title>
+	<title>Nano-G | Criar Usuário</title>
 	<link rel="stylesheet" type="text/css" href="..\css\menu\header.css">
 	<link rel="stylesheet" type="text/css" href="..\css\cria_usuario\cria_usuario.css">
 	<script type="text/javascript" src="..\js\menu.js"></script>
@@ -27,7 +28,7 @@
 						<label for="email" id="label_direita">Email</label>
 						<input type="email" id="email"  name="email">
 						<label for="data_nascimento" id="label_direita">Data de Nascimento</label>
-						<input type="date" id="data_nascimento"  name="data_nascimento">
+						<input type="date" id="data_nascimento" max="2013-12-31" name="data_nascimento">
 					</div>
 				</div>
 				<div class="div_horizontal" id="low_div">

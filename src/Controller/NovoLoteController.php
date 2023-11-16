@@ -20,5 +20,6 @@ readonly class NovoLoteController implements Controller
         $loteItem = (int) htmlspecialchars(filter_input(INPUT_POST,'lote',FILTER_VALIDATE_INT));
         $novoLote = new Lote($itemId,$quantidadeItem,$valorItem,$dataValidadeItem,$loteItem);
         $this->itensRepository->CriaLote($novoLote);
+        header("Location: /itens/remocao");
     }
 }
