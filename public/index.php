@@ -11,7 +11,7 @@ use src\Controller\ {
   ListarUsuarioController, Erro404Controller
 };
 //ini_set('display_errors', 0);
-ini_set('log_errors', 1);
+//ini_set('log_errors', 1);
 $rotas = require_once __DIR__ .  '\..\config\rotas.php';
 session_set_cookie_params(3600,'/','localhost',true,true);
 $pdo = new PDO('oci:dbname=//localhost:1521/XEPDB1', 'system', '12345');
@@ -21,7 +21,7 @@ $meioHTTP = $_SERVER['REQUEST_METHOD'];
 $rotaLogin = $rotaSolicitada === "/";
 
 session_start();
-if(!array_key_exists('AUTENTICADO',$_SESSION) && !$rotaLogin){
+if(!array_key_exists('AUTENTICADO',$_SESSION) && !$rotaLogin ){
     header('Location: /');
     return;
 }

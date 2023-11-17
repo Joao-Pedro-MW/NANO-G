@@ -51,7 +51,7 @@
             <img src="<?php echo $imagens_url . 'imagem_usuario.svg'?>" alt="imagem do usuario">
         </div>
         <div id="sair">
-            <a href="">
+            <a href="/logout">
                 <button class="button">Sair</button>
             </a>
         </div>

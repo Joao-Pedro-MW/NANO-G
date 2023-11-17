@@ -43,6 +43,7 @@ return [
     //Login
     'GET|/'=> \src\Controller\AcessaLoginController::class,
     'POST|/'=> \src\Controller\ProcessaLoginController::class,
+    'GET|/logout'=> \src\Controller\LogoutController::class,
 
     //API AJAX
     'POST|/itens/consulta_un_medida' => \src\Controller\ConsultaUnidadeMedidaController::class,
