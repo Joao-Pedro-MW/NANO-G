@@ -1,18 +1,19 @@
 <?php
 
 namespace src\Controller;
-use Couchbase\ValueRecorder;
+
+use src\Controller\Controller;
 use src\Repository\Itens\ItensRepository;
 
-class ListarSaidaController implements Controller
+class AcessaLotesController implements Controller
 {
     public function __construct(private ItensRepository $itensRepository)
     {
-    }
 
+    }
     public function processaRequisicao(): void
     {
-        $listaLotes = $this->itensRepository->TodosLotesNaoZero();
+        $listaLotes = $this->itensRepository->TodosLotes();
         $listaItens = $this->itensRepository->TodosItens();
         $listaCategorias = $this->itensRepository->TodasCategorias();
         $listaUnidadesMedida = $this->itensRepository->TodosUnidadesMedidas();
@@ -37,6 +38,6 @@ class ListarSaidaController implements Controller
                 }
             }
         }
-        require_once __DIR__ . '\..\..\src\Views\Remocao\remocao_item.php';
+        require_once __DIR__ . '\..\..\src\Views\Item\visualizar_lote.php';
     }
 }

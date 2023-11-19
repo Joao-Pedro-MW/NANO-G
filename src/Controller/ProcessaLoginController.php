@@ -20,6 +20,7 @@ class ProcessaLoginController implements Controller
         {
             header('Location: /?erro');
         } else {
+            //$_SESSION['ATIVO'] = $dadosDBLogin[""];
             $_SESSION['USUARIO'] = $dadosDBLogin['NOME'];
             $_SESSION['AUTENTICADO'] = true;
             header('Location: /');

@@ -5,7 +5,7 @@ namespace src\Controller;
 use src\Entity\Item;
 use src\Repository\Itens\ItensRepository;
 
-readonly class NovoItemController implements Controller
+readonly class ProcessaNovoItemController implements Controller
 {
     public function __construct(private ItensRepository $itensRepository)
     {

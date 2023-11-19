@@ -4,7 +4,7 @@ namespace src\Controller;
 
 use src\Repository\Itens\ItensRepository;
 
-readonly class AcessaLoteController implements Controller
+readonly class AcessaNovoLoteController implements Controller
 {
     public function __construct(private ItensRepository $itensRepository)
     {

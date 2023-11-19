@@ -10,7 +10,7 @@ class ProcessaSaidaController implements Controller
     public function __construct(private ItensRepository $itensRepository){}
     public function processaRequisicao(): void
     {
-        //$dadosLotes = $this->itensRepository->TodosLotes();
+        //$dadosLotes = $this->itensRepository->TodosLotesNaoZero();
         $dadosForm = $_POST;
         foreach ($dadosForm as $id_lote => $quantidade) {
             $quantidade = filter_var($quantidade,FILTER_VALIDATE_INT);

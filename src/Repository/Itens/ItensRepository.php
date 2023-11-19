@@ -18,9 +18,15 @@ class ItensRepository
         return $listaProdutos->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function TodosLotes():array
+    public function TodosLotesNaoZero():array
     {
         $sql = "SELECT * FROM n_lote WHERE QUANTIDADE > 0";
+        $listaLotes = $this->pdo->query($sql);
+        return $listaLotes->fetchAll(PDO::FETCH_ASSOC);
+    }
+    public function TodosLotes():array
+    {
+        $sql = "SELECT * FROM n_lote";
         $listaLotes = $this->pdo->query($sql);
         return $listaLotes->fetchAll(PDO::FETCH_ASSOC);
     }

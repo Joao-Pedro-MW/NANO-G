@@ -5,20 +5,13 @@ declare(strict_types=1);
 return [
     //Item
     'GET|/itens' => \src\Controller\ListarItemController::class,
-
-    'GET|/itens/cadastro_lote' => \src\Controller\AcessaLoteController::class,
-    'POST|/itens/cadastro_lote' => \src\Controller\NovoLoteController::class,
-
     'GET|/itens/cadastro_item' => \src\Controller\AcessaItemController::class,
-    'POST|/itens/cadastro_item' => \src\Controller\NovoItemController::class,
+    'POST|/itens/cadastro_item' => \src\Controller\ProcessaNovoItemController::class,
 
     'GET|/itens/edita_item' => \src\Controller\AcessaEditaItemController::class,
     'POST|/itens/edita_item' => \src\Controller\EditaItemController::class,
 
     'GET|/itens/remove_item' => \src\Controller\RemoveItemController::class,
-
-
-
 
     // Usuarios
     'GET|/usuarios' => \src\Controller\ListarUsuarioController::class,
@@ -39,6 +32,9 @@ return [
     'POST|/itens/remocao' => \src\Controller\ProcessaSaidaController::class,
     'GET|/itens/exclusao_lote' => \src\Controller\ListarExcluirLote::class,
     'GET|/itens/excluir_lote' => \src\Controller\ProcessaRemoverLoteController::class,
+    'GET|/itens/lotes' => \src\Controller\AcessaLotesController::class,
+    'GET|/itens/cadastro_lote' => \src\Controller\AcessaNovoLoteController::class,
+    'POST|/itens/cadastro_lote' => \src\Controller\NovoLoteController::class,
 
     //Login
     'GET|/'=> \src\Controller\AcessaLoginController::class,
