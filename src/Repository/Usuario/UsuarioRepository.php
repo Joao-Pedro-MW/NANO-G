@@ -2,6 +2,7 @@
 
 namespace src\Repository\Usuario;
 
+use Couchbase\ValueRecorder;
 use PDOException;
 use src\Entity\Usuario;
 USE PDO;
@@ -14,7 +15,7 @@ class UsuarioRepository
     public function CriaUsuario(Usuario $usuario): void 
     {
         $sql = "INSERT INTO n_usuario (id_usuario, nome, dt_nascimento, tipo_usuario, flag_ativo, cpf, email, senha) 
-        VALUES (s_user_id.nextval, :nome, TO_DATE(:data_nascimento,'YYYY-MM-DD'), :tipo_usuario, 'S',:cpf, :email, :user_senha)";
+        VALUES (s_user_id.nextval, :nome, TO_DATE(:data_nascimento,'YYYY-MM-DD'), :tipo_usuario, 1,:cpf, :email, :user_senha)";
         //(:nome, :data_nascimento, :tipo_usuario, :user_login, :user_senha)
         
         $query = $this->pdo->prepare($sql);
@@ -74,12 +75,15 @@ class UsuarioRepository
 
     public function RetornaDadosLogin(string $emailusuario):array
     {
-        $sql = "SELECT nome, cpf, senha, email FROM N_USUARIO where EMAIL = :email";
+        $sql = "SELECT nome, cpf, senha, email, flag_ativo FROM N_USUARIO where EMAIL = :email AND FLAG_ATIVO =1";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':email',$emailusuario);
-        var_dump($sql);
         $query->execute();
-
-        return $query->fetch(PDO::FETCH_ASSOC);
+        $dadosDBLogin = $query->fetch(PDO::FETCH_ASSOC);
+        if(!$dadosDBLogin){
+            return [];
+        } else {
+            return $dadosDBLogin;
+        }
     }
 }
