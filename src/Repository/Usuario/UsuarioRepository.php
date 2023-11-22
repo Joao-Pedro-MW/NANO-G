@@ -14,8 +14,8 @@ class UsuarioRepository
     }
     public function CriaUsuario(Usuario $usuario): void 
     {
-        $sql = "INSERT INTO n_usuario (id_usuario, nome, dt_nascimento, tipo_usuario, flag_ativo, cpf, email, senha) 
-        VALUES (s_user_id.nextval, :nome, TO_DATE(:data_nascimento,'YYYY-MM-DD'), :tipo_usuario, 1,:cpf, :email, :user_senha)";
+        $sql = "INSERT INTO n_usuario (id_usuario, nome, dt_nascimento, tipo_usuario, flag_ativo, login, cpf, email, senha) 
+        VALUES (s_user_id.nextval, :nome, TO_DATE(:data_nascimento,'YYYY-MM-DD'), :tipo_usuario, 1,0,:cpf, :email, :user_senha)";
         //(:nome, :data_nascimento, :tipo_usuario, :user_login, :user_senha)
         
         $query = $this->pdo->prepare($sql);

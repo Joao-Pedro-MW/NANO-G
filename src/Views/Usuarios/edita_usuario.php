@@ -32,7 +32,7 @@
                         <label for="email" id="label_direita">Email</label>
                         <input type="email" id="email" name="email" value="<?=$dadosUsuario['EMAIL']?>" required>
                         <label for="data_nascimento" id="label_direita">Data de Nascimento</label>
-                        <input type="text" id="data_nascimento" max="2013-12-31" name="data_nascimento" onclick="mudaTipo()"  value="<?=$dadosUsuario['DT_NASCIMENTO']?>" required>
+                        <input type="text" id="data_nascimento" max="2013-12-31" name="data_nascimento" onclick="mudaTipo()"  value="<?php echo date_format(date_create($dadosUsuario['DT_NASCIMENTO']),"d/m/Y")?>" required>
                     </div>
                 </div>
                 <div class="div_horizontal" id="low_div">
