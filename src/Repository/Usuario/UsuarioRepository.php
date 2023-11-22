@@ -54,7 +54,7 @@ class UsuarioRepository
 
     public function TodosUsuarios():array
     {
-        $sql = 'SELECT id_usuario , nome,
+        $sql = 'SELECT id_usuario , nome,flag_ativo,
         DECODE (tipo_usuario,\'AD\', \'Administrador\',\'CM\',\'Usuário Comum\') as tipo_usuario FROM n_usuario ' ;
         $ListaUsuarios = $this->pdo->query($sql);
         return $ListaUsuarios->fetchAll(PDO::FETCH_ASSOC);
@@ -75,7 +75,7 @@ class UsuarioRepository
 
     public function RetornaDadosLogin(string $emailusuario):array
     {
-        $sql = "SELECT nome, cpf, senha, email, flag_ativo FROM N_USUARIO where EMAIL = :email AND FLAG_ATIVO =1";
+        $sql = "SELECT nome, cpf, senha, email, flag_ativo FROM N_USUARIO where EMAIL = :email AND FLAG_ATIVO = 1";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':email',$emailusuario);
         $query->execute();
@@ -86,4 +86,19 @@ class UsuarioRepository
             return $dadosDBLogin;
         }
     }
+
+        public function DesativaUsuario(int $idUsuario)
+        {
+            $sql = "UPDATE N_USUARIO SET FLAG_ATIVO = 0 WHERE ID_USUARIO = :idUsuario";
+            $query = $this->pdo->prepare($sql);
+            $query->bindValue(':idUsuario',$idUsuario);
+            $query->execute();
+        }
+        public function AtivaUsuario(int $idUsuario)
+        {
+            $sql = "UPDATE N_USUARIO SET FLAG_ATIVO = 1 WHERE ID_USUARIO = :idUsuario";
+            $query = $this->pdo->prepare($sql);
+            $query->bindValue(':idUsuario',$idUsuario);
+            $query->execute();
+        }
 }

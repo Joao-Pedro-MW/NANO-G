@@ -43,4 +43,6 @@ return [
 
     //API AJAX
     'POST|/itens/consulta_un_medida' => \src\Controller\ConsultaUnidadeMedidaController::class,
+    'POST|/usuarios/desativa_usuario' => \src\Controller\DesativaUsuarioController::class,
+    'POST|/usuarios/ativa_usuario' => \src\Controller\AtivaUsuarioController::class,
     ];

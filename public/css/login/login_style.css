@@ -64,7 +64,10 @@ html{
   -ms-user-select: none;
   user-select: none;
 }
-
+.aviso{
+  color: #FF0000;
+  font-size: 30px
+}
 /* ---- fundo de particulas ---- */
 
 #particles-js{

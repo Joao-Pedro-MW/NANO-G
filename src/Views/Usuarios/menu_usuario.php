@@ -24,13 +24,13 @@
 	<div class="tab_usuario">
 		<img src="/imagens/imagem_usuario.svg" alt="Foto de perfil" class="perfil" >
 		<div class="nome">	
-			<p class="nome">Nome: <?= $usuario["NOME"] ?> </p>
-            <p class="nome">Tipo: <?= $usuario["TIPO_USUARIO"] ?> </p>
+			<p class="nome_usuario"><?= $usuario["NOME"] ?> </p>
+            <p class="tipo_usuario">Tipo: <?= $usuario["TIPO_USUARIO"] ?> </p>
 		</div>
 		<div class="gerenciar">
 			<label class="switch">
-				<input type="checkbox" id="switch_flag" value="<?= $usuario["ID_USUARIO"] ?>" >
-				<span class="slider round"></span>
+                <input type="checkbox" data-dado-usuario="<?= $usuario["ID_USUARIO"] ?>" id="switch_flag_<?= $usuario["ID_USUARIO"] ?>" <?php echo ($usuario['FLAG_ATIVO'] == 1) ? "checked" : ""; ?> value="<?= $usuario["ID_USUARIO"] ?>" >
+                <span class="slider round"></span>
 			</label>
 			<a class="a" href="/usuarios/edita_usuario?id=<?= $usuario["ID_USUARIO"] ?>">
 				<button class="botao_editar">Editar</button>

@@ -1,29 +1,29 @@
 $(document).ready(function() {
-    // Evento de mudança no toggle switch
-    $('#switch_flag').change(function() {
-        // Obtém o estado atual do switch
-        var isChecked = this.checked;
-        // Log quando o switch é ativado ou desativado
-        if (isChecked) {
-            $id_usuario = $('#switch_flag').val();
-            /*$.ajax(
-                {
-                    url: 'http://localhost/usuarios/flag_usuario',
-                    method: 'POST',
-                    data: {
-                        ID_USUARIO:,
-                        FLAG_ATIVO: 1
-                    },
-                    dataType: 'json'
-                }
-            ).done(function(result)
-                {
-                    $('#un_medida').val(result["UNIDADE_NOME"]);
-                }
-            );*/
-            console.log($id_usuario);
-        } else {
-            console.log("Desativado")
-        }
+    // Evento de mudança no switch
+    $('.switch input[type="checkbox"]').change(function() {
+        var isChecked = $(this).prop('checked');
+        var id_usuario = $(this).data('dado-usuario');
+        var nome_usuario = $(this).closest('.tab_usuario').find('.nome_usuario').text().trim();
+
+        var url = isChecked ? 'http://localhost/usuarios/ativa_usuario' : 'http://localhost/usuarios/desativa_usuario';
+
+        $.ajax({
+            url: url,
+            method: 'POST',
+            data: {
+                ID_USUARIO: id_usuario
+            },
+            dataType: 'text'
+        }).done(function(response) {
+            if (response.trim() === '') {
+                var acao = isChecked ? 'ativado' : 'desativado';
+                alert('Usuário ' + acao + ': ' + nome_usuario);
+            } else {
+                alert('Erro ao ' + (isChecked ? 'ativar' : 'desativar') + ' usuário');
+            }
+        }).fail(function(jqXHR, textStatus, errorThrown) {
+            console.error('Erro na requisição AJAX:', textStatus, errorThrown);
+            console.error('HTML retornado do servidor:', jqXHR.responseText);
+        });
     });
 });
