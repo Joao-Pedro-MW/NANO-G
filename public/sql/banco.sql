@@ -23,23 +23,23 @@ CREATE TABLE n_usuario (
 
 
 CREATE TABLE n_unidade_medida (
- id_unidade_medida  NUMBER        NOT NULL,
- unidade_nome       VARCHAR2(100) NOT NULL,
- create_date      DATETIME        NOT NULL,
- created_by       NUMBER          NOT NULL,
- last_updated_by  NUMBER          NOT NULL,
- last_update_date DATETIME        NOT NULL,
+ id_unidade_medida  NUMBER          NOT NULL,
+ unidade_nome       VARCHAR2(100)   NOT NULL,
+ create_date        DATETIME        NOT NULL,
+ created_by         NUMBER          NOT NULL,
+ last_updated_by    NUMBER          NOT NULL,
+ last_update_date   DATETIME        NOT NULL,
  CONSTRAINT pk_un_medida PRIMARY KEY (id_unidade_medida)
 );
 
 
 CREATE TABLE n_categoria (
- id_categoria       NUMBER        NOT NULL,
- categoria_nome     VARCHAR2(100) NOT NULL,
- create_date      DATETIME        NOT NULL,
- created_by       NUMBER          NOT NULL,
- last_updated_by  NUMBER          NOT NULL,
- last_update_date DATETIME        NOT NULL,
+ id_categoria       NUMBER          NOT NULL,
+ categoria_nome     VARCHAR2(100)   NOT NULL,
+ create_date        DATETIME        NOT NULL,
+ created_by         NUMBER          NOT NULL,
+ last_updated_by    NUMBER          NOT NULL,
+ last_update_date   DATETIME        NOT NULL,
  CONSTRAINT pk_categoria PRIMARY KEY (id_categoria)
 );
 
