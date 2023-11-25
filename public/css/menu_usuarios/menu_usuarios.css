@@ -83,7 +83,7 @@ input:checked + .slider:before {
 .sub_tab{
   display: flex;
   justify-content: space-between;
-  width: 72vw;
+  width: 75vw;
 }
 
 .nome{

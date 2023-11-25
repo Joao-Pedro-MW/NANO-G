@@ -25,7 +25,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
   width: 100px;
   margin: auto;
 }
-#painel_login input{
+#painel_login input[type="submit"]{
   height: 100%;
   padding: 0 10px;
   font-size: 20px;
@@ -68,6 +68,13 @@ html{
   color: #FF0000;
   font-size: 30px
 }
+
+input:not([type="submit"]){
+  height: 4vh;
+	border: var(--cinza-claro-borda) 2px solid;
+	border-radius: 8px;
+}
+
 /* ---- fundo de particulas ---- */
 
 #particles-js{
