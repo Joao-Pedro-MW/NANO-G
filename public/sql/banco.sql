@@ -14,6 +14,7 @@ CREATE TABLE n_usuario (
  login            VARCHAR2(1)     NOT NULL,
  email            VARCHAR2(200)   NOT NULL,
  senha            VARCHAR2(200)   NOT NULL,
+ login     VARCHAR2(1)     NOT NULL,
  create_date      DATETIME        NOT NULL,
  created_by       NUMBER          NOT NULL,
  last_updated_by  NUMBER          NOT NULL,
