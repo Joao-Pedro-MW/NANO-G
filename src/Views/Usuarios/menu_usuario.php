@@ -23,22 +23,25 @@
     <?php foreach ($usuarioLista as $usuario): ?>
 	<div class="tab_usuario">
 		<img src="/imagens/imagem_usuario.svg" alt="Foto de perfil" class="perfil" >
-		<div class="nome">	
-			<p class="nome_usuario"><?= $usuario["NOME"] ?> </p>
-            <p class="tipo_usuario">Tipo: <?= $usuario["TIPO_USUARIO"] ?> </p>
+		<div class="sub_tab">
+			<div class="nome">	
+				<p class="nome_usuario"><?= $usuario["NOME"] ?> </p>
+				<p class="tipo_usuario">Tipo: <?= $usuario["TIPO_USUARIO"] ?> </p>
+			</div>
+			<div class="gerenciar">
+				<label class="switch">
+					<input type="checkbox" data-dado-usuario="<?= $usuario["ID_USUARIO"] ?>" id="switch_flag_<?= $usuario["ID_USUARIO"] ?>" <?php echo ($usuario['FLAG_ATIVO'] == 1) ? "checked" : ""; ?> value="<?= $usuario["ID_USUARIO"] ?>" >
+					<span class="slider round"></span>
+				</label>
+				<a class="a" href="/usuarios/edita_usuario?id=<?= $usuario["ID_USUARIO"] ?>">
+					<button class="botao_editar">Editar</button>
+				</a>
+				<a href="/usuarios/remove_usuario?id=<?= $usuario["ID_USUARIO"] ?>" class="botao_lixeira">
+					<img title="Excluir Usuário" src="/imagens/imagem_lixeira.svg" width="50vw" height="50vh" style="transform: scale(0.7)">
+				</a>
+			</div>
 		</div>
-		<div class="gerenciar">
-			<label class="switch">
-                <input type="checkbox" data-dado-usuario="<?= $usuario["ID_USUARIO"] ?>" id="switch_flag_<?= $usuario["ID_USUARIO"] ?>" <?php echo ($usuario['FLAG_ATIVO'] == 1) ? "checked" : ""; ?> value="<?= $usuario["ID_USUARIO"] ?>" >
-                <span class="slider round"></span>
-			</label>
-			<a class="a" href="/usuarios/edita_usuario?id=<?= $usuario["ID_USUARIO"] ?>">
-				<button class="botao_editar">Editar</button>
-			</a>
-			<a href="/usuarios/remove_usuario?id=<?= $usuario["ID_USUARIO"] ?>" class="botao_lixeira">
-				<img title="Excluir Usuário" src="/imagens/imagem_lixeira.svg" width="50vw" height="50vh" style="transform: scale(0.7)">
-			</a>
-		</div>
+		
 
 	</div>
     <?php endforeach ?>
