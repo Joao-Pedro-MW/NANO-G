@@ -5,7 +5,7 @@ namespace src\Controller;
 use src\Controller\Controller;
 use src\Repository\Itens\ItensRepository;
 
-class ListarExcluirLote implements Controller
+class ProcessaListarExcluirLote implements Controller
 {
     public function __construct(private ItensRepository $itensRepository)
     {

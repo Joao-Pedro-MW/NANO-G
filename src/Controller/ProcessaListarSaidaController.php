@@ -4,7 +4,7 @@ namespace src\Controller;
 use Couchbase\ValueRecorder;
 use src\Repository\Itens\ItensRepository;
 
-class ListarSaidaController implements Controller
+class ProcessaListarSaidaController implements Controller
 {
     public function __construct(private ItensRepository $itensRepository)
     {

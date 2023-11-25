@@ -4,7 +4,7 @@ namespace src\Controller;
 use mysql_xdevapi\Exception;
 use src\Repository\Usuario\UsuarioRepository;
 
-readonly class RemoveUsuarioController implements Controller
+readonly class ProcessaRemoveUsuarioController implements Controller
 {
     public function __construct(private UsuarioRepository $usuarioRepository)
     {

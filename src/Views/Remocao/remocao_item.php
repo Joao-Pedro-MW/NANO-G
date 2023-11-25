@@ -15,7 +15,6 @@
 
 	<div class="container">
 		<button id="remocao" class="remocao" type="submit" form="form_remocao">Remover Item</button>
-		<button id="pesquisa" class="pesquisa" type="button">Pesquisar</button>
 	</div>
 	<div class="base">
         <form method="post" name="form_remocao" id="form_remocao">

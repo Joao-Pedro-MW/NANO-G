@@ -3,7 +3,7 @@
 namespace src\Controller;
 use src\Repository\Usuario\UsuarioRepository;
 
-class DesativaUsuarioController implements Controller
+class ConsultaDesativaUsuarioController implements Controller
 {
     public function __construct(private UsuarioRepository $usuarioRepository)
     {

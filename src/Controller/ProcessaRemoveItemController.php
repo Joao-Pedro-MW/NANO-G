@@ -11,8 +11,8 @@ readonly class RemoveItemController implements Controller
     }
     public function processaRequisicao(): void
     {
-        $id_usuario = filter_input(INPUT_GET,'item',FILTER_VALIDATE_INT);
-        $operacao = $this->itensRepository->RemoveItem($id_usuario);
+        $IdItem = filter_input(INPUT_GET,'item',FILTER_VALIDATE_INT);
+        $operacao = $this->itensRepository->RemoveItem($IdItem);
         header('Location: /itens');
     }
 }

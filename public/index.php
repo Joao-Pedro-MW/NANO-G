@@ -5,10 +5,10 @@ use src\Repository\Usuario\UsuarioRepository;
 use src\Repository\Itens\ItensRepository;
 use src\Controller\ {
   Controller,
-  NovoUsuarioController,
-  EditaUsuarioController,
-  RemoveUsuarioController,
-  ListarUsuarioController, Erro404Controller
+  ProcessaNovoUsuarioController,
+  ProcessaEditarUsuarioController,
+  ProcessaRemoveUsuarioController,
+  AcessaListarUsuarioController, Erro404Controller
 };
 ini_set('display_errors', 0);
 ini_set('log_errors', 1);

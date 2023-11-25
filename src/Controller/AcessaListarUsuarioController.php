@@ -3,7 +3,7 @@
 namespace src\Controller;
 use src\Repository\Usuario\UsuarioRepository;
 
-readonly class ListarUsuarioController implements Controller
+readonly class AcessaListarUsuarioController implements Controller
 {
     public function __construct(private UsuarioRepository $usuarioRepository)
     {

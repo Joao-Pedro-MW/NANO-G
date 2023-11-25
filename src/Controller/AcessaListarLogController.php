@@ -2,7 +2,7 @@
 
 namespace src\Controller;
 
-class ListarLogController implements Controller
+class AcessaListarLogController implements Controller
 {
     public function processaRequisicao():void
     {

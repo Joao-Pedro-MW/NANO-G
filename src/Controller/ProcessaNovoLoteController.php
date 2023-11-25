@@ -5,7 +5,7 @@ namespace src\Controller;
 use src\Entity\Lote;
 use src\Repository\Itens\ItensRepository;
 
-readonly class NovoLoteController implements Controller
+readonly class ProcessaNovoLoteController implements Controller
 {
     public function __construct(private ItensRepository $itensRepository)
     {

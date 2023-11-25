@@ -4,7 +4,7 @@ namespace src\Controller;
 use src\Entity\Usuario;
 use src\Repository\Usuario\UsuarioRepository;
 
-readonly class NovoUsuarioController implements Controller
+readonly class ProcessaNovoUsuarioController implements Controller
 {
     public function __construct(private UsuarioRepository $usuarioRepository)
     {
