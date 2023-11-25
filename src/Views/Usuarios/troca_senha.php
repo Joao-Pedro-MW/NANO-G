@@ -9,20 +9,22 @@
     <link rel="stylesheet" type="text/css" href="..\css\troca_senha\troca_senha.css">
     <script type="text/javascript" src="..\js\menu.js"></script>
 </head>
-
 <body>
 <?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
 <div class="main_div">
     <form method="POST" id="form_cria_item" class="content_div">
-
-        <label for="nome">CPF</label>
-        <input id="nome" type="text" class="input" name="nome_item">
+        <?php
+        if(array_key_exists('erro',$_GET)){
+            echo "<p class='aviso'>Senhas incorretas</p>";
+        };?>
+        <label for="senha_antiga">Senha atual</label>
+        <input type="password" class="input" id="senha_antiga" name="senha_atual" required>
 
         <label for="senha">Nova Senha</label>
-        <input type="password" class="input" id="senha" name="senha">
+        <input type="password" class="input" id="senha" name="nova_senha" required>
 
         <label for="senha_confirmar">Confirmar Senha</label>
-        <input type="password" class="input" id="senha_confirmar" name="senha_confirmar">
+        <input type="password" class="input" id="senha_confirmar" name="confirma_senha" required>
 
         <button form="form_cria_item" class="botao">Alterar Senha</button>
     </form>

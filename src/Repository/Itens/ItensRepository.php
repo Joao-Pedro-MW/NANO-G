@@ -53,7 +53,6 @@ class ItensRepository
             $query->execute();
             return True;
         } catch (\PDOException $erro) {
-            // Use um log ou imprima a mensagem de erro para fins de depuração
             return False;
         }
     }

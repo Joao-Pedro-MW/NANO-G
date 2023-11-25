@@ -3,32 +3,39 @@
 namespace src\Controller;
 
 use Couchbase\ValueRecorder;
-use src\Controller\Controller;
 use src\Repository\Usuario\UsuarioRepository;
 
 class ProcessaLoginController implements Controller
 {
-    public function __construct(private UsuarioRepository $usuarioRepository)
+    public function __construct(private readonly UsuarioRepository $usuarioRepository)
     {}
+
     public function processaRequisicao(): void
     {
-
-        $usuarioEmail = filter_input(INPUT_POST,'usuario',FILTER_VALIDATE_EMAIL);
-        $Usuariosenha = htmlspecialchars($_POST['senha_usuario']);
+        $usuarioEmail = filter_input(INPUT_POST, 'usuario', FILTER_VALIDATE_EMAIL);
+        $UsuarioSenha = htmlspecialchars($_POST['senha_usuario']);
         $dadosDBLogin = $this->usuarioRepository->RetornaDadosLogin($usuarioEmail);
-        if(!array_key_exists('FLAG_ATIVO',$dadosDBLogin)){
+        if(count($dadosDBLogin) == 0){header('Location: /?erro');};
+        $senhaCorreta = password_verify($UsuarioSenha, $dadosDBLogin['SENHA']);
+        $flagDesativado = $dadosDBLogin['FLAG_ATIVO'] == 0;
+        $primeiroLogin = $dadosDBLogin['LOGIN'] == 0;
+        if ($flagDesativado) {
             header('Location: /?usuario_desativado');
             exit;
         }
-        $senhaCorreta = password_verify($Usuariosenha,$dadosDBLogin['SENHA']);
-        if(!$senhaCorreta)
-        {
+        if (!$senhaCorreta) {
             header('Location: /?erro');
             exit;
         }
-        //$_SESSION['ATIVO'] = $dadosDBLogin[""];
         $_SESSION['USUARIO'] = $dadosDBLogin['NOME'];
         $_SESSION['AUTENTICADO'] = true;
+        $_SESSION['ID_USUARIO'] = $dadosDBLogin['ID_USUARIO'];
+        $_SESSION['ATIVADO'] = $primeiroLogin;
+        if ($primeiroLogin) {
+            header('Location: /usuarios/troca_senha');
+            exit;
+        }
         header('Location: /');
+
     }
 }

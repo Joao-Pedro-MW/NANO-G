@@ -1,13 +1,10 @@
 <?php
 
 namespace src\Repository\Usuario;
-
-use Couchbase\ValueRecorder;
 use PDOException;
 use src\Entity\Usuario;
 USE PDO;
 class UsuarioRepository
-
 {
     public function __construct(private readonly PDO $pdo)
     {
@@ -39,7 +36,7 @@ class UsuarioRepository
 
     public function AtualizaUsuario(array $dadosUsuario): void
     {
-        $sql = "UPDATE n_usuario SET nome = :nome, cpf = :cpf, email = :email, dt_nascimento = TO_DATE(:dt_nascimento,'YYYY-MM-DD'), 
+        $sql = "UPDATE n_usuario SET nome = :nome, cpf = :cpf, email = :email, dt_nascimento = :dt_nascimento, 
                       tipo_usuario = :tipo_usuario WHERE id_usuario = :id_usuario";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':id_usuario',(int) $dadosUsuario['ID_USUARIO']);
@@ -75,7 +72,7 @@ class UsuarioRepository
 
     public function RetornaDadosLogin(string $emailusuario):array
     {
-        $sql = "SELECT nome, cpf, senha, email, flag_ativo FROM N_USUARIO where EMAIL = :email AND FLAG_ATIVO = 1";
+        $sql = "SELECT id_usuario, nome, login, senha, email, flag_ativo FROM N_USUARIO where EMAIL = :email";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':email',$emailusuario);
         $query->execute();
@@ -86,19 +83,43 @@ class UsuarioRepository
             return $dadosDBLogin;
         }
     }
+    public function RetornaSenha(int $idUsuario):string
+    {
+        $sql = "SELECT senha FROM N_USUARIO where ID_USUARIO = :idUsuario";
+        $query = $this->pdo->prepare($sql);
+        $query->bindValue(':idUsuario',$idUsuario);
+        $query->execute();
+        return implode($query->fetch(PDO::FETCH_ASSOC));
 
-        public function DesativaUsuario(int $idUsuario)
-        {
-            $sql = "UPDATE N_USUARIO SET FLAG_ATIVO = 0 WHERE ID_USUARIO = :idUsuario";
-            $query = $this->pdo->prepare($sql);
-            $query->bindValue(':idUsuario',$idUsuario);
-            $query->execute();
-        }
-        public function AtivaUsuario(int $idUsuario)
-        {
-            $sql = "UPDATE N_USUARIO SET FLAG_ATIVO = 1 WHERE ID_USUARIO = :idUsuario";
-            $query = $this->pdo->prepare($sql);
-            $query->bindValue(':idUsuario',$idUsuario);
-            $query->execute();
-        }
+    }
+    public function AtualizaSenha(int $idUsuario,string $novaSenha):void
+    {
+        $sql = "UPDATE N_USUARIO SET SENHA = :novaSenha WHERE ID_USUARIO = :idUsuario";
+        $query = $this->pdo->prepare($sql);
+        $query->bindValue(':novaSenha',$novaSenha);
+        $query->bindValue(':idUsuario',$idUsuario);
+        $query->execute();
+    }
+
+    public function DesativaUsuario(int $idUsuario)
+    {
+        $sql = "UPDATE N_USUARIO SET FLAG_ATIVO = 0 WHERE ID_USUARIO = :idUsuario";
+        $query = $this->pdo->prepare($sql);
+        $query->bindValue(':idUsuario',$idUsuario);
+        $query->execute();
+    }
+    public function AtivaUsuario(int $idUsuario)
+    {
+        $sql = "UPDATE N_USUARIO SET FLAG_ATIVO = 1 WHERE ID_USUARIO = :idUsuario";
+        $query = $this->pdo->prepare($sql);
+        $query->bindValue(':idUsuario',$idUsuario);
+        $query->execute();
+    }
+    public function AtivaLogin(int $idUsuario):void
+    {
+        $sql = "UPDATE N_USUARIO SET LOGIN = 1 WHERE ID_USUARIO = :idUsuario";
+        $query = $this->pdo->prepare($sql);
+        $query->bindValue(':idUsuario',$idUsuario);
+        $query->execute();
+    }
 }

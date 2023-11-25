@@ -3,6 +3,9 @@
 declare(strict_types=1);
 
 return [
+    //Login
+    'GET|/usuarios/troca_senha' => \src\Controller\AcessaTrocaSenhaController::class,
+    'POST|/usuarios/troca_senha' => \src\Controller\ProcessaTrocarSenhaController::class,
     //Item
     'GET|/itens' => \src\Controller\ListarItemController::class,
     'GET|/itens/cadastro_item' => \src\Controller\AcessaItemController::class,
