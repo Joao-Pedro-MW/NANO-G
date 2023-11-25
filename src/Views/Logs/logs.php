@@ -15,14 +15,29 @@
    	<div class="base">
 		<h1>Registros de Entrada/Saída</h1>
 		<div class="menu_botoes">
-			<button type="button" id="saida" class="botao">Saída</button>
-			<button type="button" id="entrada" class="botao">Entrada</button>
-			<p>De:</p>
-			<input type="date" name="data_inicio" id="data_inicio" class="botao" placeholder="Data Inicial">
-			<p>até:</p>
-			<input type="date" name="data_fim" id="data_fim" class="botao" placeholder="Data Final">
-			<button type="button" class="botao" id="botao_filtro">Filtrar Dados
-			</button>
+
+			<label class="container">
+				<input type="checkbox" id="saida" class="check">
+				<span class="checkmark_saida">Saída</span>
+			</label>
+
+			<label class="container">
+				<input type="checkbox" id="entrada" class="check">
+				<span class="checkmark_entrada">Entrada</span>
+			</label>
+
+			<div class="datas">
+				<p>De:</p>
+				<input type="date" name="data_inicio" id="data_inicio" class="botao" placeholder="Data Inicial">
+			</div class="datas">
+			
+			<div class="datas">
+				<p>até:</p>
+				<input type="date" name="data_fim" id="data_fim" class="botao" placeholder="Data Final">
+			</div>
+
+			<button type="button" class="botao" id="botao_filtro">Filtrar Dados</button>
+
 		</div>
 		<table class="tabela_dados" id="tabela_dados">
 			<tr>
@@ -39,140 +54,6 @@
 				<td>4</td>
 				<td>5</td>
 			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-
 		</table>
 	</div>
 </body>

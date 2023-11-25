@@ -18,7 +18,7 @@
 	--branco: #FFF; /* var(--branco) */
   --aviso: #e22513; /* var( --aviso) */
   --aviso-escuro: #901207; /* var(--aviso-escuro) */
-  --confirmacao: #0acf0a; /* var(--confirmacao) */
+  --confirmacao: #0ac90a; /* var(--confirmacao) */
   --confirmacao-escuro: #008000; /* var(--confirmacao-escuro) */
 }
 a{text-decoration: none;color: black}

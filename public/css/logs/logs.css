@@ -23,6 +23,10 @@ table{
     border-radius: 0.7vw;
     padding: 0;
 }
+
+.botao[type="date"]{
+    width: 15vw;
+}
   
 .botao:not([type="date"]):hover{
     background-color: var(--dodger-blue-600);
@@ -34,28 +38,52 @@ table{
     border: 2px solid var(--dodger-blue-950);
 }
 
-#saida:hover{
+.container,.checkmark_saida, .checkmark_entrada {
+    margin-top: 0.25em;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 25px;
+    width: 100px;
+    text-align: center;
+    border-radius: 0.7vw;
+}
+
+.checkmark_saida, .checkmark_entrada{
+    padding: 10%;
+    background-color: var(--branco); 
+    color: var(--dodger-blue-600); 
+    border: 2px solid var(--dodger-blue-600);
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    z-index: 0;
+}
+
+.container input:checked ~ .checkmark_saida{
     border-color: var(--aviso);
     background-color: var(--aviso);
     color: var(--branco);
 }
 
-#saida:active{
-    border-color: var(--aviso-escuro);
-    background-color: var(--aviso-escuro);
-}
-
-#entrada:hover{
+.container input:checked ~ .checkmark_entrada{
     border-color: var(--confirmacao);
     background-color: var(--confirmacao);
     color: var(--branco);
 }
 
-#entrada:active{
-    border-color: var(--confirmacao-escuro);
-    background-color: var(--confirmacao-escuro);
-}
-
 #data_inicio,#data_fim{
     height: 47px;
+}
+
+.datas{
+    display: flex;
 }
