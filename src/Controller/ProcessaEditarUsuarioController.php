@@ -11,6 +11,10 @@ readonly class ProcessaEditarUsuarioController implements Controller
     }
     public function processaRequisicao(): void
     {
+        if($_SESSION['PERMISSAO'] == 'CM'){
+            header('Location: /');
+            exit;
+        }
         $usuarioID = filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);
         $UsuarioNome = htmlspecialchars(filter_input(INPUT_POST,'nome',FILTER_SANITIZE_SPECIAL_CHARS));
         $UsuarioEmail = htmlspecialchars(filter_input(INPUT_POST,'email',FILTER_SANITIZE_SPECIAL_CHARS));

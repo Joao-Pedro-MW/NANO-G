@@ -11,6 +11,10 @@ readonly class AcessaEditaUsuarioController implements Controller
     }
     public function processaRequisicao(): void
     {
+        if($_SESSION['PERMISSAO'] == 'CM'){
+            header('Location: /');
+            exit;
+        }
         if(!array_key_exists('id',$_GET)){
             header('Location: /usuarios');
         }

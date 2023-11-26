@@ -10,6 +10,10 @@ readonly class AcessaListarUsuarioController implements Controller
     }
     public function processaRequisicao(): void
     {
+        if($_SESSION['PERMISSAO'] == 'CM'){
+            header('Location: /');
+            exit;
+        }
         $usuarioLista = $this->usuarioRepository->TodosUsuarios();
         require_once __DIR__ . '\..\..\src\Views\Usuarios\menu_usuario.php';
     }

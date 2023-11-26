@@ -28,11 +28,15 @@
                 <a href="\itens\exclusao_lote">Excluir Lote</a>
                 <a href="\itens\lotes">Todos os lotes</a>
             </div>
+            <?php
+            echo ($_SESSION['PERMISSAO'] == 'AD')?
+            <<<HTML
             <div class="menu_classe">
-                <h1 class="classe_titulo">Usuarios</h1>
-                <a href="\usuarios">Menu usuarios</a>
-                <a href="\usuarios\cria_usuario">Cadastro de usuários</a>
-            </div>
+                            <h1 class="classe_titulo">Usuarios</h1>
+                            <a href="\usuarios">Menu usuarios</a>
+                            <a href="\usuarios\cria_usuario">Cadastro de usuários</a>
+                        </div>
+            HTML : ""; ?>
 
         </div>
     </div>

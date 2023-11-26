@@ -11,6 +11,10 @@ readonly class ProcessaNovoUsuarioController implements Controller
     }
     public function processaRequisicao(): void
     {
+        if($_SESSION['PERMISSAO'] == 'CM'){
+            header('Location: /');
+            exit;
+        }
         if (array_key_exists('cpf', $_POST)) {
             $UsuarioNome = htmlspecialchars(filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS));
             $UsuarioEmail = htmlspecialchars(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS));

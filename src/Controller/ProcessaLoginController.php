@@ -28,6 +28,7 @@ class ProcessaLoginController implements Controller
             exit;
         }
         $_SESSION['USUARIO'] = $dadosDBLogin['NOME'];
+        $_SESSION['PERMISSAO'] = $dadosDBLogin['TIPO_USUARIO'];
         $_SESSION['AUTENTICADO'] = true;
         $_SESSION['ID_USUARIO'] = $dadosDBLogin['ID_USUARIO'];
         $_SESSION['ATIVADO'] = $primeiroLogin;

@@ -47,20 +47,15 @@ class UsuarioRepository
         $sql = "DECLARE
                     v_count NUMBER;
                 BEGIN
-                    -- Verificar se o novo e-mail já existe para outro usuário
-                    SELECT COUNT(*) INTO v_count FROM N_USUARIO WHERE EMAIL = :novo_email AND id_usuario != :id_usuario;
-                
-                    -- Se o novo e-mail não existe para outro usuário, realizar a atualização
+                    SELECT COUNT(*) INTO v_count FROM N_USUARIO WHERE EMAIL = :email AND id_usuario != :id_usuario;
                     IF v_count = 0 THEN
                         UPDATE n_usuario SET 
                             nome = :nome,
                             cpf = :cpf,
-                            email = :novo_email, -- Usar o novo e-mail aqui
+                            email = :email, 
                             dt_nascimento = :dt_nascimento,
                             tipo_usuario = :tipo_usuario 
                         WHERE id_usuario = :id_usuario;
-                        
-                        DBMS_OUTPUT.PUT_LINE('Atualização realizada com sucesso!');
                     END IF;
                 END;
 ";
@@ -99,7 +94,7 @@ class UsuarioRepository
 
     public function RetornaDadosLogin(string $emailusuario):array
     {
-        $sql = "SELECT id_usuario, nome, login, senha, email, flag_ativo FROM N_USUARIO where EMAIL = :email";
+        $sql = "SELECT * FROM N_USUARIO where EMAIL = :email";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':email',$emailusuario);
         $query->execute();

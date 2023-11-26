@@ -10,6 +10,10 @@ class ConsultaDesativaUsuarioController implements Controller
     }
     public function processaRequisicao(): void
     {
+        if($_SESSION['PERMISSAO'] == 'CM'){
+            header('Location: /');
+            exit;
+        }
         $idUsuario = filter_input(INPUT_POST,'ID_USUARIO',FILTER_VALIDATE_INT);
         if($idUsuario){
             $this->usuarioRepository->DesativaUsuario($idUsuario);

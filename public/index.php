@@ -3,13 +3,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/../vendor/autoload.php';
 use src\Repository\Usuario\UsuarioRepository;
 use src\Repository\Itens\ItensRepository;
-use src\Controller\ {
-  Controller,
-  ProcessaNovoUsuarioController,
-  ProcessaEditarUsuarioController,
-  ProcessaRemoveUsuarioController,
-  AcessaListarUsuarioController, Erro404Controller
-};
+use src\Controller\ {Erro404Controller};
 //ini_set('display_errors', 0);
 //ini_set('log_errors', 1);
 $rotas = require_once __DIR__ .  '\..\config\rotas.php';
@@ -31,13 +25,13 @@ if(array_key_exists('ATIVADO',$_SESSION) AND !$rotaTrocaSenha){
     }
 }
 if(!array_key_exists('AUTENTICADO',$_SESSION) AND !$rotaLogin){
+
     header('Location: /');
 }
 $chave = "$meioHTTP|$rotaSolicitada";
 $repositorioNecessario = ucfirst(explode('/',$rotaSolicitada)[1]) . 'Repository';
 
 switch ($repositorioNecessario){
-
     case 'ItensRepository':
         $repositorioNecessario = new ItensRepository($pdo);
         break;
@@ -45,6 +39,7 @@ switch ($repositorioNecessario){
         $repositorioNecessario = new UsuarioRepository($pdo);
         break;
 }
+
 if(array_key_exists($chave,$rotas)) {
     $classeControlador = $rotas["$meioHTTP|$rotaSolicitada"];
     $controlador = new $classeControlador($repositorioNecessario);
