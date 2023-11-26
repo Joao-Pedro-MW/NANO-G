@@ -41,18 +41,18 @@
 		</div>
 		<table class="tabela_dados" id="tabela_dados">
 			<tr>
-				<th>Nome</th>
-				<th>Valor</th>
-				<th>Quantidade</th>
-				<th>Vencimento</th>
-				<th>Lote</th>
+                <th>Usuario criacao</th>
+                <th>Data/Hora criação do registro</th>
+                <th>Local</th>
+                <th>Usuario de edicao</th>
+                <th>Ultima alteração</th>
 			</tr>
 			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
+				<td>João Pedro</td>
+                <td>20/11/2023 18:50:45</td>
+                <td>Gestão Usuarios</td>
+				<td>Wilges</td>
+				<td>21/11/2023 23:11:15</td>
 			</tr>
 		</table>
 	</div>
