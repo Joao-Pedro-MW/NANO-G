@@ -21,5 +21,6 @@ readonly class ProcessaNovoLoteController implements Controller
         $novoLote = new Lote($itemId,$quantidadeItem,$valorItem,$dataValidadeItem,$loteItem);
         $this->itensRepository->CriaLote($novoLote);
         header("Location: /itens/remocao");
+        exit;
     }
 }

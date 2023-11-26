@@ -9,21 +9,29 @@ class UsuarioRepository
     public function __construct(private readonly PDO $pdo)
     {
     }
-    public function CriaUsuario(Usuario $usuario): void 
+    public function CriaUsuario(Usuario $usuario)
     {
-        $sql = "INSERT INTO n_usuario (id_usuario, nome, dt_nascimento, tipo_usuario, flag_ativo, login, cpf, email, senha) 
-        VALUES (s_user_id.nextval, :nome, TO_DATE(:data_nascimento,'YYYY-MM-DD'), :tipo_usuario, 1,0,:cpf, :email, :user_senha)";
-        //(:nome, :data_nascimento, :tipo_usuario, :user_login, :user_senha)
+        $sql = "
+        DECLARE
+            v_count NUMBER;
+        BEGIN
+            -- Verificar se o e-mail já existe
+            SELECT COUNT(*) INTO v_count FROM N_USUARIO WHERE EMAIL = :email;
         
+        -- Se o e-mail não existe, realizar a inserção
+            IF v_count = 0 THEN
+                INSERT INTO N_USUARIO (id_usuario, nome, dt_nascimento, tipo_usuario, flag_ativo, login, cpf, email, senha) 
+                VALUES (s_user_id.nextval, :nome, TO_DATE(:data_nascimento, 'YYYY-MM-DD'), :tipo_usuario, '1', '0', :cpf, :email, :user_senha);
+            END IF;
+        END;";
         $query = $this->pdo->prepare($sql);
-        // Vincule os valores aos parâmetros
         $query->bindValue(':nome', $usuario->nome);
         $query->bindValue(':data_nascimento', $usuario->data_nascimento);
         $query->bindValue(':tipo_usuario', $usuario->tipo_usuario);
         $query->bindValue(':email', $usuario->email);
         $query->bindValue(':cpf', $usuario->cpf);
         $query->bindValue(':user_senha', $usuario->user_senha);
-        $resultado = $query->execute();
+        return $query->execute();
     }
 
     public function RemoveUsuario(int $id): void
@@ -36,8 +44,27 @@ class UsuarioRepository
 
     public function AtualizaUsuario(array $dadosUsuario): void
     {
-        $sql = "UPDATE n_usuario SET nome = :nome, cpf = :cpf, email = :email, dt_nascimento = :dt_nascimento, 
-                      tipo_usuario = :tipo_usuario WHERE id_usuario = :id_usuario";
+        $sql = "DECLARE
+                    v_count NUMBER;
+                BEGIN
+                    -- Verificar se o novo e-mail já existe para outro usuário
+                    SELECT COUNT(*) INTO v_count FROM N_USUARIO WHERE EMAIL = :novo_email AND id_usuario != :id_usuario;
+                
+                    -- Se o novo e-mail não existe para outro usuário, realizar a atualização
+                    IF v_count = 0 THEN
+                        UPDATE n_usuario SET 
+                            nome = :nome,
+                            cpf = :cpf,
+                            email = :novo_email, -- Usar o novo e-mail aqui
+                            dt_nascimento = :dt_nascimento,
+                            tipo_usuario = :tipo_usuario 
+                        WHERE id_usuario = :id_usuario;
+                        
+                        DBMS_OUTPUT.PUT_LINE('Atualização realizada com sucesso!');
+                    END IF;
+                END;
+";
+
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':id_usuario',(int) $dadosUsuario['ID_USUARIO']);
         $query->bindValue(':nome',$dadosUsuario['NOME']);
@@ -122,4 +149,6 @@ class UsuarioRepository
         $query->bindValue(':idUsuario',$idUsuario);
         $query->execute();
     }
+
+
 }

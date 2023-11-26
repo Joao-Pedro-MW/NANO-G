@@ -1,7 +1,6 @@
 <?php
 
 namespace src\Controller;
-use mysql_xdevapi\Exception;
 use src\Repository\Usuario\UsuarioRepository;
 
 readonly class ProcessaRemoveUsuarioController implements Controller

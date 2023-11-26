@@ -11,8 +11,8 @@ readonly class ConsultaUnidadeMedidaController
     }
 
     public function processaRequisicao(): void {
-        $idItem = filter_input(INPUT_POST, 'idItem', FILTER_VALIDATE_INT); // Altere para INPUT_POST
+        $idItem = filter_input(INPUT_POST, 'idItem', FILTER_VALIDATE_INT);
         $unidadeMedidaItem = json_encode($this->itensRepository->GetUnidadeMedidaPorId($idItem));
-        echo $unidadeMedidaItem; // Certifique-se de imprimir a resposta para que o JavaScript possa acessá-la
+        echo $unidadeMedidaItem;
     }
 }

@@ -29,13 +29,11 @@
             if(array_key_exists('erro',$_GET)){
                 echo "<p class='aviso'>Login ou senha incorreto</p>";
             };?>
-
             <label for="usuario">Usuário:</label>
             <input id="usuario" type="email" name="usuario" required>
 
             <label for="senha">Senha:</label>
             <input id="senha" type="password" name="senha_usuario" required>
-            
             <input type="submit" form="form_login" value="Entrar" id="bt_login">
         </form>
     </div>

@@ -27,9 +27,5 @@ class ProcessaTrocarSenhaController implements Controller
         } else {
             header('Location: /usuarios/troca_senha?erro');
         }
-
-
-
-        //$status = $this->usuarioRepository->AtualizaSenha($idUsuario,);
     }
 }

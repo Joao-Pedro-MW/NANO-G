@@ -1,8 +1,6 @@
 <?php
 
 namespace src\Controller;
-
-use src\Controller\Controller;
 use src\Repository\Itens\ItensRepository;
 
 class ProcessaSaidaController implements Controller

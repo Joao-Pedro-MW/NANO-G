@@ -1,7 +1,6 @@
 <?php
 
 namespace src\Controller;
-use Couchbase\ValueRecorder;
 use src\Repository\Itens\ItensRepository;
 
 readonly class ListarItemController implements Controller
