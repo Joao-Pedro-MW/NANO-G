@@ -12,6 +12,7 @@
 
 <body>
 <?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
+<h1>Cadastrar Item</h1>
 <div class="main_div">
     <form method="POST" id="form_cria_item" class="content_div">
         <label for="nome">Nome</label>

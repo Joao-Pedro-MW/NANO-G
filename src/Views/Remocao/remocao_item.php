@@ -13,9 +13,12 @@
 <body>
 	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
 
+    <h1>Remoção de Itens</h1>
+
 	<div class="container">
 		<button id="remocao" class="remocao" type="submit" form="form_remocao">Remover Item</button>
 	</div>
+
 	<div class="base">
         <form method="post" name="form_remocao" id="form_remocao">
             <table id="tabela_dados">

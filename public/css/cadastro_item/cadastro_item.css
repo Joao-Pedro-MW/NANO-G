@@ -13,7 +13,7 @@
 }
 
 .main_div{
-	height: 70vh;
+	height: 60vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -51,3 +51,8 @@
 }
 
 label{margin-bottom: 0.4vw;}
+
+h1{
+	margin-top: 50px;
+	margin-left: 50px;
+}

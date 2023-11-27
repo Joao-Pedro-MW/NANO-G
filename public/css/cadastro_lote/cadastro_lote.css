@@ -113,3 +113,8 @@ button:active{
 	float: left;
 	width: 50%;
 }
+
+h1{
+	margin-top: 50px;
+	margin-left: 50px;
+}

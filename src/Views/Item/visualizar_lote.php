@@ -13,6 +13,9 @@
 </head>
 <body>
 <?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
+
+<h1>Visualizar lotes</h1>
+
 <div class="base">
 
     <form method="post" name="form_remocao" id="form_remocao">

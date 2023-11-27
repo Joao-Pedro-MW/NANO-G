@@ -11,6 +11,7 @@
 </head>
 <body>
     <?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
+    <h1>Cadastar Lote</h1>
     <form class="linha" id="main_div" method="POST">
         <div id="content_div">
             <div class="coluna">

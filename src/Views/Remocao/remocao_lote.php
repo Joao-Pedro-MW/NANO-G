@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
     <link rel="icon" type="image/x-icon" href="..\imagens\favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Nano-G | Remover item</title>
+	<title>Nano-G | Remover Lote</title>
 	<link rel="stylesheet" type="text/css" href="..\css\menu\header.css">
 	<link rel="stylesheet" type="text/css" href="..\css\remocao_lote\remocao_lote.css">
 	<link rel="stylesheet" type="text/css" href="..\css\tabelas.css">
@@ -18,6 +18,7 @@
 		<button id="pesquisa" class="pesquisa" type="button">Pesquisar</button>
 	</div>
 	-->
+    <h1>Remoção de Lotes</h1>
 	<div class="base">
         <form method="post" name="form_remocao" id="form_remocao">
             <table id="tabela_dados">
