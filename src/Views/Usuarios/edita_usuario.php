@@ -26,7 +26,7 @@
                         <label for="nome">Nome</label>
                         <input type="text" id="nome" name="nome" value="<?=$dadosUsuario['NOME']?>" required>
                         <label for="cpf">CPF</label>
-                        <input type="number" id="cpf" name="cpf" value="<?=$dadosUsuario['CPF']?>" required>
+                        <input type="text" id="cpf" name="cpf" value="<?=$dadosUsuario['CPF']?>" required>
                     </div>
                     <div class="div_vertical">
                         <label for="email" id="label_direita">Email</label>
@@ -53,5 +53,11 @@
         </form>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+	<script>
+		$('#cpf').mask('000.000.000-00', { reverse: true });
+	</script>
 </body>
 </html>
