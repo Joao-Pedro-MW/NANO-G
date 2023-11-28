@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="icon" type="image/x-icon" href="..\imagens\favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
     <title>Nano-G | Criar Usuário</title>
     <link rel="stylesheet" type="text/css" href="..\css\menu\header.css">
     <link rel="stylesheet" type="text/css" href="..\css\cria_usuario\cria_usuario.css">
