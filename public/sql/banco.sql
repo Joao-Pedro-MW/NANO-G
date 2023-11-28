@@ -1,3 +1,10 @@
+DROP SEQUENCE s_user_id;
+DROP SEQUENCE s_item_id;
+DROP SEQUENCE s_user_id;
+DROP SEQUENCE s_un_medida_id;
+DROP SEQUENCE s_categoria_id;
+DROP SEQUENCE s_lote_id;
+
 CREATE SEQUENCE s_user_id START WITH 1 INCREMENT BY 1 NOCACHE NOCYCLE;
 CREATE SEQUENCE s_item_id START WITH 1 INCREMENT BY 1 NOCACHE NOCYCLE;
 CREATE SEQUENCE s_un_medida_id START WITH 1 INCREMENT BY 1 NOCACHE NOCYCLE;
@@ -7,14 +14,13 @@ CREATE SEQUENCE s_lote_id START WITH 100 INCREMENT BY 1 NOCACHE NOCYCLE;
 CREATE TABLE n_usuario (
  id_usuario       NUMBER          NOT NULL,
  nome             VARCHAR2(150)   NOT NULL,
- cpf              VARCHAR2(30)    NOT NULL,
+ cpf              VARCHAR2(30)    NOT NULL UNIQUE,
  dt_nascimento    DATE            NOT NULL,
  tipo_usuario     VARCHAR2(2)     NOT NULL,
  flag_ativo       VARCHAR2(1)     NOT NULL,
  login            VARCHAR2(1)     NOT NULL,
- email            VARCHAR2(200)   NOT NULL,
+ email            VARCHAR2(200)   NOT NULL UNIQUE,
  senha            VARCHAR2(200)   NOT NULL,
- login            VARCHAR2(1)     NOT NULL,
  create_date      DATETIME        NOT NULL,
  created_by       NUMBER          NOT NULL,
  last_updated_by  NUMBER          NOT NULL,
@@ -73,3 +79,6 @@ CREATE TABLE n_lote (
  CONSTRAINT pk_lote PRIMARY KEY (id_lote),
  CONSTRAINT fk_item FOREIGN KEY (id_item) REFERENCES n_item (id_item)
 );
+
+INSERT INTO n_usuario VALUES (
+s_user_id.nextval,'Admin NanoG','9999999999',TO_DATE('1990-01-01', 'YYYY-MM-DD'),'AD','1','0','admin@nanog.com.br','$argon2id$v=19$m=65536,t=4,p=1$Yk11RjlGUGMxaDM3SlZyOA$J0dr0G/2xpzqvsv+4ezlcKXobxJ512lny9Ee/Waxs70',SYSDATE,1,1,SYSDATE);
