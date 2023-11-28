@@ -11,19 +11,8 @@ class UsuarioRepository
     }
     public function CriaUsuario(Usuario $usuario)
     {
-        $sql = "
-        DECLARE
-            v_count NUMBER;
-        BEGIN
-            -- Verificar se o e-mail já existe
-            SELECT COUNT(*) INTO v_count FROM N_USUARIO WHERE EMAIL = :email;
-        
-        -- Se o e-mail não existe, realizar a inserção
-            IF v_count = 0 THEN
-                INSERT INTO N_USUARIO (id_usuario, nome, dt_nascimento, tipo_usuario, flag_ativo, login, cpf, email, senha) 
-                VALUES (s_user_id.nextval, :nome, TO_DATE(:data_nascimento, 'YYYY-MM-DD'), :tipo_usuario, '1', '0', :cpf, :email, :user_senha);
-            END IF;
-        END;";
+        $sql = "INSERT INTO N_USUARIO (id_usuario, nome, dt_nascimento, tipo_usuario, flag_ativo, login, cpf, email, senha,create_date,created_by,last_updated_by,last_update_date) 
+                VALUES (s_user_id.nextval, :nome, TO_DATE(:data_nascimento, 'YYYY-MM-DD'), :tipo_usuario, '1', '0', :cpf, :email, :user_senha,SYSDATE,s_user_id.nextval,s_user_id.nextval,SYSDATE)";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':nome', $usuario->nome);
         $query->bindValue(':data_nascimento', $usuario->data_nascimento);
@@ -44,22 +33,8 @@ class UsuarioRepository
 
     public function AtualizaUsuario(array $dadosUsuario): void
     {
-        $sql = "DECLARE
-                    v_count NUMBER;
-                BEGIN
-                    SELECT COUNT(*) INTO v_count FROM N_USUARIO WHERE EMAIL = :email AND id_usuario != :id_usuario;
-                    IF v_count = 0 THEN
-                        UPDATE n_usuario SET 
-                            nome = :nome,
-                            cpf = :cpf,
-                            email = :email, 
-                            dt_nascimento = :dt_nascimento,
-                            tipo_usuario = :tipo_usuario 
-                        WHERE id_usuario = :id_usuario;
-                    END IF;
-                END;
-";
-
+        $sql = "UPDATE n_usuario SET nome = :nome, cpf = :cpf, email = :email, dt_nascimento = TO_DATE(:dt_nascimento,'YYYY-MM-DD'), 
+                      tipo_usuario = :tipo_usuario WHERE id_usuario = :id_usuario";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':id_usuario',(int) $dadosUsuario['ID_USUARIO']);
         $query->bindValue(':nome',$dadosUsuario['NOME']);

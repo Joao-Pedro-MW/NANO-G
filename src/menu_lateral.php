@@ -59,7 +59,7 @@
             <a href="/logout">
                 <button class="button">Sair</button>
             </a>
-            <a href="/logout">
+            <a href="/usuarios/troca_senha">
                 <button class="button">Trocar Senha</button>
             </a>
         </div>

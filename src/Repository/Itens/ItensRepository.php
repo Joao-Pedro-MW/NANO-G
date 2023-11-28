@@ -66,7 +66,7 @@ class ItensRepository
     }
     public function CriaItem(Item $novoItem):void
     {
-        $sql = "INSERT INTO n_item VALUES (s_item_id.nextval, :nomeItem,:idCategoriaItem,:idUnidadeMedidaItem)";
+        $sql = "INSERT INTO n_item VALUES (s_item_id.nextval, :nomeItem,:idCategoriaItem,:idUnidadeMedidaItem,SYSDATE,1,1,SYSDATE)";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':nomeItem',$novoItem->itemNome);
         $query->bindValue(':idCategoriaItem',$novoItem->itemCategoria);
@@ -104,8 +104,8 @@ class ItensRepository
 
     public function CriaLote(Lote $lote):void
     {
-        $sql = "INSERT INTO n_lote (id_lote,id_item,quantidade,data_validade, VALOR_ITEM )
-        VALUES (S_LOTE_ID.nextval, :itemID, :quantidadeItem, TO_DATE(:data_validade, 'YYYY-MM-DD'), :valorItem)";
+        $sql = "INSERT INTO n_lote (id_lote,id_item,quantidade,data_validade, VALOR_ITEM, CREATE_DATE,CREATED_BY,LAST_UPDATE_DATE,LAST_UPDATED_BY)
+        VALUES (S_LOTE_ID.nextval, :itemID, :quantidadeItem, TO_DATE(:data_validade, 'YYYY-MM-DD'),:valorItem,SYSDATE,1,1,SYSDATE)";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':itemId',$lote->itemId);
         $query->bindValue(':quantidadeItem',$lote->quantidadeItens);
