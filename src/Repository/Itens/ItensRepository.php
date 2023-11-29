@@ -83,7 +83,7 @@ class ItensRepository
 
     public function AtualizaItem(int $itemId, Item $dadositem):void
     {
-        $sql = "UPDATE n_item SET item_nome = :nomeItem, id_categoria = :idCategoriaItem, id_un_medida = :idUnidadeMedidaItem
+        $sql = "UPDATE n_item SET item_nome = :nomeItem, id_categoria = :idCategoriaItem, LAST_UPDATED_BY = 8, LAST_UPDATE_DATE = SYSDATE, id_un_medida = :idUnidadeMedidaItem
         WHERE id_item = $itemId";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':nomeItem',$dadositem->itemNome);
@@ -104,7 +104,7 @@ class ItensRepository
 
     public function CriaLote(Lote $lote):void
     {
-        $sql = "INSERT INTO n_lote (id_lote,id_item,quantidade,data_validade, VALOR_ITEM, CREATE_DATE,CREATED_BY,LAST_UPDATE_DATE,LAST_UPDATED_BY)
+        $sql = "INSERT INTO n_lote (id_lote,id_item,quantidade,data_validade, VALOR_ITEM, CREATE_DATE,CREATED_BY,LAST_UPDATED_BY,LAST_UPDATE_DATE)
         VALUES (S_LOTE_ID.nextval, :itemID, :quantidadeItem, TO_DATE(:data_validade, 'YYYY-MM-DD'),:valorItem,SYSDATE,1,1,SYSDATE)";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':itemId',$lote->itemId);

@@ -4,7 +4,7 @@ namespace src\Controller;
 
 use src\Repository\Itens\ItensRepository;
 
-readonly class RemoveItemController implements Controller
+readonly class ProcessaRemoveItemController implements Controller
 {
     public function __construct(private ItensRepository $itensRepository)
     {

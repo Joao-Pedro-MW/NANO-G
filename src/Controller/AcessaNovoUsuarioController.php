@@ -11,6 +11,9 @@ class AcessaNovoUsuarioController implements Controller
             header('Location: /');
             exit;
         }
+        if(!array_key_exists('ERRO_EMAIL_JA_EXISTENTE',$_SESSION)){
+            $_SESSION['ERRO_EMAIL_JA_EXISTENTE'] = [];
+        }
         require_once __DIR__ . '\..\..\src\Views\Usuarios\cria_usuario.php';
     }
 }
