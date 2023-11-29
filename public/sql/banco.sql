@@ -100,4 +100,58 @@ INSERT ALL
     INTO n_unidade_medida VALUES(5,'L (Litros)',SYSDATE,1,1,SYSDATE)
 SELECT 1 FROM dual;
 
+
+CREATE OR REPLACE VIEW n_logs_v (created_by, criador, create_date, last_update_date, last_update_by, atualizador, tabela) AS
+SELECT
+    it.created_by,
+    (
+        SELECT
+            us.nome
+        FROM
+            n_usuario us
+        WHERE
+                us.id_usuario = it.created_by
+    )       criador,
+    it.create_date,
+    it.last_update_date,
+    it.last_updated_by,
+    (
+        SELECT
+            us.nome
+        FROM
+            n_usuario us
+        WHERE
+                us.id_usuario = it.last_updated_by
+    )       atualizador,
+    'Itens' tabela
+FROM
+    n_item it
+
+UNION
+
+SELECT
+    lot.created_by,
+    (
+        SELECT
+            us.nome
+        FROM
+            n_usuario us
+        WHERE
+                us.id_usuario = lot.created_by
+    )       criador,
+    lot.create_date,
+    lot.last_update_date,
+    lot.last_updated_by,
+    (
+        SELECT
+            us.nome
+        FROM
+            n_usuario us
+        WHERE
+                us.id_usuario = lot.last_updated_by
+    )       atualizador,
+    'Lotes' tabela
+FROM
+    n_lote lot;
+
 COMMIT;
