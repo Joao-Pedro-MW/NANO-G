@@ -105,7 +105,7 @@ class ItensRepository
     public function CriaLote(Lote $lote):void
     {
         $sql = "INSERT INTO n_lote (id_lote,id_item,quantidade,data_validade, VALOR_ITEM, CREATE_DATE,CREATED_BY,LAST_UPDATE_DATE,LAST_UPDATED_BY)
-        VALUES (S_LOTE_ID.nextval, :itemID, :quantidadeItem, TO_DATE(:data_validade, 'YYYY-MM-DD'),:valorItem,SYSDATE,1,1,SYSDATE)";
+        VALUES (S_LOTE_ID.nextval, :itemID, :quantidadeItem, TO_DATE(:data_validade, 'YYYY-MM-DD'),:valorItem,SYSDATE,1,SYSDATE,1)";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':itemId',$lote->itemId);
         $query->bindValue(':quantidadeItem',$lote->quantidadeItens);

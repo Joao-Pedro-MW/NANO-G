@@ -29,28 +29,28 @@
                     </select>
                 </th>
                 <th class="item" name="Un_medida">Unidade Medida
-                    <select autofocus class="combobox">
+                    <select id="Un_medida" autofocus class="combobox" onchange="filtroun()">
                         <?php foreach ($listaLotes as $lote): ?>
                             <option class="opcao" id="pesquisa_un_medida"><?= $lote["UNIDADE_MEDIDA"]?></option>
                         <?php endforeach;?>>
                     </select>
                 </th>
                 <th class="item" name="Quantidade">Quantidade
-                    <select id="quantidade" autofocus class="combobox">
+                    <select id="quantidade" autofocus class="combobox" onchange="filtroqtd()">
                         <?php foreach ($listaLotes as $lote): ?>
                             <option class="opcao" id="pesquisa_quantidade"><?= $lote["QUANTIDADE"]?></option>
                         <?php endforeach;?>
                     </select>
                 </th>
                 <th class="item" name="Valor_item">Valor por Item
-                    <select autofocus class="combobox">
+                    <select id="valor" autofocus class="combobox" onchange="filtrovalor()">
                         <?php foreach ($listaLotes as $lote): ?>
                             <option class="opcao" id="pesquisa_valor"><?= $lote["VALOR_ITEM"]?></option>
                         <?php endforeach;?>
                     </select>
                 </th>
                 <th class="item" name="Categoria">Categoria
-                    <select autofocus class="combobox">
+                    <select id="categoria" autofocus class="combobox" onchange="filtrocat()">
                         <?php foreach ($listaLotes as $lote): ?>
                             <option class="opcao" id="pesquisa_valor"><?= $lote["CATEGORIA"]?></option>
                         <?php endforeach;?>
@@ -64,7 +64,7 @@
                     </select>
                 </th>
                 <th class="item" name="Validade">Validade
-                    <select autofocus class="combobox">
+                    <select id="validade" autofocus class="combobox" onchange="filtrovalidade()">
                         <?php foreach ($listaLotes as $lote): ?>
                             <option class="opcao" id="pesquisa_data_validade"><?= $lote['DATA_VALIDADE']?></option>
                         <?php endforeach;?>
