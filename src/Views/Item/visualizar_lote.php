@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="..\css\remocao_itens\remocao_itens.css">
     <link rel="stylesheet" type="text/css" href="..\css\tabelas.css">
     <script type="text/javascript" src="..\js\menu.js"></script>
-    <script type="text/javascript" src="..\js\filtro.js"></script>
+    <script type="text/javascript" src="..\js\filtro.js"    ></script>
 </head>
 <body>
 <?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
@@ -20,7 +20,7 @@
 
     <form method="post" name="form_remocao" id="form_remocao">
         <table id="tabela_dados">
-            <tr>
+            <tr class="header">
                 <th class="item" name="Item">Item
                     <select id="item" autofocus class="combobox" onchange="filtroitem()">
                         <?php foreach ($listaLotes as $lote): ?>

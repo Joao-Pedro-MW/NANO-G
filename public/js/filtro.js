@@ -1,16 +1,16 @@
 const filtroitem = () => {
     const columns = [
-      { name: 'Item', index: 0, isFilter: true }
+      { name: 'item', index: 0, isFilter: true }
     ]
     const filterColumns = columns.filter(c => c.isFilter).map(c => c.index)
     const trs = document.querySelectorAll(`#tabela_dados tr:not(.header)`)
-    const filter = document.querySelector('#item').value
-    const regex = new RegExp(filter, 'i')
+    const filter = document.querySelector('#item').value  
+    const regex = new RegExp(`^${filter}$`, 'i');
     const isFoundInTds = td => regex.test(td.innerHTML)
     const isFound = childrenArr => childrenArr.some(isFoundInTds)
     const setTrStyleDisplay = ({ style, children }) => {
       style.display = isFound([
-        ...filterColumns.map(c => children[c]) // <-- filter Columns
+        ...filterColumns.map(c => children[c])
       ]) ? '' : 'none'
     }
     
@@ -24,12 +24,12 @@ const filtroun = () => {
   const filterColumns = columns.filter(c => c.isFilter).map(c => c.index)
   const trs = document.querySelectorAll(`#tabela_dados tr:not(.header)`)
   const filter = document.querySelector('#Un_medida').value
-  const regex = new RegExp(filter, 'i')
+  const regex = new RegExp(`^${filter}$`, 'i');
   const isFoundInTds = td => regex.test(td.innerHTML)
   const isFound = childrenArr => childrenArr.some(isFoundInTds)
   const setTrStyleDisplay = ({ style, children }) => {
     style.display = isFound([
-      ...filterColumns.map(c => children[c]) // <-- filter Columns
+      ...filterColumns.map(c => children[c])
     ]) ? '' : 'none'
   }
   
@@ -43,12 +43,12 @@ const filtroqtd = () => {
   const filterColumns = columns.filter(c => c.isFilter).map(c => c.index)
   const trs = document.querySelectorAll(`#tabela_dados tr:not(.header)`)
   const filter = document.querySelector('#quantidade').value
-  const regex = new RegExp(filter, 'i')
+  const regex = new RegExp(`^${filter}$`, 'i');
   const isFoundInTds = td => regex.test(td.innerHTML)
   const isFound = childrenArr => childrenArr.some(isFoundInTds)
   const setTrStyleDisplay = ({ style, children }) => {
     style.display = isFound([
-      ...filterColumns.map(c => children[c]) // <-- filter Columns
+      ...filterColumns.map(c => children[c])
     ]) ? '' : 'none'
   }
   
@@ -62,12 +62,12 @@ const filtrovalor = () => {
   const filterColumns = columns.filter(c => c.isFilter).map(c => c.index)
   const trs = document.querySelectorAll(`#tabela_dados tr:not(.header)`)
   const filter = document.querySelector('#valor').value
-  const regex = new RegExp(filter, 'i')
+  const regex = new RegExp(`^${filter}$`, 'i');
   const isFoundInTds = td => regex.test(td.innerHTML)
   const isFound = childrenArr => childrenArr.some(isFoundInTds)
   const setTrStyleDisplay = ({ style, children }) => {
     style.display = isFound([
-      ...filterColumns.map(c => children[c]) // <-- filter Columns
+      ...filterColumns.map(c => children[c])
     ]) ? '' : 'none'
   }
   
@@ -81,12 +81,12 @@ const filtrocat = () => {
   const filterColumns = columns.filter(c => c.isFilter).map(c => c.index)
   const trs = document.querySelectorAll(`#tabela_dados tr:not(.header)`)
   const filter = document.querySelector('#categoria').value
-  const regex = new RegExp(filter, 'i')
+  const regex = new RegExp(`^${filter}$`, 'i');
   const isFoundInTds = td => regex.test(td.innerHTML)
   const isFound = childrenArr => childrenArr.some(isFoundInTds)
   const setTrStyleDisplay = ({ style, children }) => {
     style.display = isFound([
-      ...filterColumns.map(c => children[c]) // <-- filter Columns
+      ...filterColumns.map(c => children[c])
     ]) ? '' : 'none'
   }
   trs.forEach(setTrStyleDisplay)
@@ -99,12 +99,12 @@ const filtrolote = () => {
     const filterColumns = columns.filter(c => c.isFilter).map(c => c.index)
     const trs = document.querySelectorAll(`#tabela_dados tr:not(.header)`)
     const filter = document.querySelector('#lote').value
-    const regex = new RegExp(filter, 'i')
+    const regex = new RegExp(`^${filter}$`, 'i');
     const isFoundInTds = td => regex.test(td.innerHTML)
     const isFound = childrenArr => childrenArr.some(isFoundInTds)
     const setTrStyleDisplay = ({ style, children }) => {
       style.display = isFound([
-        ...filterColumns.map(c => children[c]) // <-- filter Columns
+        ...filterColumns.map(c => children[c])
       ]) ? '' : 'none'
     }
     trs.forEach(setTrStyleDisplay)
@@ -117,12 +117,12 @@ const filtrovalidade = () => {
   const filterColumns = columns.filter(c => c.isFilter).map(c => c.index)
   const trs = document.querySelectorAll(`#tabela_dados tr:not(.header)`)
   const filter = document.querySelector('#validade').value
-  const regex = new RegExp(filter, 'i')
+  const regex = new RegExp(`^${filter}$`, 'i');
   const isFoundInTds = td => regex.test(td.innerHTML)
   const isFound = childrenArr => childrenArr.some(isFoundInTds)
   const setTrStyleDisplay = ({ style, children }) => {
     style.display = isFound([
-      ...filterColumns.map(c => children[c]) // <-- filter Columns
+      ...filterColumns.map(c => children[c])
     ]) ? '' : 'none'
   }
   trs.forEach(setTrStyleDisplay)
