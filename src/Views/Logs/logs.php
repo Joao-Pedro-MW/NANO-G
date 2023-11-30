@@ -13,7 +13,7 @@
 <body>
 	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
    	<div class="base">
-		<h1>Registros de Entrada/Saída</h1>
+		<h1>Registros de alterações (Logs)</h1>
 		<div class="menu_botoes">
 
 			<label class="container">
