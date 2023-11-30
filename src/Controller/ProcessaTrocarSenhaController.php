@@ -21,7 +21,7 @@ class ProcessaTrocarSenhaController implements Controller
         if(password_verify($senhaAtual,$senhaDB) && $senhaNova === $senhaConfirmar ){
             $senhaConfirmar = password_hash($senhaConfirmar,PASSWORD_ARGON2ID);
             $this->usuarioRepository->AtualizaSenha($idUsuario,$senhaConfirmar,$idUsuario);
-            $this->usuarioRepository->AtivaLogin($idUsuario);
+            $this->usuarioRepository->AtivaLogin($idUsuario,$idUsuario);
             $_SESSION = [];
             header('Location: /');
         } else {
