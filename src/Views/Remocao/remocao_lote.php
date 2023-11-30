@@ -9,57 +9,52 @@
 	<link rel="stylesheet" type="text/css" href="..\css\remocao_lote\remocao_lote.css">
 	<link rel="stylesheet" type="text/css" href="..\css\tabelas.css">
 	<script type="text/javascript" src="..\js\menu.js"></script>
+    <script type="text/javascript" src="..\js\filtro lote.js"></script>
 </head>
 <body>
 	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
-    <!--
-	<div class="container">
-		<button id="remocao" class="remocao" type="submit" form="form_remocao">Excluir Lote</button>
-		<button id="pesquisa" class="pesquisa" type="button">Pesquisar</button>
-	</div>
-	-->
     <h1>Remoção de Lotes</h1>
 	<div class="base">
         <form method="post" name="form_remocao" id="form_remocao">
             <table id="tabela_dados">
-                <tr>
+                <tr class="header">
                     <th class="item">lote
-                        <select autofocus class="combobox">
+                        <select id="lote" autofocus class="combobox" onchange="filtrolote()">
                             <?php foreach ($listaLotes as $lote): ?>
-                            <option class="opcao" id="pesquisa_lote"><?= $lote["CATEGORIA"]?></option>
+                            <option class="opcao" id="pesquisa_lote"><?= $lote["ID_LOTE"]?></option>
                             <?php endforeach;?>
                         </select>
                     </th>
                     <th class="item">item
-                        <select autofocus class="combobox">
+                        <select id="item" autofocus class="combobox" onchange="filtroitem()">
                             <?php foreach ($listaLotes as $lote): ?>
                                 <option class="opcao" id="pesquisa_nome_item"><?=$lote["NOME_ITEM"]?></option>
                             <?php endforeach;?>
                         </select>
                     </th>
                     <th class="item">Quantidade
-                        <select id="quantidade" autofocus class="combobox">
+                        <select id="quantidade" autofocus class="combobox" onchange="filtroqtd()">
                             <?php foreach ($listaLotes as $lote): ?>
                                 <option class="opcao" id="pesquisa_quantidade"><?= $lote["QUANTIDADE"]?></option>
                             <?php endforeach;?>
                         </select>
                     </th>
                     <th class="item">Unidade Medida
-                        <select autofocus class="combobox">
+                        <select id="Un_medida" autofocus class="combobox" onchange="filtroun()">
                             <?php foreach ($listaLotes as $lote): ?>
                                 <option class="opcao" id="pesquisa_un_medida"><?= $lote["UNIDADE_MEDIDA"]?></option>
                             <?php endforeach;?>
                         </select>
                     </th>
                     <th class="item">Valor por Item
-                        <select autofocus class="combobox">
+                        <select id="valor" autofocus class="combobox" onchange="filtrovalor()">
                             <?php foreach ($listaLotes as $lote): ?>
                                 <option class="opcao" id="pesquisa_valor"><?= $lote["VALOR_ITEM"]?></option>
                             <?php endforeach;?>
                         </select>
                     </th>
                     <th class="item">Validade
-                        <select autofocus class="combobox">
+                        <select id="validade" autofocus class="combobox" onchange="filtrovalidade()">
                             <?php foreach ($listaLotes as $lote): ?>
                                 <option class="opcao" id="pesquisa_data_validade"><?= $lote['DATA_VALIDADE']?></option>
                             <?php endforeach;?>
