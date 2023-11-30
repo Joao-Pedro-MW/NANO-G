@@ -15,10 +15,11 @@ readonly class ProcessaEditarUsuarioController implements Controller
             header('Location: /');
             exit;
         }
+        $idUsuario = $_SESSION['ID_USUARIO'];
 
         $usuarioID = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
-        $UsuarioNome = htmlspecialchars(filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS));
-        $UsuarioEmail = htmlspecialchars(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS));
+        $UsuarioNome = trim(htmlspecialchars(filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS)),"\n\r\t\v\x00");
+        $UsuarioEmail = trim(htmlspecialchars(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS)),"\n\r\t\v\x00");
         $UsuarioDataNascimento = htmlspecialchars(filter_input(INPUT_POST, 'data_nascimento', FILTER_SANITIZE_SPECIAL_CHARS));
         $UsuarioPermissao = htmlspecialchars(filter_input(INPUT_POST, 'tipo_usuario', FILTER_SANITIZE_SPECIAL_CHARS));
         $UsuarioCPF = htmlspecialchars(filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_SPECIAL_CHARS));
@@ -31,7 +32,7 @@ readonly class ProcessaEditarUsuarioController implements Controller
             'TIPO_USUARIO' => $UsuarioPermissao,
             'EMAIL' => $UsuarioEmail
         ];
-        $resultado = $this->usuarioRepository->AtualizaUsuario($dadosUsuario);
+        $resultado = $this->usuarioRepository->AtualizaUsuario($dadosUsuario,$idUsuario);
         // Processa o resultado e exibe na tela
         if (!$resultado) {
             echo 'Falha na atualização. Contate o suporte.';

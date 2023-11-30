@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/../vendor/autoload.php';
+
+use src\Repository\Logs\LogsRepository;
 use src\Repository\Usuario\UsuarioRepository;
 use src\Repository\Itens\ItensRepository;
 use src\Controller\ {Erro404Controller};
@@ -30,16 +32,20 @@ if(!array_key_exists('AUTENTICADO',$_SESSION) AND !$rotaLogin){
 }
 $chave = "$meioHTTP|$rotaSolicitada";
 $repositorioNecessario = ucfirst(explode('/',$rotaSolicitada)[1]) . 'Repository';
-
+//ACESSO DB
 switch ($repositorioNecessario){
+    case 'LogsRepository':
+        $repositorioNecessario = new LogsRepository($pdo);
+        break;
     case 'ItensRepository':
         $repositorioNecessario = new ItensRepository($pdo);
         break;
     case 'UsuariosRepository' OR 'Repository':
         $repositorioNecessario = new UsuarioRepository($pdo);
         break;
-}
 
+}
+//ROTEAMENTO
 if(array_key_exists($chave,$rotas)) {
     $classeControlador = $rotas["$meioHTTP|$rotaSolicitada"];
     $controlador = new $classeControlador($repositorioNecessario);

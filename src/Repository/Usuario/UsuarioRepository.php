@@ -9,48 +9,6 @@ class UsuarioRepository
     public function __construct(private readonly PDO $pdo)
     {
     }
-    public function CriaUsuario(Usuario $usuario)
-    {
-        $sql = "INSERT INTO N_USUARIO (id_usuario, nome, dt_nascimento, tipo_usuario, flag_ativo, login, cpf, email, senha,create_date,created_by,last_updated_by,last_update_date) 
-                VALUES (s_user_id.nextval, :nome, TO_DATE(:data_nascimento, 'YYYY-MM-DD'), :tipo_usuario, '1', '0', :cpf, :email, :user_senha,SYSDATE,s_user_id.nextval,s_user_id.nextval,SYSDATE)";
-        $query = $this->pdo->prepare($sql);
-        $query->bindValue(':nome', $usuario->nome);
-        $query->bindValue(':data_nascimento', $usuario->data_nascimento);
-        $query->bindValue(':tipo_usuario', $usuario->tipo_usuario);
-        $query->bindValue(':email', $usuario->email);
-        $query->bindValue(':cpf', $usuario->cpf);
-        $query->bindValue(':user_senha', $usuario->user_senha);
-        return $query->execute();
-    }
-
-    public function RemoveUsuario(int $id): void
-    {
-        $sql = 'DELETE FROM n_usuario WHERE ID_USUARIO = :id';
-        $query = $this->pdo->prepare($sql);
-        $query->bindValue(':id',$id);
-        $query->execute();
-    }
-
-    public function AtualizaUsuario(array $dadosUsuario)
-    {
-
-        try {
-            $sql = "UPDATE n_usuario SET nome = :nome, cpf = :cpf, email = :email, dt_nascimento = TO_DATE(:dt_nascimento,'YYYY-MM-DD'), 
-                      tipo_usuario = :tipo_usuario WHERE id_usuario = :id_usuario";
-            $query = $this->pdo->prepare($sql);
-            $query->bindValue(':id_usuario', (int)$dadosUsuario['ID_USUARIO']);
-            $query->bindValue(':nome', $dadosUsuario['NOME']);
-            $query->bindValue(':cpf', $dadosUsuario['CPF']);
-            $query->bindValue(':email', $dadosUsuario['EMAIL']);
-            $query->bindValue(':dt_nascimento', $dadosUsuario['DT_NASCIMENTO']);
-            $query->bindValue(':tipo_usuario', $dadosUsuario['TIPO_USUARIO']);
-            $query->execute();
-            return $query->fetchColumn();
-        } catch (PDOException $e){
-            return $e;
-        }
-    }
-
 
     public function TodosUsuarios():array
     {
@@ -95,32 +53,80 @@ class UsuarioRepository
         return implode($query->fetch(PDO::FETCH_ASSOC));
 
     }
-    public function AtualizaSenha(int $idUsuario,string $novaSenha):void
+    public function CriaUsuario(Usuario $usuario,int $idEditor)
     {
-        $sql = "UPDATE N_USUARIO SET SENHA = :novaSenha WHERE ID_USUARIO = :idUsuario";
+        $sql = "INSERT INTO N_USUARIO (id_usuario, nome, dt_nascimento, tipo_usuario, flag_ativo, login, cpf, email, senha,create_date,created_by,last_updated_by,last_update_date) 
+                VALUES (s_user_id.nextval, :nome, TO_DATE(:data_nascimento, 'YYYY-MM-DD'), :tipo_usuario, '1', '0', :cpf, :email, :user_senha,SYSDATE,:idEditor,:idEditor,SYSDATE)";
         $query = $this->pdo->prepare($sql);
-        $query->bindValue(':novaSenha',$novaSenha);
-        $query->bindValue(':idUsuario',$idUsuario);
+        $query->bindValue(':nome', $usuario->nome);
+        $query->bindValue(':data_nascimento', $usuario->data_nascimento);
+        $query->bindValue(':tipo_usuario', $usuario->tipo_usuario);
+        $query->bindValue(':email', $usuario->email);
+        $query->bindValue(':cpf', $usuario->cpf);
+        $query->bindValue(':user_senha', $usuario->user_senha);
+        $query->bindValue(':idEditor',$idEditor);
+        return $query->execute();
+    }
+
+    public function RemoveUsuario(int $id): void
+    {
+        $sql = 'DELETE FROM n_usuario WHERE ID_USUARIO = :id';
+        $query = $this->pdo->prepare($sql);
+        $query->bindValue(':id',$id);
         $query->execute();
     }
 
-    public function DesativaUsuario(int $idUsuario)
+    public function AtualizaUsuario(array $dadosUsuario, int $idEditor)
     {
-        $sql = "UPDATE N_USUARIO SET FLAG_ATIVO = 0 WHERE ID_USUARIO = :idUsuario";
+
+        try {
+            $sql = "UPDATE n_usuario SET nome = :nome, cpf = :cpf, email = :email, dt_nascimento = TO_DATE(:dt_nascimento,'YYYY-MM-DD'), 
+                      tipo_usuario = :tipo_usuario,LAST_UPDATED_BY = :idEditor , LAST_UPDATE_DATE = SYSDATE WHERE id_usuario = :id_usuario";
+            $query = $this->pdo->prepare($sql);
+            $query->bindValue(':id_usuario', (int)$dadosUsuario['ID_USUARIO']);
+            $query->bindValue(':nome', $dadosUsuario['NOME']);
+            $query->bindValue(':cpf', $dadosUsuario['CPF']);
+            $query->bindValue(':email', $dadosUsuario['EMAIL']);
+            $query->bindValue(':dt_nascimento', $dadosUsuario['DT_NASCIMENTO']);
+            $query->bindValue(':tipo_usuario', $dadosUsuario['TIPO_USUARIO']);
+            $query->bindValue(':idEditor',$idEditor);
+            $query->execute();
+            return $query->fetchColumn();
+        } catch (PDOException $e){
+            return $e;
+        }
+    }
+
+
+    public function AtualizaSenha(int $idUsuario,string $novaSenha, int $idEditor):void
+    {
+        $sql = "UPDATE N_USUARIO SET SENHA = :novaSenha, LAST_UPDATE_DATE = SYSDATE, LAST_UPDATED_BY = :idEditor WHERE ID_USUARIO = :idUsuario";
         $query = $this->pdo->prepare($sql);
+        $query->bindValue(':novaSenha',$novaSenha);
         $query->bindValue(':idUsuario',$idUsuario);
+        $query->bindValue(':idEditor',$idEditor);
         $query->execute();
     }
-    public function AtivaUsuario(int $idUsuario)
+
+    public function DesativaUsuario(int $idUsuario, int $idEditor)
     {
-        $sql = "UPDATE N_USUARIO SET FLAG_ATIVO = 1 WHERE ID_USUARIO = :idUsuario";
+        $sql = "UPDATE N_USUARIO SET FLAG_ATIVO = 0, LAST_UPDATED_BY = :idEditor , LAST_UPDATE_DATE = SYSDATE WHERE ID_USUARIO = :idUsuario";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':idUsuario',$idUsuario);
+        $query->bindValue(':idEditor',$idEditor);
         $query->execute();
     }
-    public function AtivaLogin(int $idUsuario):void
+    public function AtivaUsuario(int $idUsuario, int $idEditor)
     {
-        $sql = "UPDATE N_USUARIO SET LOGIN = 1 WHERE ID_USUARIO = :idUsuario";
+        $sql = "UPDATE N_USUARIO SET FLAG_ATIVO = 1,LAST_UPDATED_BY = :idEditor , LAST_UPDATE_DATE = SYSDATE WHERE ID_USUARIO = :idUsuario";
+        $query = $this->pdo->prepare($sql);
+        $query->bindValue(':idUsuario',$idUsuario);
+        $query->bindValue(':idEditor',$idEditor);
+        $query->execute();
+    }
+    public function AtivaLogin(int $idUsuario, int $idEditor):void
+    {
+        $sql = "UPDATE N_USUARIO SET LOGIN = 1 , LAST_UPDATED_BY = :idEditor , LAST_UPDATE_DATE = SYSDATE WHERE ID_USUARIO = :idUsuario";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':idUsuario',$idUsuario);
         $query->execute();

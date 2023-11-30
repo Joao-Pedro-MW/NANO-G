@@ -64,13 +64,15 @@ class ItensRepository
         $query->bindValue(':id_lote',$id_lote);
         $query->execute();
     }
-    public function CriaItem(Item $novoItem):void
+    public function CriaItem(Item $novoItem, int $idUsuario):void
     {
-        $sql = "INSERT INTO n_item VALUES (s_item_id.nextval, :nomeItem,:idCategoriaItem,:idUnidadeMedidaItem,SYSDATE,1,1,SYSDATE)";
+        $sql = "INSERT INTO n_item VALUES (s_item_id.nextval, :nomeItem,:idCategoriaItem,:idUnidadeMedidaItem,SYSDATE,:idUsuario,:idUsuario,SYSDATE)";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':nomeItem',$novoItem->itemNome);
         $query->bindValue(':idCategoriaItem',$novoItem->itemCategoria);
         $query->bindValue(':idUnidadeMedidaItem',$novoItem->itemUnidadeMedida);
+        $query->bindValue(':idUsuario',$idUsuario);
+
         $query->execute();
     }
 
@@ -81,14 +83,15 @@ class ItensRepository
         return $dadosItem->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function AtualizaItem(int $itemId, Item $dadositem):void
+    public function AtualizaItem(int $itemId, Item $dadositem, int $idUsuario):void
     {
-        $sql = "UPDATE n_item SET item_nome = :nomeItem, id_categoria = :idCategoriaItem, LAST_UPDATED_BY = 8, LAST_UPDATE_DATE = SYSDATE, id_un_medida = :idUnidadeMedidaItem
+        $sql = "UPDATE n_item SET item_nome = :nomeItem, id_categoria = :idCategoriaItem, LAST_UPDATED_BY = :idUsuario, LAST_UPDATE_DATE = SYSDATE, id_un_medida = :idUnidadeMedidaItem
         WHERE id_item = $itemId";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':nomeItem',$dadositem->itemNome);
         $query->bindValue(':idCategoriaItem',$dadositem->itemCategoria);
         $query->bindValue(':idUnidadeMedidaItem',$dadositem->itemUnidadeMedida);
+        $query->bindValue(':idUsuario',$idUsuario);
         $query->execute();
     }
 
@@ -114,13 +117,15 @@ class ItensRepository
         $query->bindValue(':idUsuario',$idUsuario);
         $query->execute();
     }
-    public function ReduzQuantidadeLote(int $id_lote, int $quantidade):void
+    public function ReduzQuantidadeLote(int $id_lote, int $quantidade, int $idUsuario):void
     {
         if($quantidade !== 0){
-            $sql = "UPDATE N_LOTE SET QUANTIDADE = (QUANTIDADE - :quantidade) WHERE ID_LOTE = :id_lote";
+            $sql = "UPDATE N_LOTE SET QUANTIDADE = (QUANTIDADE - :quantidade),
+                  LAST_UPDATED_BY = :idUsuario, LAST_UPDATE_DATE = SYSDATE WHERE ID_LOTE = :id_lote";
             $query = $this->pdo->prepare($sql);
             $query->bindValue(':quantidade',$quantidade);
             $query->bindValue(':id_lote',$id_lote);
+            $query->bindValue(':idUsuario',$idUsuario);
             $query->execute();
         }
     }

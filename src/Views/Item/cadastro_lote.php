@@ -49,7 +49,7 @@
             </div>
             <div class="coluna" style="margin-left:5%;">
                 <div>
-                    <label for="validade">Validade do Produto</label>
+                    <label for="validade">Validade</label>
                     <input type="date" name="data_validade" id="data_validade" min="<?=date('Y-m-d');?>" placeholder="Data de Validade" required><br>
                 </div>
                 <div>

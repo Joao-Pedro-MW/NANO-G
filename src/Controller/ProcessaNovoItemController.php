@@ -16,7 +16,8 @@ readonly class ProcessaNovoItemController implements Controller
         $itemCategoria = htmlspecialchars(filter_input(INPUT_POST,'categoria_item',FILTER_SANITIZE_SPECIAL_CHARS));
         $itemUnidadeMedida = htmlspecialchars(filter_input(INPUT_POST,'unidade_medida_item',FILTER_SANITIZE_SPECIAL_CHARS));
         $novoItem = new Item($itemNome, $itemCategoria, $itemUnidadeMedida);
-        $this->itensRepository->CriaItem($novoItem);
+        $idUsuario = $_SESSION['ID_USUARIO'];
+        $this->itensRepository->CriaItem($novoItem,$idUsuario);
         header('Location: /itens',false,303);
     }
 }

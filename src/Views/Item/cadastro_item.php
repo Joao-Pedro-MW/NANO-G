@@ -16,16 +16,16 @@
 <div class="main_div">
     <form method="POST" id="form_cria_item" class="content_div">
         <label for="nome">Nome</label>
-        <input id="nome" type="text" class="input" name="nome_item">
+        <input id="nome" type="text" class="input" name="nome_item" required>
         <label for="categoria">Categoria</label>
-        <select name="categoria_item" id="unidade_medida" class="input">
+        <select name="categoria_item" id="unidade_medida" class="input" required>
             <?php foreach ($listaCategorias as $categoria): ?>
                 <option name="categoria_item"
                         value="<?= $categoria["ID_CATEGORIA"] ?>"> <?= $categoria["CATEGORIA_NOME"] ?></option>
             <?php endforeach ?>
         </select>
         <label for="unidade_medida">Unidade de medida</label>
-        <select name="unidade_medida_item" id="unidade_medida" class="input">
+        <select name="unidade_medida_item" id="unidade_medida" class="input" required>
             <?php foreach ($listaUnidadesMedida as $unidade_medida): ?>
                 <option name="unidade_medida_item"
                         value="<?= $unidade_medida["ID_UNIDADE_MEDIDA"] ?>"> <?= $unidade_medida["UNIDADE_NOME"] ?> </option>
