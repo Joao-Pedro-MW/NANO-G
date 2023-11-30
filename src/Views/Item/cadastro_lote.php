@@ -53,13 +53,13 @@
                     <input type="date" name="data_validade" id="data_validade" min="<?=date('Y-m-d');?>" placeholder="Data de Validade" required><br>
                 </div>
                 <div>
+                    <label for="botao" id="label_inv">.</label>
+                    <button id="botao" form="main_div">Cadastrar Lote</button>
+                </div>
+                <div style="visibility: hidden;">
                     <label for="lote" id="label">Lote (Automático)</label>
                     <!--Necessario ser validado pela Alynne-->
                     <input type="text" name="lote" id="lote" placeholder="XXXXXX" readonly><br>
-                </div>
-                <div>
-                    <label for="botao" id="label_inv">.</label>
-                    <button id="botao" form="main_div">Cadastrar Lote</button>
                 </div>
             </div>
         </div>

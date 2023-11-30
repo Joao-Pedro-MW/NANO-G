@@ -89,11 +89,11 @@ INSERT ALL
 SELECT 1 FROM dual;
 
 INSERT ALL
-    INTO n_unidade_medida VALUES(1,'Kg (Quilogramas)',SYSDATE,1,1,SYSDATE)
-    INTO n_unidade_medida VALUES(2,'g (Gramas)',SYSDATE,1,1,SYSDATE)
-    INTO n_unidade_medida VALUES(3,'Un (Unidades)',SYSDATE,1,1,SYSDATE)
-    INTO n_unidade_medida VALUES(4,'PCT (Pacotes)',SYSDATE,1,1,SYSDATE)
-    INTO n_unidade_medida VALUES(5,'L (Litros)',SYSDATE,1,1,SYSDATE)
+    INTO n_unidade_medida VALUES(1,'Quilogramas',SYSDATE,1,1,SYSDATE)
+    INTO n_unidade_medida VALUES(2,'Gramas',SYSDATE,1,1,SYSDATE)
+    INTO n_unidade_medida VALUES(3,'Unidades',SYSDATE,1,1,SYSDATE)
+    INTO n_unidade_medida VALUES(4,'Pacotes',SYSDATE,1,1,SYSDATE)
+    INTO n_unidade_medida VALUES(5,'Litros',SYSDATE,1,1,SYSDATE)
 SELECT 1 FROM dual;
 
 

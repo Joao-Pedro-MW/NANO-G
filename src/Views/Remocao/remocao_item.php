@@ -27,15 +27,15 @@
                     <th id="campo_select"></th>
                     <th class="item">Item
                         <select id="item" autofocus class="combobox" onchange="filtroitem()">
-                            <?php foreach ($listaLotes as $lote): ?>
-                                <option class="opcao" id="pesquisa_nome_item"><?=$lote["NOME_ITEM"]?></option>
+                            <?php foreach ($listaItens as $item): ?>
+                                <option class="opcao" id="pesquisa_nome_item"><?=$item["ITEM_NOME"]?></option>
                             <?php endforeach;?>
                         </select>
                     </th>
                     <th class="item">Unidade Medida
-                        <select autofocus class="combobox" onchange="filtroun()">
-                            <?php foreach ($listaLotes as $lote): ?>
-                                <option class="opcao" id="pesquisa_un_medida"><?= $lote["UNIDADE_MEDIDA"]?></option>
+                        <select id="Un_medida" autofocus class="combobox" onchange="filtroun()">
+                            <?php foreach ($listaUnidadesMedida as $unidadeMedida): ?>
+                                <option class="opcao" id="pesquisa_un_medida"><?= $unidadeMedida['UNIDADE_NOME']?></option>
                             <?php endforeach;?>>
                         </select>
                     </th>
@@ -55,8 +55,8 @@
                     </th>
                     <th class="item">Categoria
                         <select id="categoria" autofocus class="combobox" onchange="filtrocat()">
-                            <?php foreach ($listaLotes as $lote): ?>
-                                <option class="opcao" id="pesquisa_valor"><?= $lote["CATEGORIA"]?></option>
+                            <?php foreach ($listaCategorias as $categoria): ?>
+                                <option class="opcao" id="pesquisa_valor"><?= $categoria["CATEGORIA_NOME"]?></option>
                             <?php endforeach;?>
                         </select>
                     </th>

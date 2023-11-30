@@ -25,6 +25,8 @@ return [
 
     'GET|/usuarios/edita_usuario' => \src\Controller\AcessaEditaUsuarioController::class,
     'POST|/usuarios/edita_usuario' => \src\Controller\ProcessaEditarUsuarioController::class,
+
+    'GET|/usuarios/resetar_senha' => \src\Controller\ProcessaResetarSenhaController::class,
     //Logs
     'GET|/logs' => \src\Controller\AcessaListarLogController::class,
     //Estoque

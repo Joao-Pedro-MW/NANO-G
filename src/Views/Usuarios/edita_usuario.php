@@ -59,7 +59,9 @@
                     </div>
 
                     <div id="button_div">
-                        <button form="form_edita_usuario" class="botao_salvar">Trocar Senha</button>
+                        <a href="/usuarios/resetar_senha">
+                            <button class="botao_salvar">Resetar Senha</button>
+                        </a>
                         <button form="form_edita_usuario" class="botao_salvar">Salvar</button>
                     </div>
                     
