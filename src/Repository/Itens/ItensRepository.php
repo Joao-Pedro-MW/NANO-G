@@ -102,15 +102,16 @@ class ItensRepository
         return $query->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function CriaLote(Lote $lote):void
+    public function CriaLote(Lote $lote,int $idUsuario):void
     {
-        $sql = "INSERT INTO n_lote (id_lote,id_item,quantidade,data_validade, VALOR_ITEM, CREATE_DATE,CREATED_BY,LAST_UPDATE_DATE,LAST_UPDATED_BY)
-        VALUES (S_LOTE_ID.nextval, :itemID, :quantidadeItem, TO_DATE(:data_validade, 'YYYY-MM-DD'),:valorItem,SYSDATE,1,SYSDATE,1)";
+        $sql = "INSERT INTO n_lote (id_lote,id_item,quantidade,data_validade, VALOR_ITEM, CREATE_DATE,CREATED_BY,LAST_UPDATED_BY,LAST_UPDATE_DATE)
+        VALUES (S_LOTE_ID.nextval, :itemID, :quantidadeItem, TO_DATE(:data_validade, 'YYYY-MM-DD'),:valorItem,SYSDATE,:idUsuario,:idUsuario,SYSDATE)";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':itemId',$lote->itemId);
         $query->bindValue(':quantidadeItem',$lote->quantidadeItens);
         $query->bindValue(':data_validade',$lote->dataValidadeItem);
         $query->bindValue(':valorItem',$lote->valorItem);
+        $query->bindValue(':idUsuario',$idUsuario);
         $query->execute();
     }
     public function ReduzQuantidadeLote(int $id_lote, int $quantidade):void
