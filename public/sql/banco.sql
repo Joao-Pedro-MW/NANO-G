@@ -27,10 +27,6 @@ CREATE TABLE n_usuario (
                            login            VARCHAR2(1)     NOT NULL,
                            email            VARCHAR2(200)   NOT NULL UNIQUE,
                            senha            VARCHAR2(200)   NOT NULL,
-                           create_date      TIMESTAMP       NOT NULL,
-                           created_by       NUMBER          NOT NULL,
-                           last_updated_by  NUMBER          NOT NULL,
-                           last_update_date TIMESTAMP        NOT NULL,
                            CONSTRAINT pk_usuario PRIMARY KEY (id_usuario)
 );
 CREATE TABLE n_unidade_medida (
@@ -85,7 +81,7 @@ CREATE TABLE n_lote (
 );
 
 INSERT INTO n_usuario VALUES (
-                                 s_user_id.nextval,'Admin NanoG','9999999999',TO_DATE('1990-01-01', 'YYYY-MM-DD'),'AD','1','0','admin@nanog.com.br','$argon2id$v=19$m=65536,t=4,p=1$Yk11RjlGUGMxaDM3SlZyOA$J0dr0G/2xpzqvsv+4ezlcKXobxJ512lny9Ee/Waxs70',SYSDATE,1,1,SYSDATE
+s_user_id.nextval,'Admin NanoG','9999999999',TO_DATE('1990-01-01', 'YYYY-MM-DD'),'AD','1','0','admin@nanog.com.br','$argon2id$v=19$m=65536,t=4,p=1$Yk11RjlGUGMxaDM3SlZyOA$J0dr0G/2xpzqvsv+4ezlcKXobxJ512lny9Ee/Waxs70'
                              );
 INSERT ALL
     INTO N_CATEGORIA VALUES (1, 'Materia Prima',SYSDATE,1,1,SYSDATE)

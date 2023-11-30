@@ -32,7 +32,7 @@ readonly class ProcessaEditarUsuarioController implements Controller
             'TIPO_USUARIO' => $UsuarioPermissao,
             'EMAIL' => $UsuarioEmail
         ];
-        $resultado = $this->usuarioRepository->AtualizaUsuario($dadosUsuario,$idUsuario);
+        $resultado = $this->usuarioRepository->AtualizaUsuario($dadosUsuario);
         // Processa o resultado e exibe na tela
         if (!$resultado) {
             echo 'Falha na atualização. Contate o suporte.';

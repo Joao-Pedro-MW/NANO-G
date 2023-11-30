@@ -15,6 +15,8 @@ readonly class ProcessaNovoItemController implements Controller
         $itemNome = htmlspecialchars(filter_input(INPUT_POST,'nome_item',FILTER_SANITIZE_SPECIAL_CHARS));
         $itemCategoria = htmlspecialchars(filter_input(INPUT_POST,'categoria_item',FILTER_SANITIZE_SPECIAL_CHARS));
         $itemUnidadeMedida = htmlspecialchars(filter_input(INPUT_POST,'unidade_medida_item',FILTER_SANITIZE_SPECIAL_CHARS));
+        //Limpeza de espaços
+        $itemNome = str_replace('  ', '', $itemNome);
         $novoItem = new Item($itemNome, $itemCategoria, $itemUnidadeMedida);
         $idUsuario = $_SESSION['ID_USUARIO'];
         $this->itensRepository->CriaItem($novoItem,$idUsuario);

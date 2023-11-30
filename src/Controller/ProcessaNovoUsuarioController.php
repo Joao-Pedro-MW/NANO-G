@@ -17,14 +17,18 @@ readonly class ProcessaNovoUsuarioController implements Controller
             header('Location: /');
             exit;
         }
-        $idUsuario = $_SESSION['ID_USUARIO'];
         if (array_key_exists('cpf', $_POST)) {
             $UsuarioNome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+
             $UsuarioEmail = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
             $UsuarioDataNascimento = filter_input(INPUT_POST, 'data_nascimento', FILTER_SANITIZE_SPECIAL_CHARS);
             $UsuarioPermissao = filter_input(INPUT_POST, 'tipo_usuario', FILTER_SANITIZE_SPECIAL_CHARS);
             $UsuarioCPF = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_SPECIAL_CHARS);
             $UsuarioSenha = password_hash(preg_replace('/[\.\-\s]/', '', $UsuarioCPF),PASSWORD_ARGON2ID);
+            //Limpeza de espaços
+            $UsuarioNome = str_replace('  ', '', $UsuarioNome);
+            $UsuarioEmail = str_replace('  ', '', $UsuarioEmail);
+
             $novoUsuario = new Usuario(
                 $UsuarioNome,
                 $UsuarioDataNascimento,
@@ -34,7 +38,7 @@ readonly class ProcessaNovoUsuarioController implements Controller
                 $UsuarioSenha,
             );
             try {
-                $this->usuarioRepository->CriaUsuario($novoUsuario,$idUsuario);
+                $this->usuarioRepository->CriaUsuario($novoUsuario);
                 header('Location: /usuarios', false, 303);
                 $_SESSION['ERRO_EMAIL_JA_EXISTENTE'] = [];
                 exit;

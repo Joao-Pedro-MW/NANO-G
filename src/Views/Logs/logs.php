@@ -13,8 +13,8 @@
 <body>
 	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
    	<div class="base">
-		<h1>Registros de alterações (Logs)</h1>
-		<div class="menu_botoes">
+		<h1>Registros de alterações</h1>
+		<!--<div class="menu_botoes">
 
         <label class="container">
             <input type="checkbox" id="saida" class="check">
@@ -38,8 +38,7 @@
 
         <button type="button" class="botao" id="botao_filtro">Filtrar Dados</button>
 
-    </div>
-    -->
+    </div> -->
     <table class="tabela_dados" id="tabela_dados">
         <tr>
             <th>Criador</th>
@@ -52,7 +51,7 @@
             <tr>
                 <td><?=$log['CRIADOR']?></td>
                 <td><?=$log['CREATE_DATE']?></td>
-                <td><?=$log['TABELA']?>s</td>
+                <td><?=$log['TABELA']?></td>
                 <td><?=$log['ATUALIZADOR']?></td>
                 <td><?=$log['LAST_UPDATE_DATE']?></td>
             </tr>
