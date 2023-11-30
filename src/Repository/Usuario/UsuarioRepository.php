@@ -31,18 +31,24 @@ class UsuarioRepository
         $query->execute();
     }
 
-    public function AtualizaUsuario(array $dadosUsuario): void
+    public function AtualizaUsuario(array $dadosUsuario)
     {
-        $sql = "UPDATE n_usuario SET nome = :nome, cpf = :cpf, email = :email, dt_nascimento = TO_DATE(:dt_nascimento,'YYYY-MM-DD'), 
+
+        try {
+            $sql = "UPDATE n_usuario SET nome = :nome, cpf = :cpf, email = :email, dt_nascimento = TO_DATE(:dt_nascimento,'YYYY-MM-DD'), 
                       tipo_usuario = :tipo_usuario WHERE id_usuario = :id_usuario";
-        $query = $this->pdo->prepare($sql);
-        $query->bindValue(':id_usuario',(int) $dadosUsuario['ID_USUARIO']);
-        $query->bindValue(':nome',$dadosUsuario['NOME']);
-        $query->bindValue(':cpf',$dadosUsuario['CPF']);
-        $query->bindValue(':email',$dadosUsuario['EMAIL']);
-        $query->bindValue(':dt_nascimento',$dadosUsuario['DT_NASCIMENTO']);
-        $query->bindValue(':tipo_usuario',$dadosUsuario['TIPO_USUARIO']);
-        $query->execute();
+            $query = $this->pdo->prepare($sql);
+            $query->bindValue(':id_usuario', (int)$dadosUsuario['ID_USUARIO']);
+            $query->bindValue(':nome', $dadosUsuario['NOME']);
+            $query->bindValue(':cpf', $dadosUsuario['CPF']);
+            $query->bindValue(':email', $dadosUsuario['EMAIL']);
+            $query->bindValue(':dt_nascimento', $dadosUsuario['DT_NASCIMENTO']);
+            $query->bindValue(':tipo_usuario', $dadosUsuario['TIPO_USUARIO']);
+            $query->execute();
+            return $query->fetchColumn();
+        } catch (PDOException $e){
+            return $e;
+        }
     }
 
 

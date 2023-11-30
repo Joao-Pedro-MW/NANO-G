@@ -14,7 +14,7 @@ return [
     'GET|/itens/edita_item' => \src\Controller\AcessaEditaItemController::class,
     'POST|/itens/edita_item' => \src\Controller\ProcessaEditaItemController::class,
 
-    'GET|/itens/remove_item' => \src\Controller\RemoveItemController::class,
+    'GET|/itens/remove_item' => \src\Controller\ProcessaRemoveItemController::class,
 
     // Usuarios
     'GET|/usuarios' => \src\Controller\AcessaListarUsuarioController::class,

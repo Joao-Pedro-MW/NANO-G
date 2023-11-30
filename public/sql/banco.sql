@@ -34,24 +34,24 @@ CREATE TABLE n_usuario (
                            CONSTRAINT pk_usuario PRIMARY KEY (id_usuario)
 );
 CREATE TABLE n_unidade_medida (
-                                  id_unidade_medida  NUMBER          NOT NULL,
-                                  unidade_nome       VARCHAR2(100)   NOT NULL,
-                                  create_date        TIMESTAMP        NOT NULL,
-                                  created_by         NUMBER          NOT NULL,
-                                  last_updated_by    NUMBER          NOT NULL,
-                                  last_update_date   TIMESTAMP        NOT NULL,
-                                  CONSTRAINT pk_un_medida PRIMARY KEY (id_unidade_medida)
+                          id_unidade_medida  NUMBER          NOT NULL,
+                          unidade_nome       VARCHAR2(100)   NOT NULL,
+                          create_date        TIMESTAMP        NOT NULL,
+                          created_by         NUMBER          NOT NULL,
+                          last_updated_by    NUMBER          NOT NULL,
+                          last_update_date   TIMESTAMP        NOT NULL,
+                          CONSTRAINT pk_un_medida PRIMARY KEY (id_unidade_medida)
 );
 
 
 CREATE TABLE n_categoria (
-                             id_categoria       NUMBER          NOT NULL,
-                             categoria_nome     VARCHAR2(100)   NOT NULL,
-                             create_date        TIMESTAMP        NOT NULL,
-                             created_by         NUMBER          NOT NULL,
-                             last_updated_by    NUMBER          NOT NULL,
-                             last_update_date   TIMESTAMP        NOT NULL,
-                             CONSTRAINT pk_categoria PRIMARY KEY (id_categoria)
+                         id_categoria       NUMBER          NOT NULL,
+                         categoria_nome     VARCHAR2(100)   NOT NULL,
+                         create_date        TIMESTAMP        NOT NULL,
+                         created_by         NUMBER          NOT NULL,
+                         last_updated_by    NUMBER          NOT NULL,
+                         last_update_date   TIMESTAMP        NOT NULL,
+                         CONSTRAINT pk_categoria PRIMARY KEY (id_categoria)
 );
 
 CREATE TABLE n_item (
@@ -60,7 +60,7 @@ CREATE TABLE n_item (
                         item_nome        VARCHAR2(150)   NOT NULL,
                         id_categoria     NUMBER          NOT NULL,
                         id_un_medida     NUMBER          NOT NULL,
-                        create_date      TIMESTAMP        NOT NULL,
+                        create_date      TIMESTAMP       NOT NULL,
                         created_by       NUMBER          NOT NULL,
                         last_updated_by  NUMBER          NOT NULL,
                         last_update_date TIMESTAMP       NOT NULL,
@@ -89,16 +89,69 @@ INSERT INTO n_usuario VALUES (
                              );
 INSERT ALL
     INTO N_CATEGORIA VALUES (1, 'Materia Prima',SYSDATE,1,1,SYSDATE)
-INTO N_CATEGORIA VALUES (2, 'Produto Final',SYSDATE,1,1,SYSDATE)
-INTO N_CATEGORIA VALUES (3, 'Embalagem',SYSDATE,1,1,SYSDATE)
+    INTO N_CATEGORIA VALUES (2, 'Produto Final',SYSDATE,1,1,SYSDATE)
 SELECT 1 FROM dual;
 
 INSERT ALL
     INTO n_unidade_medida VALUES(1,'Kg (Quilogramas)',SYSDATE,1,1,SYSDATE)
-INTO n_unidade_medida VALUES(2,'g (Gramas)',SYSDATE,1,1,SYSDATE)
-INTO n_unidade_medida VALUES(3,'Un (Unidades)',SYSDATE,1,1,SYSDATE)
-INTO n_unidade_medida VALUES(4,'PCT (Pacotes)',SYSDATE,1,1,SYSDATE)
-INTO n_unidade_medida VALUES(5,'L (Litros)',SYSDATE,1,1,SYSDATE)
+    INTO n_unidade_medida VALUES(2,'g (Gramas)',SYSDATE,1,1,SYSDATE)
+    INTO n_unidade_medida VALUES(3,'Un (Unidades)',SYSDATE,1,1,SYSDATE)
+    INTO n_unidade_medida VALUES(4,'PCT (Pacotes)',SYSDATE,1,1,SYSDATE)
+    INTO n_unidade_medida VALUES(5,'L (Litros)',SYSDATE,1,1,SYSDATE)
 SELECT 1 FROM dual;
+
+
+CREATE OR REPLACE VIEW n_logs_v (created_by, criador, create_date, last_update_date, last_update_by, atualizador, tabela) AS
+SELECT
+    it.created_by,
+    (
+        SELECT
+            us.nome
+        FROM
+            n_usuario us
+        WHERE
+                us.id_usuario = it.created_by
+    )       criador,
+    it.create_date,
+    it.last_update_date,
+    it.last_updated_by,
+    (
+        SELECT
+            us.nome
+        FROM
+            n_usuario us
+        WHERE
+                us.id_usuario = it.last_updated_by
+    )       atualizador,
+    'Itens' tabela
+FROM
+    n_item it
+
+UNION
+
+SELECT
+    lot.created_by,
+    (
+        SELECT
+            us.nome
+        FROM
+            n_usuario us
+        WHERE
+                us.id_usuario = lot.created_by
+    )       criador,
+    lot.create_date,
+    lot.last_update_date,
+    lot.last_updated_by,
+    (
+        SELECT
+            us.nome
+        FROM
+            n_usuario us
+        WHERE
+                us.id_usuario = lot.last_updated_by
+    )       atualizador,
+    'Lotes' tabela
+FROM
+    n_lote lot;
 
 COMMIT;

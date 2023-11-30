@@ -9,9 +9,9 @@
 	<link rel="stylesheet" type="text/css" href="..\css\cria_usuario\cria_usuario.css">
 	<script type="text/javascript" src="..\js\menu.js"></script>
 </head>
-
 <body>
-	<?php require __DIR__ . '..\..\..\menu_lateral.php' ?>
+	<?php require __DIR__ . '..\..\..\menu_lateral.php';
+    if($_SESSION['ERRO_EMAIL_JA_EXISTENTE']){echo "<p>Outro usuário já usa este e-mail</p>";}?>
 	<h1 style="margin-left:10vw; height: 7vh;margin-right: 60vw;">Criar Usuário</h1>
 	<div class="div_horizontal" id="main_div">
 		<img src="../imagens/imagem_usuario.svg" class="perfil">
@@ -20,15 +20,15 @@
 				<div class="div_horizontal">
 					<div class="div_vertical">
 						<label for="nome">Nome</label>
-						<input type="text" id="nome"  name="nome">
+						<input type="text" id="nome"  name="nome" required>
 						<label for="cpf">CPF</label>
-						<input type="text" id="cpf" name="cpf" maxlength="14">
+						<input type="text" id="cpf" name="cpf" maxlength="14" required>
 					</div>
 					<div class="div_vertical">
 						<label for="email" id="label_direita">Email</label>
-						<input type="email" id="email"  name="email">
+						<input type="email" id="email"  name="email" required>
 						<label for="data_nascimento" id="label_direita">Data de Nascimento</label>
-						<input type="date" id="data_nascimento" max="2013-12-31" name="data_nascimento">
+						<input type="date" id="data_nascimento" max="2013-12-31" name="data_nascimento" required>
 					</div>
 				</div>
 				<div class="div_horizontal" id="low_div">
@@ -40,7 +40,7 @@
 						</div>
 						<div id="lowest_div">
 							<label for="user" style="margin-left: 0.5vw">Usuário</label>
-							<input type="radio" name="tipo_usuario" value="CM" id="user">	
+							<input type="radio" name="tipo_usuario" value="CM" id="user" checked>
 						</div>
 					</div>
 					<button form="form_cria_usuario" class="botao_salvar">Salvar</button>

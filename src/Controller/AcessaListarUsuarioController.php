@@ -14,6 +14,7 @@ readonly class AcessaListarUsuarioController implements Controller
             header('Location: /');
             exit;
         }
+        $_SESSION['ERRO_EMAIL_JA_EXISTENTE'] = [];
         $usuarioLista = $this->usuarioRepository->TodosUsuarios();
         require_once __DIR__ . '\..\..\src\Views\Usuarios\menu_usuario.php';
     }

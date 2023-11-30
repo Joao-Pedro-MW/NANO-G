@@ -83,7 +83,7 @@ class ItensRepository
 
     public function AtualizaItem(int $itemId, Item $dadositem):void
     {
-        $sql = "UPDATE n_item SET item_nome = :nomeItem, id_categoria = :idCategoriaItem, id_un_medida = :idUnidadeMedidaItem
+        $sql = "UPDATE n_item SET item_nome = :nomeItem, id_categoria = :idCategoriaItem, LAST_UPDATED_BY = 8, LAST_UPDATE_DATE = SYSDATE, id_un_medida = :idUnidadeMedidaItem
         WHERE id_item = $itemId";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':nomeItem',$dadositem->itemNome);

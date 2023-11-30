@@ -1,5 +1,7 @@
 <?php
+
 declare(strict_types=1);
+
 namespace src\Entity;
 
 class Usuario
@@ -12,5 +14,4 @@ class Usuario
         public string $cpf,
         public string $user_senha
     ){}
-
 }
