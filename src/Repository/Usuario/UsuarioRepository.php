@@ -105,20 +105,18 @@ class UsuarioRepository
         $query->execute();
     }
 
-    public function DesativaUsuario(int $idUsuario, int $idEditor)
+    public function DesativaUsuario(int $idUsuario)
     {
         $sql = "UPDATE N_USUARIO SET FLAG_ATIVO = 0 WHERE ID_USUARIO = :idUsuario";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':idUsuario',$idUsuario);
-        $query->bindValue(':idEditor', $idEditor);
         $query->execute();
     }
-    public function AtivaUsuario(int $idUsuario, int $idEditor)
+    public function AtivaUsuario(int $idUsuario)
     {
         $sql = "UPDATE N_USUARIO SET FLAG_ATIVO = 1 WHERE ID_USUARIO = :idUsuario";
         $query = $this->pdo->prepare($sql);
         $query->bindValue(':idUsuario',$idUsuario);
-        $query->bindValue(':idEditor', $idEditor);
         $query->execute();
     }
     public function AtivaLogin(int $idUsuario, int $idEditor):void
